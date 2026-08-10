@@ -1,0 +1,655 @@
+@import '/src/shared/styles/breakpoints';
+
+.modeSetupsWrapper {
+  --c-mode: var(--c-setups);
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  container-type: inline-size;
+  container-name: setups-mode;
+}
+
+.createSetupsGameDialog.createSetupsGameDialog.createSetupsGameDialog {
+  --c-mode: var(--c-setups);
+
+  padding: 0.5rem;
+
+  @media screen and (width > $sm) {
+    background-color: var(--c-mode);
+    max-width: 70vw;
+  }
+}
+
+.setupCreateForm {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: var(--color-panel);
+  border-radius: var(--b-radius-2);
+  padding: 2.5rem;
+  position: relative;
+
+  :global(.rt-Button.rt-variant-solid) {
+    color: black;
+  }
+}
+
+.createTrigger {
+  width: 100%;
+  min-height: 62.5rem;
+}
+
+.setupList.setupList {
+  width: 100%;
+  border-radius: 5rem;
+  padding-bottom: 1.5rem;
+
+  &:has(.selected) .setupCard:not(.selected) {
+    /* NOTE: to select all cards except the selected one and make them a faded */
+    opacity: 0.5;
+  }
+
+  .collapsibleContent {
+    overflow: hidden;
+    order: attr(data-order);
+
+    &[data-state='open'] {
+      animation: slide-down 300ms ease-out;
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.setupBetForm.setupBetForm {
+  width: 100%;
+  min-width: 45rem;
+  padding: 2.5rem;
+  padding-bottom: 1rem;
+  gap: 2.5rem;
+  background-color: var(--color-panel);
+  border-radius: var(--b-radius-2);
+}
+
+.setupCard.setupCard.setupCard {
+  transition: transform 0.2s ease-in-out;
+  background-color: var(--c-black);
+  border-radius: 5rem;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 42rem;
+  width: 100%;
+  gap: 2.5rem;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &.disabled {
+    background-color: var(--c-black-alpha);
+    cursor: not-allowed;
+  }
+
+  & :global(.rt-CardInner) {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  & .influencerPreview {
+    border-bottom: 1px solid var(--gray-5);
+  }
+}
+
+.graphContainer.graphContainer.graphContainer {
+  min-width: 80rem;
+
+  @media screen and (width < $sm) {
+    min-width: unset;
+  }
+}
+
+.setupBackgroundAssetIcon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate(-200%, 200%) scale(10);
+  filter: grayscale(100%) opacity(0.5) brightness(0.8);
+  mix-blend-mode: color-dodge;
+}
+
+.setupsCardList.setupsCardList.setupsCardList {
+  overflow: scroll hidden;
+  display: flex;
+  gap: 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray) transparent;
+
+  @container setups-mode (width > 800px) {
+    display: grid;
+    overflow-x: hidden;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @container setups-mode (width > 1050px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--gray-5);
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--c-white-alpha-2);
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--c-white-alpha-1);
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+
+.setupAddBetForm {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  :global(.rt-TextFieldInput) {
+    background-color: var(--c-black);
+    padding: 1rem 2rem;
+  }
+
+  .setupAddBetButton {
+    height: 7.5rem;
+  }
+
+  .setupBetAmountSelection button {
+    &:global(.rt-variant-solid) > div {
+      color: white;
+    }
+  }
+
+  .setupBetAmount {
+    height: 7.5rem;
+  }
+}
+
+.switchChainButton {
+  flex-shrink: 1;
+  width: 100%;
+  height: 7.5rem;
+  width: 100%;
+}
+
+.setupsAddPredictFormControls {
+  background-color: var(--c-black);
+}
+
+.setupAddBetCard.setupAddBetCard {
+  grid-column: 1 / -1;
+  border-radius: var(--b-radius-2);
+}
+
+.setupBetButton {
+  width: 100%;
+  transition:
+    transform 0.2s ease-in-out,
+    border 0.2s ease-in-out;
+
+  &:has(button[data-state='checked']) {
+    transform: scale(0.95);
+    border: 2px solid var(--accent);
+    box-sizing: border-box;
+    border-radius: var(--b-radius-1);
+  }
+}
+
+.onboardingCard.onboardingCard {
+  background-color: var(--c-mode);
+  position: relative;
+}
+
+.createSetupViewText.createSetupViewText {
+  line-height: 7rem;
+  font-size: 5rem;
+}
+
+.createSetupViewDescription {
+  max-width: 48rem;
+  line-height: 3rem;
+  opacity: 0.8;
+}
+
+.createSetupViewButton.createSetupViewButton {
+  max-width: 20rem;
+  height: 7rem;
+}
+
+.setupElementWrapper.setupElementWrapper {
+  padding: 2rem;
+}
+
+.setupPriceBadgeText.setupPriceBadgeText {
+  color: var(--c-black);
+  z-index: 2;
+}
+
+.setupPriceBadgeTextGray.setupPriceBadgeTextGray {
+  color: var(--gray-4);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.ownerName {
+  color: var(--c-white);
+}
+
+.blackDot.blackDot {
+  background-color: var(--c-black);
+}
+
+.blackDotText.blackDotText {
+  color: var(--c-black-alpha);
+}
+
+.blackDotText2.blackDotText2 {
+  color: var(--c-black);
+}
+
+.betsTypeSwitcherWrapper {
+  width: 100%;
+}
+
+.betsTypeSwitcherButton.betsTypeSwitcherButton.betsTypeSwitcherButton {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectionButton.selectionButton.selectionButton {
+  width: 8.8rem;
+}
+
+.formPricePercent.formPricePercent {
+  background-color: var(--c-black);
+  border-radius: calc(var(--b-radius-1) / 2);
+  white-space: nowrap;
+}
+
+.formBackgroundIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.1;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(32%, -44%);
+
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.setupTakeProfitOption {
+  padding: 2rem;
+  border-radius: var(--b-radius-1);
+  background-color: var(--c-black-alpha);
+  border: 1px solid var(--pink);
+
+  &.appearanceLight {
+    background-color: var(--c-white-alpha-1);
+    color: var(--c-black);
+    border: none;
+  }
+
+  &.takeProfit {
+    border: 1px solid var(--green);
+  }
+
+  &.optionDimmed {
+    opacity: 0.5;
+  }
+}
+
+.setupPriceBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  color: var(--pink);
+  pointer-events: none;
+
+  &.takeProfit {
+    color: var(--green);
+  }
+}
+
+.gameResultsWrapper.gameResultsWrapper {
+  min-width: 28.5rem;
+}
+
+.gameResultStatText {
+  color: var(--c-gray-40);
+}
+
+.conditionBox.conditionBox {
+  padding: 0.5rem 1rem;
+  background-color: var(--c-black);
+  border-radius: 1rem;
+}
+
+@keyframes slide-down {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+.tableBodyCellClassname {
+  padding: 3rem;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.betExistsContainer.betExistsContainer {
+  width: 100%;
+  height: 15rem;
+  border-radius: 2rem;
+}
+
+.betExistsContainerText.betExistsContainerText {
+  max-width: 15rem;
+}
+
+.poolSizeStat.poolSizeStat {
+  max-width: 25rem;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.exitCrossBtn.exitCrossBtn {
+  position: absolute;
+  top: 1rem;
+  right: -1rem;
+}
+
+.tableInfoContainer.tableInfoContainer.tableInfoContainer {
+  @media screen and (width < $sm) {
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.tableWrapper.tableWrapper {
+  & > :global(.rt-CardInner) {
+    @media screen and (width < $sm) {
+      padding: 2.5rem;
+    }
+  }
+}
+
+.tableTitle.tableTitle {
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.amountField.amountField.amountField {
+  background-color: var(--black);
+  border-radius: 1.5rem;
+
+  & > :global(.rt-TextFieldInput) {
+    color: var(--c-gray-40);
+    padding-left: 4rem;
+  }
+
+  & > :global(.rt-TextFieldInput::placeholder) {
+    color: var(--c-gray-40);
+    padding-left: 4rem;
+  }
+}
+
+.amountFieldWithoutPadding.amountFieldWithoutPadding.amountFieldWithoutPadding {
+  background-color: var(--black);
+  border-radius: 1.5rem;
+
+  &:global(.rt-TextFieldInput) {
+    color: var(--gray-9);
+  }
+
+  &:global(.rt-TextFieldInput::placeholder) {
+    color: var(--gray-9);
+    font-size: medium;
+  }
+
+  &:global(.rt-TextFieldInput:disabled) {
+    background-color: var(--c-white-black-1);
+  }
+}
+
+:global(.rt-TextFieldRoot):has(.amountFieldWithoutPadding)::before {
+  content: '$';
+  right: 1.25rem;
+  color: var(--pink);
+  position: absolute;
+  z-index: 2;
+  top: 1.75rem;
+  color: var(--gray-9);
+  opacity: 0.5;
+}
+
+.createSetupsGameBtn.createSetupsGameBtn.createSetupsGameBtn {
+  height: 7.5rem;
+}
+
+.cancelBtn.cancelBtn.cancelBtn {
+  background-color: transparent;
+  color: var(--blue);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.amountFieldTitle {
+  color: var(--gray-11);
+}
+
+.amountFieldXyroIconLeft {
+  position: absolute;
+  color: var(--yellow);
+  left: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 1;
+}
+
+.betAmountBtn.betAmountBtn.betAmountBtn {
+  background-color: var(--c-gray-80);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.optionNameText {
+  font-weight: var(--font-weight-bold);
+}
+
+.betAmountBtnActive.betAmountBtnActive.betAmountBtnActive {
+  background-color: var(--c-a-lime);
+}
+
+.payoutContainer.payoutContainer.payoutContainer {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--orange);
+  opacity: 0.5;
+}
+
+.payoutText.payoutText.payoutText {
+  color: var(--gray-7);
+}
+
+.payoutValue.payoutValue.payoutValue {
+  color: var(--orange);
+}
+
+.betPoolInfo {
+  background-color: var(--gray-3);
+  border-radius: calc(var(--b-radius-1));
+}
+
+.setupsDialogGameView.setupsDialogGameView.setupsDialogGameView {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (width > $sm) {
+    flex-direction: row;
+    max-width: 80vw;
+    width: 100%;
+  }
+
+  @media screen and (width > $lg) {
+    flex-direction: row;
+    max-width: 70vw;
+    width: 100%;
+  }
+}
+
+.setupsGameFormWithGraph {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 'form graph';
+  column-gap: 0.5rem;
+  border-radius: var(--b-radius-2);
+  height: 100%;
+
+  @media screen and (width < $sm) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'graph'
+      'form';
+  }
+}
+
+.setupsGameViewTabs {
+  background-color: var(--color-panel);
+  border-radius: var(--b-radius-2);
+
+  & :global(.rt-TabsTrigger)::before {
+    display: none;
+  }
+
+  & :global(.rt-TabsList) {
+    padding-bottom: 1rem;
+  }
+
+  @media screen and (width < $sm) {
+    padding: 0;
+    padding-top: 1.5rem;
+  }
+}
+
+.setupsGameDetails {
+  grid-area: details;
+  background-color: var(--color-panel);
+  border-radius: var(--b-radius-2);
+}
+
+.setupsGameDetailsResult {
+  background-color: var(--c-black-alpha);
+  border-radius: var(--b-radius-1);
+}
+
+.playerListScrollArea {
+  height: 100%;
+  max-height: 65rem;
+  padding: 0;
+  border-radius: var(--b-radius);
+
+  &:has(:nth-child(n + 10)) {
+    box-shadow: inset 0 -3rem 1rem -1rem var(--c-black-alpha-1);
+  }
+}
+
+.playerList {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.playerItem {
+  padding: 2rem 0;
+  list-style: none;
+}
+
+.assetId {
+  max-width: 15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.setupsPriceGraphWrapper {
+  flex-grow: 1;
+  min-width: 80rem;
+
+  @media screen and (width < $sm) {
+    min-width: unset;
+  }
+}
+
+.setupsAddPredictDialog.setupsAddPredictDialog {
+  padding: 0;
+  max-width: 70vw;
+}
+
+.setupsAddPredictFormHeader {
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.setupsGameView {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+  grid-template-areas:
+    'graph'
+    'details';
+
+  @media screen and (width > $sm) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'details graph';
+    gap: 0;
+  }
+}

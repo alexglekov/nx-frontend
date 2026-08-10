@@ -1,0 +1,606 @@
+@use '/src/shared/styles/mixins' as mixins;
+@import '/src/shared/styles/breakpoints';
+
+.profileModeItem.profileModeItem {
+  padding: 2rem;
+  background-color: var(--gray-4);
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.profileModeItemText.profileModeItemText {
+  color: var(--white);
+}
+
+.profileModeItemBackgroundElement {
+  position: absolute;
+  top: -10rem;
+  width: 30rem;
+  height: 30rem;
+  color: var(--white);
+  opacity: 0.1;
+}
+
+.userProfileInfoWrapper.userProfileInfoWrapper {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 5rem;
+  border-radius: 5rem;
+  gap: 7.5rem;
+  background-color: var(--c-gray-90);
+
+  @media screen and (width < $sm) {
+    gap: 3rem;
+  }
+}
+
+.avatarWrapper.avatarWrapper {
+  position: relative;
+  border-radius: 100%;
+  background-color: var(--black);
+  width: 16rem;
+  height: 16rem;
+}
+
+.userProfileInfoName.userProfileInfoName {
+  font-size: 5rem;
+  color: var(--c-solid-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60rem;
+
+  @media screen and (width < $sm) {
+    max-width: 30rem;
+  }
+
+  @media screen and (width < $xxs) {
+    max-width: 24rem;
+  }
+}
+
+.userProfileInfoRegistration.userProfileInfoRegistration {
+  color: var(--c-gray-20);
+  opacity: 0.6;
+}
+
+.userProfileInfoBio.userProfileInfoBio {
+  color: var(--c-solid-white);
+  max-width: 55rem;
+
+  @media screen and (width < $sm) {
+    max-width: 40rem;
+  }
+
+  @media screen and (width < $xxs) {
+    max-width: 30rem;
+  }
+}
+
+.profileInfoStatsItemIcon.profileInfoStatsItemIcon {
+  @media screen and (width < $sm) {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+.diamondWrapper.diamondWrapper {
+  margin-top: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--black);
+  clip-path: polygon(
+    0% 50%,
+    0% 83.635%,
+    0% 83.635%,
+    0.214% 86.29%,
+    0.834% 88.808%,
+    1.827% 91.156%,
+    3.157% 93.3%,
+    4.793% 95.207%,
+    6.7% 96.843%,
+    8.844% 98.173%,
+    11.192% 99.166%,
+    13.71% 99.786%,
+    16.365% 100%,
+    67.955% 100%,
+    67.955% 100%,
+    69.302% 99.947%,
+    70.632% 99.788%,
+    71.939% 99.527%,
+    73.218% 99.165%,
+    74.464% 98.705%,
+    75.669% 98.15%,
+    76.83% 97.501%,
+    77.939% 96.761%,
+    78.992% 95.933%,
+    79.982% 95.018%,
+    95.018% 79.982%,
+    95.018% 79.982%,
+    95.933% 78.992%,
+    96.761% 77.939%,
+    97.501% 76.83%,
+    98.15% 75.669%,
+    98.705% 74.464%,
+    99.165% 73.218%,
+    99.527% 71.939%,
+    99.788% 70.632%,
+    99.947% 69.302%,
+    100% 67.955%,
+    100% 16.365%,
+    100% 16.365%,
+    99.786% 13.71%,
+    99.166% 11.192%,
+    98.173% 8.844%,
+    96.843% 6.7%,
+    95.207% 4.793%,
+    93.3% 3.157%,
+    91.156% 1.827%,
+    88.808% 0.834%,
+    86.29% 0.214%,
+    83.635% 0%,
+    32.045% 0%,
+    32.045% 0%,
+    30.698% 0.053%,
+    29.368% 0.212%,
+    28.061% 0.473%,
+    26.782% 0.835%,
+    25.536% 1.295%,
+    24.331% 1.85%,
+    23.17% 2.499%,
+    22.061% 3.239%,
+    21.008% 4.067%,
+    20.018% 4.982%,
+    4.982% 20.018%,
+    4.982% 20.018%,
+    4.067% 21.008%,
+    3.239% 22.061%,
+    2.499% 23.17%,
+    1.85% 24.331%,
+    1.295% 25.536%,
+    0.835% 26.782%,
+    0.473% 28.061%,
+    0.212% 29.368%,
+    0.053% 30.698%,
+    0% 32.045%,
+    0% 50%
+  );
+
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.profileInfoStatsWrapper.profileInfoStatsWrapper {
+  gap: 10rem;
+}
+
+.profileInfoStatsItemText.profileInfoStatsItemText {
+  color: var(--c-solid-white);
+}
+
+.winrateGraphTitle.winrateGraphTitle {
+  color: var(--white);
+}
+
+.winrateGraphWrapper.winrateGraphWrapper.winrateGraphWrapper {
+  height: 71rem;
+  border-radius: 5rem;
+}
+
+.emptyGraphWrapper.emptyGraphWrapper.emptyGraphWrapper {
+  background-image: url('/src/shared/images/empty-winrate-graph.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profileAchievementsWrapper.profileAchievementsWrapper {
+  border-radius: 5rem;
+}
+
+.collapsibleContent {
+  overflow: hidden;
+  width: 100%;
+
+  &[data-state='open'] {
+    animation: slide-down 300ms ease-out;
+  }
+
+  &[data-state='closed'] {
+    animation: slide-up 300ms ease-out;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.profileAchievementsInfo.profileAchievementsInfo {
+  color: var(--gray-9);
+  font-weight: 400;
+  max-width: 33rem;
+}
+
+.profileAchievementItemWrapper.profileAchievementItemWrapper {
+  width: 100%;
+  padding: 3rem;
+  border-radius: 3rem;
+  background-color: var(--black);
+}
+
+.profileAchievementName.profileAchievementName {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.separator {
+  margin: 2.5rem 0;
+  background-color: var(--gray-4);
+  width: 100%;
+  height: 1px;
+}
+
+.profileAchievementDate.profileAchievementDate {
+  color: var(--gray-7);
+}
+
+.profileAchievementDescription.profileAchievementDescription {
+  color: var(--gray-9);
+  max-width: 33rem;
+}
+
+.profileAchievementRarity.profileAchievementRarity {
+  color: var(--pink);
+}
+
+.xyroButton.xyroButton.xyroButton {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  margin: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+
+  & path {
+    transition: opacity 0.1s ease-in-out;
+  }
+
+  &:hover path {
+    opacity: 0.8;
+  }
+}
+
+.toggle {
+  transition: transform 0.2s ease-in-out;
+
+  &.toggleReversed {
+    transform: rotate(180deg);
+  }
+}
+
+.valueCheckbox.valueCheckbox {
+  width: 3rem;
+  height: 3rem;
+  border: 1.5px solid var(--gray-6);
+  border-radius: 1rem;
+  right: 2.5rem;
+  top: 2.5rem;
+}
+
+.valueCheckboxSelected.valueCheckboxSelected {
+  border: 1.5px solid var(--pink);
+  background-color: var(--pink);
+}
+
+.profileModeStatsItemContainer.profileModeStatsItemContainer {
+  background-color: var(--gray-4);
+  border-radius: 5rem;
+  padding: 3rem;
+  overflow: hidden;
+  gap: 5.5rem;
+}
+
+.profileModeStatsItemBadge.profileModeStatsItemBadge.profileModeStatsItemBadge {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: fit-content;
+
+  &.oneVsOne {
+    background-color: var(--c-one-vs-one);
+  }
+
+  &.setups {
+    background-color: var(--c-setups);
+  }
+
+  &.upDown {
+    background-color: var(--c-up-down);
+  }
+
+  &.bullsEye {
+    background-color: var(--c-bulls-eye);
+  }
+}
+
+.profileModeStatsSetupsCreatedContainer.profileModeStatsSetupsCreatedContainer {
+  background-color: var(--gray-4);
+  border-radius: 5rem;
+  padding: 3rem;
+  gap: 3.5rem;
+}
+
+.profileModeStatsItemBackground.profileModeStatsItemBackground {
+  opacity: 0.4;
+
+  &.oneVsOne {
+    right: -3rem;
+    top: -7rem;
+
+    @media screen and (width < $sm) {
+      top: -12rem;
+      right: 2rem;
+    }
+  }
+
+  &.setups {
+    top: -7rem;
+    right: -2rem;
+
+    @media screen and (width < $sm) {
+      top: -14rem;
+      right: 2rem;
+    }
+  }
+
+  &.upDown {
+    top: -9rem;
+    right: 2rem;
+
+    @media screen and (width < $sm) {
+      top: -16rem;
+      right: 7rem;
+    }
+  }
+
+  &.bullsEye {
+    top: -2rem;
+    right: -1rem;
+
+    @media screen and (width < $sm) {
+      top: -8rem;
+      right: 4rem;
+    }
+  }
+}
+
+.setupsNavIcon.setupsNavIcon {
+  color: var(--c-setups);
+}
+
+.setupsCallToActionContainer.setupsCallToActionContainer {
+  padding: 2.5rem;
+  border-radius: 2.5rem;
+  background-color: var(--black);
+}
+
+.setupsCallToActionButton.setupsCallToActionButton.setupsCallToActionButton {
+  min-height: 7rem;
+  max-width: 20rem;
+  width: 100%;
+}
+
+.statisticWinrateBadge.statisticWinrateBadge {
+  padding: 0.25rem 0.5rem;
+  background-color: #ff8d3a33;
+  color: #ff8d3a;
+  border-radius: 0.5rem;
+}
+
+.profileLargestWin.profileLargestWin.profileLargestWin {
+  position: relative;
+  width: 100%;
+  background-color: var(--black);
+  border-radius: 6rem;
+}
+
+.profileLargestWinDivider.profileLargestWinDivider.profileLargestWinDivider {
+  width: 1px;
+  height: 6rem;
+  background-color: var(--gray-7);
+
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.profileInfoStatsWrapper.profileInfoStatsWrapper.profileInfoStatsWrapper {
+  gap: 9rem;
+
+  @media screen and (width < $sm) {
+    gap: 2rem 9rem;
+  }
+}
+
+.profileLargestWinDate.profileLargestWinDate.profileLargestWinDate {
+  align-self: center;
+  margin-left: 2rem;
+}
+
+.profileAvatarArtifact.profileAvatarArtifact.profileAvatarArtifact {
+  position: absolute;
+  top: 9.5rem;
+  left: -3rem;
+}
+
+.profileLargestWinRightArtifact.profileLargestWinRightArtifact.profileLargestWinRightArtifact {
+  position: absolute;
+  right: -0.75rem;
+  top: 6.5rem;
+}
+
+.profileLargestWinLeftArtifact.profileLargestWinLeftArtifact.profileLargestWinLeftArtifact {
+  position: absolute;
+  top: 6rem;
+  left: -1rem;
+}
+
+.profileLargestWinBigDot.profileLargestWinBigDot.profileLargestWinBigDot {
+  position: absolute;
+  bottom: -2rem;
+  right: -3rem;
+}
+
+.profileLargestWinSmallDot.profileLargestWinSmallDot.profileLargestWinSmallDot {
+  position: absolute;
+  top: -0.25rem;
+  right: -1rem;
+}
+
+.cashbackTabWrapper.cashbackTabWrapper {
+  padding: 3.5rem 3.75rem;
+  background-color: var(--black);
+  border-radius: 3.75rem;
+
+  @media screen and (width < $sm) {
+    gap: 3rem;
+  }
+}
+
+.cashBackTabVerticalSeparator.cashBackTabVerticalSeparator {
+  width: 2px;
+  height: 6rem;
+  background-color: var(--gray-5);
+
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.cashBackSecondaryItemsContainer {
+  gap: 10rem;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+    padding: 0 2rem;
+    gap: 3.75rem;
+  }
+}
+
+.cashBackClaimBtn.cashBackClaimBtn.cashBackClaimBtn {
+  min-height: 7.5rem;
+  max-width: 25rem;
+  width: 100%;
+  background-color: var(--c-a-lazur);
+
+  @media screen and (width < $sm) {
+    min-width: 100%;
+  }
+}
+
+.paymentsWillStartText {
+  color: var(--c-a-lazur);
+  opacity: 0.7;
+}
+
+.timerTimeText {
+  color: var(--c-a-lazur);
+}
+
+.roundProgressBar {
+  z-index: 1;
+}
+
+.timeframeCountdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: stroke-dashoffset 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 3px solid var(--c-black);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.cashBackSecondaryItem.cashBackSecondaryItem {
+  @media screen and (width < $sm) {
+    min-width: 10rem;
+  }
+}
+
+.profileAvatarWrapper {
+  border-radius: 6.25rem;
+  padding: 3.75rem;
+  gap: 1.25rem;
+  background-color: var(--c-black);
+
+  @media screen and (width < $sm) {
+    gap: 3rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@each $level, $colors in mixins.$levels {
+  .profileAvatar-#{$level} {
+    &::before {
+      @if length($colors) == 3 {
+        @include mixins.avatar-shadow-gradient(
+          nth($colors, 1),
+          nth($colors, 2),
+          nth($colors, 3)
+        );
+      } @else {
+        @include mixins.avatar-shadow-gradient(
+          nth($colors, 1),
+          nth($colors, 2)
+        );
+      }
+    }
+  }
+}
+
+.profileAvatarLevelIcon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20%;
+  border-radius: 1.5rem;
+  background: var(--c-solid-black);
+  padding: 1.25rem;
+  width: 8rem;
+  height: 8rem;
+  z-index: 3;
+}
+
+.cashbackTransactionHashLink.cashbackTransactionHashLink {
+  color: var(--c-a-lazur);
+}
+
+.cashBackTransactionItem.cashBackTransactionItem {
+  border: 1px solid var(--c-a-lazur);
+  padding: 2rem;
+  border-radius: 8rem;
+
+  @media screen and (width < $sm) {
+    border-radius: 4rem;
+  }
+}

@@ -1,0 +1,204 @@
+@import '/src/shared/styles/breakpoints';
+
+.tableRoot.tableRoot.tableRoot.tableRoot {
+  width: 100%;
+  position: relative;
+  height: 57rem;
+
+  & > :global(.rt-ScrollAreaRoot > .rt-ScrollAreaViewport > *) {
+    width: 0;
+  }
+
+  @media screen and (width < $sm) {
+    height: fit-content;
+  }
+}
+
+.tableHeaderClassname {
+  position: sticky;
+  top: 0;
+  background: var(--color-panel);
+  z-index: 10;
+}
+
+.tableHeaderCell.tableHeaderCell {
+  width: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--gray);
+  padding-left: 0;
+  text-wrap: nowrap;
+}
+
+.shadowBlock.shadowBlock.shadowBlock {
+  position: absolute;
+  right: -0.25rem;
+  top: 0;
+  height: 100%;
+  width: 7rem;
+  background: linear-gradient(270deg, #201e27 0%, rgba(32, 30, 39, 0%) 100%);
+
+  @media screen and (width > $sm) {
+    display: none;
+  }
+}
+
+.tableBodyCell.tableBodyCell {
+  box-shadow: none;
+  padding-left: 0;
+  height: 10rem;
+
+  @media screen and (width < $sm) {
+    height: 6rem;
+  }
+}
+
+.tableBodyCell.tableBodyCell:last-child {
+  width: 12rem;
+  padding-left: 0;
+  height: 10rem;
+
+  @media screen and (width < $sm) {
+    height: 6rem;
+  }
+}
+
+.tableBodyRowClassname.tableBodyRowClassname:last-child > .tableBodyCell {
+  box-shadow: none;
+
+  @media screen and (width < $sm) {
+    padding-bottom: 2.25rem;
+  }
+}
+
+.tableItemAssetShortName {
+  color: var(--c-white-alpha-2);
+}
+
+.tableItemDirectionWrapper {
+  padding: 0.7rem 1.1rem;
+  border-radius: 1.2rem;
+  background-color: var(--c-black);
+}
+
+.tableItemUserName {
+  color: var(--c-white);
+}
+
+.emptyTableContainer.emptyTableContainer {
+  height: 55rem;
+}
+
+.emptyTableText.emptyTableText {
+  color: var(--gray);
+  text-align: center;
+}
+
+.actionButton.actionButton.actionButton {
+  width: 3rem;
+  height: 3rem;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.actionWrap.actionWrap.actionWrap {
+  margin: 0 auto;
+}
+
+.actionButtonWide.actionButtonWide.actionButtonWide {
+  width: auto;
+  height: 4rem;
+}
+
+.tableItemCreatedDateText.tableItemCreatedDateText {
+  @media screen and (width < $sm) {
+    min-width: 10rem;
+  }
+}
+
+.explorerLinkWrapper.explorerLinkWrapper.explorerLinkWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.explorerLink.explorerLink.explorerLink {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 1rem;
+  color: var(--c-gray-40);
+  padding: 1rem 2.25rem;
+  border-radius: 3.75rem;
+  background-color: var(--black);
+  text-decoration: none;
+}
+
+.tableItemCountdown {
+  @media screen and (width < $sm) {
+    min-width: 10rem;
+    text-wrap: nowrap;
+  }
+}
+
+.tableItemMode {
+  @media screen and (width < $sm) {
+    min-width: 17rem;
+  }
+}
+
+.tableItemTarget {
+  @media screen and (width < $sm) {
+    min-width: 20rem;
+  }
+}
+
+.tableItemAsset {
+  @media screen and (width < $sm) {
+    min-width: 14rem;
+  }
+}
+
+.tableItemCreatedAt {
+  @media screen and (width < $sm) {
+    min-width: 14rem;
+  }
+}
+
+.tableItemAnyText {
+  white-space: nowrap;
+
+  @media screen and (width < $sm) {
+    max-width: 14rem;
+    width: 100%;
+  }
+}
+
+.detailsCell.detailsCell.detailsCell {
+  padding-bottom: 0;
+  width: 15rem;
+  box-shadow: none;
+}
+
+.detailsCellContainer.detailsCellContainer.detailsCellContainer {
+  width: max-content;
+}
+
+.conditionResultItemWrapper.conditionResultItemWrapper {
+  padding: 0.75rem 1rem;
+  border-radius: 1.25rem;
+  background-color: var(--c-black);
+}
+
+.gameIdItemContainer.gameIdItemContainer.gameIdItemContainer {
+  background-color: var(--black);
+  padding: 1rem 2rem;
+  width: fit-content;
+  border-radius: 5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.gameIdItemContainer.gameIdItemContainer:active {
+  opacity: 0.5;
+}

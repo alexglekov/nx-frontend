@@ -1,0 +1,34 @@
+.collapsibleContent {
+  overflow: hidden;
+  will-change: height;
+
+  &[data-state='open'] {
+    animation: slide-down 150ms linear;
+  }
+
+  &[data-state='closed'] {
+    animation: slide-up 150ms linear;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    height: 0;
+    transform: scaleY(0);
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+    transform: scaleY(1);
+  }
+  to {
+    height: 0;
+    transform: scaleY(0);
+  }
+}

@@ -1,0 +1,58 @@
+@import '/src/shared/styles/breakpoints';
+
+.modeHeaderWrapper.modeHeaderWrapper.modeHeaderWrapper {
+  background-color: var(--gray-4);
+  padding: 2rem 3rem;
+  border-radius: 3rem;
+}
+
+.contractAddressBlock {
+  min-width: 0;
+}
+
+.contractAddressLink {
+  text-decoration: none;
+  color: var(--white);
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.modePickerDropdownTrigger.modePickerDropdownTrigger.modePickerDropdownTrigger {
+  border-radius: 2.5rem;
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+.dropDownContentWrapper.dropDownContentWrapper.dropDownContentWrapper {
+  min-width: 40.5rem;
+  background-color: var(--gray-4);
+}
+
+:global(.rt-DropdownMenuContent.rt-DropdownMenuContent) {
+  border-radius: 3rem;
+}
+
+.dropDownItemWrapper {
+  padding: 1rem 3rem;
+  border-bottom: 1px solid var(--black);
+}
+
+.dropDownItemWrapper:hover {
+  background-color: var(--gray-5);
+  border-radius: 2.5rem;
+  cursor: pointer;
+}
+
+.dropDownItemWrapper:last-child {
+  border: none;
+}
+
+.triangleIconRotated.triangleIconRotated.triangleIconRotated {
+  transform: rotate(180deg);
+}
+
+.successIcon {
+  min-width: 3.5rem;
+}

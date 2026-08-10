@@ -1,0 +1,30 @@
+@import '/src/shared/styles/breakpoints';
+
+.graphWrapper {
+  border-radius: 5rem;
+  padding: 3rem;
+  width: 100%;
+  background-color: var(--gray-4);
+}
+
+.topBetsWrapper {
+  background-color: var(--gray-4);
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+
+.upDownGameWrapperSkeleton.upDownGameWrapperSkeleton.upDownGameWrapperSkeleton {
+  @media screen and (width < $sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.upDownPoolSkeleton.upDownPoolSkeleton.upDownPoolSkeleton {
+  border-radius: 4rem;
+  background-color: var(--gray-4);
+  padding: 0 1rem;
+
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}

@@ -1,0 +1,10 @@
+@import '/src/shared/styles/breakpoints';
+
+.dialogContainer.dialogContainer.dialogContainer {
+  max-width: 75rem;
+
+  @media screen and (width < $sm) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

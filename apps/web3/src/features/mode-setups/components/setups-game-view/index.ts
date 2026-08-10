@@ -1,0 +1,1 @@
+export { SetupsGameView } from './setups-game-view'

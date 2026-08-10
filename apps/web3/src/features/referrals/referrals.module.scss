@@ -1,0 +1,77 @@
+@import '/src/shared/styles/breakpoints';
+
+.referralCardWrapper.referralCardWrapper.referralCardWrapper {
+  background-color: var(--gray-3);
+  border-radius: 5rem;
+  padding: 4rem;
+  overflow: hidden;
+}
+
+.referralCardDescriptionText {
+  opacity: 0.7;
+  max-width: 65rem;
+}
+
+.referralsCardBanner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @media screen and (width < $sm) {
+    opacity: 0.3;
+    width: 75%;
+  }
+}
+
+.referralsCardWithdrawContainer.referralsCardWithdrawContainer {
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+}
+
+.referralWithdrawButton.referralWithdrawButton.referralWithdrawButton {
+  height: 5.5rem;
+  max-width: 35rem;
+
+  color: var(--black);
+}
+
+.referralWithdrawButtonText.referralWithdrawButtonText.referralWithdrawButtonText {
+  color: var(--c-gray-60);
+  font-size: 1.3rem;
+}
+
+.tableWrapper.tableWrapper {
+  & > :global(.rt-CardInner) {
+    @media screen and (width < $sm) {
+      padding: 2.5rem;
+    }
+  }
+}
+
+.tableInfoContainer.tableInfoContainer.tableInfoContainer {
+  @media screen and (width < $sm) {
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.tableTitle.tableTitle {
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.conditionResultItemWrapper.conditionResultItemWrapper {
+  padding: 0.75rem 1rem;
+  border-radius: 1.25rem;
+  background-color: var(--c-black);
+}
+
+.adressTableItem.adressTableItem.adressTableItem {
+  width: 10rem;
+
+  @media screen and (width < $sm) {
+    width: initial;
+  }
+}

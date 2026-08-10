@@ -1,0 +1,36 @@
+@import '/src/shared/styles/breakpoints';
+
+.cyanContainer.cyanContainer {
+  border-radius: 1.5rem;
+  background-color: color-mix(in srgb, var(--cyan) 10%, transparent);
+
+  @media screen and (max-width: $sm) {
+    background-color: transparent;
+  }
+}
+
+.yellowContainer.yellowContainer {
+  border-radius: 1.5rem;
+  background-color: color-mix(in srgb, var(--yellow) 10%, transparent);
+}
+
+.cyanContainerText.cyanContainerText {
+  color: var(--cyan);
+  max-width: 20rem;
+}
+
+.cyanContainerTextSecondary.cyanContainerTextSecondary {
+  color: var(--cyan);
+  max-width: 20rem;
+  opacity: 0.5;
+}
+
+.cyanContainerWarningText.cyanContainerWarningText {
+  color: var(--c-a-lazur);
+  max-width: 15rem;
+}
+
+.yellowContainerText.yellowContainerText {
+  color: var(--c-a-yellow);
+  max-width: 15rem;
+}

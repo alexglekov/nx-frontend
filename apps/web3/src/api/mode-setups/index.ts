@@ -1,0 +1,11 @@
+export * from './fragment-setups-predicts'
+export * from './fragment-setups-predict-shallow'
+export * from './fragment-setups-game-pool'
+export * from './fragment-setups-game'
+export * from './fragment-setups-game-owner'
+
+export * from './get-setups-game-predicts'
+export * from './get-setups-user-games'
+export * from './get-setups-games'
+export * from './get-setups-game'
+export * from './get-setups-user-predicts'

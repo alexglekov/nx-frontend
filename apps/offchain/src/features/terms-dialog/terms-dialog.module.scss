@@ -1,0 +1,21 @@
+.termsDialogTabs {
+  background-color: var(--color-panel);
+  border-radius: var(--b-radius-2);
+
+  & :global(.rt-TabsTrigger)::before {
+    display: none;
+  }
+
+  & :global(.rt-TabsList) {
+    padding-bottom: 1rem;
+  }
+}
+
+.termsDialogContent:global(.rt-DialogContent) {
+  max-width: 100rem;
+}
+
+.termsDialogScrollArea {
+  max-height: 80rem;
+  overflow-y: visible;
+}

@@ -1,0 +1,150 @@
+@mixin avatar-border-gradient($firstColor, $secondColor, $thirdColor: null) {
+  @if $thirdColor != null {
+    background: linear-gradient(
+        to top,
+        $firstColor 0%,
+        $secondColor 49%,
+        $secondColor 50%,
+        $secondColor 51%,
+        $thirdColor 100%
+      )
+      border-box;
+  } @else {
+    background: linear-gradient(to top, $firstColor 0%, $secondColor 100%)
+      border-box;
+  }
+}
+
+@mixin avatar-shadow-gradient($firstColor, $secondColor, $thirdColor: null) {
+  content: '';
+  position: absolute;
+  filter: blur(10px);
+  inset: -1rem;
+  border-radius: 50%;
+
+  @if $thirdColor != null {
+    background: linear-gradient(
+      to top,
+      $firstColor 0%,
+      $secondColor 49%,
+      $secondColor 50%,
+      $secondColor 51%,
+      $thirdColor 100%
+    );
+  } @else {
+    background: linear-gradient(to top, $firstColor 0%, $secondColor 100%);
+  }
+}
+
+$levels: (
+  0: (
+    #5a5a5a,
+    #c0c0c0
+  ),
+  1: (
+    #5a5a5a,
+    #c0c0c0
+  ),
+  2: (
+    #5a5a5a,
+    #c0c0c0
+  ),
+  3: (
+    #76879c,
+    #f1f5fb
+  ),
+  4: (
+    #76879c,
+    #f1f5fb
+  ),
+  5: (
+    #f5b928,
+    #fef1b3
+  ),
+  6: (
+    #f5b928,
+    #fef1b3
+  ),
+  7: (
+    #f68625,
+    #facf88
+  ),
+  8: (
+    #f68625,
+    #facf88
+  ),
+  9: (
+    #0aa161,
+    #baf9df
+  ),
+  10: (
+    #0aa161,
+    #baf9df
+  ),
+  11: (
+    #02fdf4,
+    #c7f8fb
+  ),
+  12: (
+    #02fdf4,
+    #c7f8fb
+  ),
+  13: (
+    #3e77cd,
+    #dbe3ff
+  ),
+  14: (
+    #3e77cd,
+    #dbe3ff
+  ),
+  15: (
+    #3020ff,
+    #a545ff
+  ),
+  16: (
+    #3020ff,
+    #a545ff
+  ),
+  17: (
+    #a21bcc,
+    #fddeff
+  ),
+  18: (
+    #a21bcc,
+    #fddeff
+  ),
+  19: (
+    #e31a64,
+    #ffc7fc
+  ),
+  20: (
+    #df2403,
+    #f3d96c,
+    #eb3234
+  ),
+  21: (
+    #df2403,
+    #f3d96c,
+    #eb3234
+  ),
+  22: (
+    #df2403,
+    #f3d96c,
+    #eb3234
+  ),
+  23: (
+    #df2403,
+    #f3d96c,
+    #eb3234
+  ),
+  24: (
+    #df2403,
+    #f3d96c,
+    #eb3234
+  ),
+  25: (
+    #df2403,
+    #f3d96c,
+    #eb3234
+  )
+);

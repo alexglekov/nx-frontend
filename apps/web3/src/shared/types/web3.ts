@@ -1,0 +1,1 @@
+export type Web3Adress = `0x${string}`

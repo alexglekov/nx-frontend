@@ -1,0 +1,20 @@
+.typeSwitcherWrapper {
+  background-color: var(--c-black);
+  border-radius: 12.5rem;
+}
+
+.typeSwitcherSection.typeSwitcherSection.typeSwitcherSection {
+  background-color: transparent;
+  color: var(--gray-6);
+}
+
+.typeSwitcherActiveSection.typeSwitcherActiveSection.typeSwitcherActiveSection {
+  &:global(.rt-Button) {
+    background-color: var(--c-a-snow);
+    color: var(--c-black);
+  }
+}
+
+.betsAmountMark {
+  color: var(--gray-6);
+}

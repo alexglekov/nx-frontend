@@ -1,0 +1,333 @@
+@import '/src/shared/styles/breakpoints';
+
+.currentLevel.currentLevel {
+  background-color: #0C0B0F;
+  padding: 2rem;
+  border-radius: 3rem;
+  position: relative;
+}
+
+.claimRevShareButton.claimRevShareButton {
+  background-color: var(--pink);
+  height: 7.5rem;
+  width: 100%
+}
+
+.levelStats.levelStats {
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  border: 2px solid var(--pink);
+  background-color: var(--c-gray-90);
+  border-radius: 4rem;
+  width: 45rem;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.cardInfo.cardInfo {
+  border-radius: 3.75rem;
+  background-color: var(--c-gray-90);
+  padding: 4rem;
+  height: 50%;
+  overflow: hidden;
+}
+
+.cardInfoImage.cardInfoImage {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+
+  @media screen and (width < $sm) {
+    width: 13.75rem;
+    height: 13rem;
+    bottom: -2rem;
+    right: -2rem;
+  }
+}
+
+.dialogContent.dialogContent.dialogContent {
+  box-sizing: border-box;
+  max-width: 51rem;
+  padding: 4rem;
+  border-radius: 5rem;
+  border: 0.5rem solid var(--pink);
+  background-color: var(--gray-4);
+
+  @media (width < $sm) {
+    max-width: 100vw;
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    min-height: 0;
+    height: 65rem;
+  }
+}
+
+.referralLevelsDialog.referralLevelsDialog.referralLevelsDialog {
+  box-sizing: border-box;
+  max-width: 97.75rem;
+  width: 100%;
+  padding: 5rem 4rem 4rem 4rem;
+  border-radius: 5.25rem;
+  border: 0.5rem solid var(--pink);
+  background-color: var(--c-gray-90);
+
+  @media screen and (width < $sm) {
+    width: 100%;
+    min-height: 0;
+    height: 80vh;
+  }
+}
+
+.copyIcon.copyIcon {
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.pencilIcon.pencilIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  @media screen and (width < $sm) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.referralAboutLink.referralAboutLink {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.changeRefferalCodeTextField.changeRefferalCodeTextField {
+  background-color: var(--gray-2);
+  height: 56px;
+}
+
+.buttonsContainer.buttonsContainer {
+  margin-top: 12rem;
+}
+
+.submitBtn.submitBtn {
+  width: 100%;
+  height: 7.5rem;
+
+  &:disabled {
+    .submitBtnText {
+      color: var(--black);
+      opacity: 0.3;
+    }
+  }
+}
+
+.cancelBtn.cancelBtn {
+  height: 7.5rem;
+  background-color: transparent;
+}
+
+.inviteFriendsWrapper.inviteFriendsWrapper {
+  flex: 1;
+  background-color: var(--c-gray-90);
+  border-radius: 4rem;
+  padding: 4rem;
+  height: 43rem;
+}
+
+.inviteFriendsTitle.inviteFriendsTitle {
+  max-width: 22rem;
+  line-height: 110%;
+
+  @media screen and (width < $sm) {
+    max-width: 100%;
+  }
+}
+
+.shareCodeText.shareCodeText {
+  opacity: 0.7;
+  line-height: 2.5rem;
+}
+
+.referralCodeContainer.referralCodeContainer {
+  border-radius: 2rem;
+  background-color: #0A090D;
+  padding: 2rem 3rem;
+}
+
+.referralCodeText.referralCodeText {
+  color: var(--c-gray-40);
+}
+
+.inviteLinkExampleText.inviteLinkExampleText {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.invitesStatTitle.invitesStatTitle {
+  color: var(--c-gray-20);
+}
+
+.cardsInfo.cardsInfo {
+  flex: 1;
+  height: 43rem;
+}
+
+.cardInfoText.cardInfoText {
+  max-width: 36rem;
+
+  @media screen and (width < $sm) {
+    max-width: 100%;
+  }
+}
+
+.tournamentStatistics.tournamentStatistics {
+  border-radius: 3.75rem;
+  padding: 3rem;
+  background-color: #201E27;
+}
+
+.statsBlock.statsBlock {
+  flex: 1;
+  padding: 3rem;
+  border-radius: 3.5rem;
+  background-color: #0C0B0F;
+}
+
+.separator.separator {
+  width: 100%;
+}
+
+.tableWrapper.tableWrapper {
+  & > :global(.rt-CardInner) {
+    @media screen and (width < $sm) {
+      padding: 2.5rem;
+    }
+  }
+}
+
+.tableInfoContainer.tableInfoContainer.tableInfoContainer {
+  @media screen and (width < $sm) {
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.tableTitle.tableTitle {
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.leaderBoard.leaderBoard.leaderBoard {
+  :global(.rt-TableRootTable) {
+    --table-row-border-bottom: none;
+  }
+}
+
+.showMoreBtn.showMoreBtn {
+  width: fit-content;
+
+  &:hover {
+    background: none;
+  }
+}
+
+.cardInfoActionBtn.cardInfoActionBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.leaderCards.leaderCards {
+  background-color: var(--c-gray-90);
+  border-radius: 4rem;
+  padding: 5rem 6.25rem 6.25rem 6.25rem;
+}
+
+.leaderCard.leaderCard {
+  border-radius: 5rem;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #0C0B0F;
+  padding: 4rem;
+  overflow: hidden;
+  width: 100%;
+
+  &--1 {
+    min-height: 43.375rem;
+    box-shadow: 0px 0px 3rem 0px var(--pink) inset;
+    border-color: var(--pink);
+  }
+
+  &--2 {
+    min-height: 33.25rem;
+    box-shadow: 0px 0px 3rem 0px #40EFED inset;
+    border-color: #40EFED;
+
+    @media screen and (width < $sm) {
+      order: 1;
+    }
+  }
+
+  &--3 {
+    min-height: 27.625rem;
+    box-shadow: 0px 0px 3rem 0px #7B77FF inset;
+    border-color: #7B77FF;
+
+    @media screen and (width < $sm) {
+      order: 2;
+    }
+  }
+}
+
+.leaderInfo.leaderInfo {
+  overflow: hidden;
+}
+
+.seasonText.seasonText {
+  color: #9CB0F8;
+}
+
+.referralCupImage.referralCupImage {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 23.75rem;
+  height: 23.75rem;
+}
+
+.topLevelIcon.topLevelIcon {
+  min-width: 10rem;
+  min-height: 10rem;
+
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.leaderCardShadow.leaderCardShadow {
+  width: 40.875rem;
+  height: 14.125rem;
+  transform: rotate(-9.685deg);
+  position: absolute;
+  right: -30rem;
+  bottom: -10rem;
+  border-radius: 41rem;
+  filter: blur(4rem);
+
+  &--1 {
+    background-color: var(--pink);
+  }
+
+  &--2 {
+    background-color: #40EFED;
+  }
+
+  &--3 {
+    background-color: #7B77FF;
+  }
+}

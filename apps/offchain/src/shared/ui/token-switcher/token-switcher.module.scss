@@ -1,0 +1,53 @@
+.element {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2.5rem;
+
+  &--disabled {
+    cursor: not-allowed;
+  }
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 4rem;
+  height: 2.5rem;
+  padding-left: 0.4rem;
+  background-color: var(--cyan);
+  border-radius: 1.5rem;
+  transition: background-color 300ms;
+}
+
+.blockChecked {
+  background-color: var(--c-a-yellow);
+}
+
+.switcher {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--c-black);
+  filter: drop-shadow(0 1px 2px rgba(16, 24, 40, 6%))
+    drop-shadow(0 1px 3px rgba(16, 24, 40, 10%));
+  border-radius: 50%;
+  transition: transform 300ms;
+}
+
+.switcherChecked {
+  transform: translateX(1.5rem);
+}
+
+.tokenUnchecked {
+  opacity: 0.3;
+}

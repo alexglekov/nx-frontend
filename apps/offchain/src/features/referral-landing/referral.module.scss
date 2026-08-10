@@ -1,0 +1,186 @@
+@import '/src/shared/styles/breakpoints';
+
+.introTitle.introTitle {
+  max-width: 63.25rem;
+  font-size: 5.25rem;
+}
+
+.introTitleGradient.introTitleGradient {
+  background: linear-gradient(90deg, #FF68F0 12.5%, #8247E5 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introDescription.introDescription {
+  max-width: 36.25rem;
+}
+
+.introImage.introImage {
+  position: absolute;
+  right: 20rem;
+  top: 0;
+
+  @media screen and (width < $sm) {
+    position: initial;
+    object-fit: cover;
+    width: 80%;
+  }
+}
+
+.descriptionBlock {
+  margin-top: 19.25rem;
+
+  @media screen and (width < $sm) {
+    margin-top: 4rem;
+    gap: 5rem;
+    flex-direction: column;
+  }
+}
+
+.descriptionTextWrapper.descriptionTextWrapper {
+  max-width: 73.75rem;
+
+  @media screen and (width < $sm) {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+.descriptionText.descriptionText {
+  color: var(--sky-9);
+}
+
+.linkWrapper.linkWrapper {
+  text-decoration: none;
+  width: fit-content;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.buttonWrapperOutline.buttonWrapperOutline {
+  position: relative;
+  margin-top: 2.5rem;
+  width: fit-content;
+  background: linear-gradient(90deg, rgba(213, 95, 255, 0.5) 0%, rgba(114, 54, 255, 0.5) 52.59%, rgba(0, 127, 255, 0.5) 100%);
+  border-radius: 12.5rem;
+  padding: 1rem;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.launchLink.launchLink {
+  border-radius: 12.5rem;
+  padding: 2.25rem 3rem;
+  width: 27.5rem;
+  background: linear-gradient(90deg, #D55FFF 0%, #7236FF 52.59%, #007FFF 100%);
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+// Season rewards
+
+.seasonRewardsWrapper.seasonRewardsWrapper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10rem;
+  padding: 9.25rem 6.25rem;
+  border-radius: 4rem;
+  background: linear-gradient(180deg, #1D192A 0%, rgba(23, 21, 32, 0.00) 100%);
+  gap: 6.25rem;
+}
+
+.seasonRewardsTitleGradient.seasonRewardsTitleGradient {
+  background: linear-gradient(90deg, #81DEED 9.43%, #9CB0F8 35.79%, #9CB0F8 52.65%, #FF62F2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.seasonRewardsTitleText.seasonRewardsTitleText {
+  font-size: 5.25rem;
+
+  @media screen and (width < $sm) {
+    text-align: center;
+  }
+}
+
+.seasonRewardsDescriptionText {
+  max-width: 65.5rem;
+  text-align: center;
+}
+
+.levelCard.levelCard {
+  padding: 2.5rem 4rem;
+  border-radius: 3.75rem;
+  height: 32.5rem;
+  background-position: top right;
+  background-repeat: no-repeat;
+
+  &--1 {
+    background-color: #99BBFF;
+    background-image: url('/src/shared/images/referral-page/first-level.png')
+  }
+
+  &--2 {
+    background-color: #80E0EC;
+    background-image: url('/src/shared/images/referral-page/second-level.png')
+  }
+
+  @media screen and (width < $sm) {
+    background-size: 50%;
+  }
+}
+
+.levelTitle.levelTitle {
+  font-size: 11rem;
+}
+
+.bannerCTA.bannerCTA {
+  margin-top: 5rem;
+  height: 54rem;
+  border-radius: 4rem;
+  background-image: url('/src/shared/images/referral-page/banner-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.seasonRewardsShadow.seasonRewardsShadow {
+  position: absolute;
+  width: 31rem;
+  height: 31rem;
+  border-radius: 50%;
+  filter: blur(10rem);
+}
+
+.seasonRewardsShadowFirst {
+  top: -15.5rem;
+  left: -15.5rem;
+  background-color: #726EEB;
+}
+
+.seasonRewardsShadowSecond {
+  top: -15.5rem;
+  right: -15.5rem;
+  background-color: #F650EE;
+}
+
+.howItWork.howItWork {
+  border-radius: 4rem;
+  background-color: #181520;
+  padding: 6.25rem;
+}
+
+.howItWorkTitle.howItWorkTitle {
+  max-width: 48.75rem;
+}
+
+.howItWorkDescription.howItWorkDescription {
+  max-width: 41.875rem;
+}

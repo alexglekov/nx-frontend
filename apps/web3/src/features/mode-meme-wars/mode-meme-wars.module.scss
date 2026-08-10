@@ -1,0 +1,319 @@
+@import '/src/shared/styles/breakpoints';
+
+.wrapper {
+  gap: 0.5rem;
+}
+
+.tableWrapper.tableWrapper {
+  width: 100%;
+
+  & > :global(.rt-CardInner) {
+    @media screen and (width < $sm) {
+      padding: 2.5rem;
+    }
+  }
+}
+
+.memeWarsFormWrapper.memeWarsFormWrapper.memeWarsFormWrapper {
+  min-height: 92.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-4);
+  border-radius: 5rem;
+  padding: 3rem;
+}
+
+.assetSelectTrigger.assetSelectTrigger.assetSelectTrigger {
+  width: 100%;
+  min-width: 30rem;
+  background-color: var(--black);
+  min-height: 7rem;
+  border-radius: 1.75rem;
+  box-shadow: none;
+  padding-left: 8rem;
+  cursor: pointer;
+
+  & > :global(.rt-SelectTriggerInner) {
+    color: var(--gray-9);
+  }
+
+  @media screen and (width < $sm) {
+    min-height: 8.5rem;
+  }
+}
+
+.assetSelectTriggerFull.assetSelectTriggerFull.assetSelectTriggerFull {
+  padding-left: 1rem;
+}
+
+.assetSelectTrigger.assetSelectTrigger.assetSelectTrigger > span {
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.selectTriggerNewIcon.selectTriggerNewIcon {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.assetSelectContent.assetSelectContent.assetSelectContent {
+  background-color: var(--black);
+  margin-top: 6.5rem;
+  width: 100%;
+  padding-left: -2rem;
+  padding: 1rem;
+  border-radius: 3rem;
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--gray-4), var(--gray-6) 25%),
+    0 12px 60px var(--black-a5),
+    0 12px 32px -16px var(--black-a7);
+
+  :global(.rt-SelectItemIndicator) {
+    display: none;
+  }
+}
+
+.assetSelectItem.assetSelectItem.assetSelectItem {
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.memeWarsAmountButton.memeWarsAmountButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 100%;
+  background-color: var(--gray-5);
+  border-radius: 1rem;
+  cursor: pointer;
+
+  @media screen and (width < $sm) {
+    height: 6.5rem;
+  }
+}
+
+.memeWarsAmountButtonSelected.memeWarsAmountButtonSelected {
+  background-color: var(--green);
+  transition: 0.3s;
+}
+
+.payoutContainer.payoutContainer.payoutContainer {
+  background-color: var(--gray-5);
+  border-radius: 1rem;
+  max-width: 7rem;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+}
+
+.payoutContainerText.payoutContainerText {
+  color: #ff8d3a;
+}
+
+.predictSubmitButton {
+  height: 7rem;
+  width: 100%;
+  border-radius: 4rem;
+  background-color: var(--c-a-lazur);
+
+  @media screen and (width < $sm) {
+    height: 8.5rem;
+  }
+}
+
+.memeWarsPlayersListScrollArea.memeWarsPlayersListScrollArea.memeWarsPlayersListScrollArea {
+  height: 100%;
+  width: 100%;
+  max-height: 20.5rem;
+
+  & > :global(.rt-ScrollAreaScrollbar.rt-ScrollAreaScrollbar) {
+    opacity: 0.3;
+    transition: opacity 0.2s ease-in-out;
+    left: -2rem;
+  }
+
+  @media screen and (max-width < 768px) {
+    transform: translateX(-1rem);
+  }
+}
+
+.memeWarsGameArea.memeWarsGameArea.memeWarsGameArea {
+  @media screen and (width < $sm) {
+    background-color: var(--gray-4);
+    border-radius: 4rem;
+  }
+}
+
+.memeWarsFormMyPredictItem.memeWarsFormMyPredictItem {
+  background-color: var(--black);
+  border-radius: 2rem;
+}
+
+.winnerModalWrapper.winnerModalWrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  border-radius: 5rem;
+  background: var(--color-overlay);
+  top: 0;
+  left: 0;
+}
+
+.winnerModalContentWrapper.winnerModalContentWrapper {
+  border-radius: 2.5rem;
+  border: 3px solid var(--gray-4);
+  padding: 4.75rem 3rem;
+  background-color: var(--black);
+}
+
+.totalGamePoolContainer.totalGamePoolContainer {
+  background-color: var(--gray-3);
+  padding: 2rem 2.5rem;
+  width: 100%;
+  border-radius: 2.75rem;
+}
+
+.playerPredictsContainer.playerPredictsContainer {
+  background-color: var(--c-black-alpha-2);
+  border-radius: 2.75rem;
+  padding: 1rem;
+}
+
+.calloutWrapper.calloutWrapper {
+  border-radius: 1.5rem;
+  background-color: color-mix(in srgb, var(--cyan) 10%, transparent);
+
+  @media screen and (max-width: $sm) {
+    background-color: transparent;
+  }
+}
+
+.calloutText.calloutText {
+  color: var(--cyan);
+  max-width: 20rem;
+  opacity: 0.7;
+}
+
+.gameDetailsItem.gameDetailsItem {
+  background-color: var(--gray-2);
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.gameDetailsItemDiffContainer.gameDetailsItemDiffContainer {
+  background-color: var(--gray-4);
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+}
+
+.memeWarsAssetInfo.memeWarsAssetInfo {
+  min-height: 12.25rem;
+  padding: 1rem 1.5rem;
+  border-radius: 2.5rem;
+  background-color: var(--c-gray-100);
+}
+
+.assetPriceDiff.assetPriceDiff {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--c-gray-80);
+}
+
+.priceDiffText.priceDiffText {
+  color: var(--c-white);
+}
+
+.priceDiffTextPositive.priceDiffTextPositive {
+  color: var(--c-a-lime);
+}
+
+.priceDiffTextNegative.priceDiffTextNegative {
+  color: var(--c-a-red);
+}
+
+.memeWarsAssetInfoList.memeWarsAssetInfoList {
+  margin-bottom: 3rem;
+
+  @media screen and (width < $sm) {
+    margin-bottom: 0;
+    padding: 2.5rem 2rem 1.5rem;
+  }
+}
+
+.memeWarsGraph.memeWarsGraph {
+  padding: 0;
+
+  @media screen and (width >= $sm) {
+    padding: 3rem;
+    background-color: var(--c-gray-90);
+    border-radius: 5.25rem;
+  }
+}
+
+.timerText.timerText {
+  text-wrap: nowrap;
+  z-index: 1;
+}
+
+.timeframeCountdown.timeframeCountdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: stroke-dashoffset 0.3s ease-in-out;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 3px solid var(--c-black);
+  z-index: 1;
+}
+
+.timerCounter.timerCounter {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2.5rem;
+  flex-shrink: 0;
+  min-width: 17rem;
+  min-height: 11rem;
+
+  & .timerBackground {
+    position: absolute;
+    z-index: 0;
+  }
+
+  @container up-down-mode (width <= 768px) {
+    padding: 1.5rem;
+    min-width: 13rem;
+    min-height: 9rem;
+  }
+}
+
+.titleText.titleText {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 45rem;
+
+  @media screen and (width < $sm) {
+    margin-top: 2rem;
+    max-width: 100%;
+    width: unset;
+  }
+}
+
+.memeWarsFormHeader.memeWarsFormHeader {
+  padding-top: 2rem;
+  align-self: center;
+
+  @media screen and (width >= $sm) {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,42 @@
+import {
+  ArchonOfTheNetLevelIcon,
+  ArtificialGodLevelIcon,
+  CityEliteLevelIcon,
+  CyberSovereignLevelIcon,
+  CyberWarriorLevelIcon,
+  NewcomerLevelIcon,
+  OperativeLevelIcon,
+  SurvivorLevelIcon,
+  SyndicateLeaderLevelIcon,
+  SystemLordLevelIcon,
+  XYROLegendLevelIcon
+} from 'shared/icons'
+
+export const LEVELS_ICONS_MAP: Record<number, React.ReactNode> = {
+  0: <NewcomerLevelIcon />,
+  1: <NewcomerLevelIcon />,
+  2: <NewcomerLevelIcon />,
+  3: <SurvivorLevelIcon />,
+  4: <SurvivorLevelIcon />,
+  5: <OperativeLevelIcon />,
+  6: <OperativeLevelIcon />,
+  7: <CyberWarriorLevelIcon />,
+  8: <CyberWarriorLevelIcon />,
+  9: <CityEliteLevelIcon />,
+  10: <CityEliteLevelIcon />,
+  11: <SystemLordLevelIcon />,
+  12: <SystemLordLevelIcon />,
+  13: <SyndicateLeaderLevelIcon />,
+  14: <SyndicateLeaderLevelIcon />,
+  15: <CyberSovereignLevelIcon />,
+  16: <CyberSovereignLevelIcon />,
+  17: <ArchonOfTheNetLevelIcon />,
+  18: <ArchonOfTheNetLevelIcon />,
+  19: <ArtificialGodLevelIcon />,
+  20: <XYROLegendLevelIcon />,
+  21: <XYROLegendLevelIcon />,
+  22: <XYROLegendLevelIcon />,
+  23: <XYROLegendLevelIcon />,
+  24: <XYROLegendLevelIcon />,
+  25: <XYROLegendLevelIcon />
+}

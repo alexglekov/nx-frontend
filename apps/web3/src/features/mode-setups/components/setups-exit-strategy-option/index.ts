@@ -1,0 +1,1 @@
+export { SetupsExitStrategyOption } from './exit-strategy-option'

@@ -1,0 +1,57 @@
+.xyroButton.xyroButton.xyroButton {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 0;
+  display: flex;
+  border-radius: 0;
+  align-items: center;
+  background-color: transparent;
+  text-transform: uppercase;
+  transition:
+    filter 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+
+  &.iconOnly {
+    padding: 0;
+    aspect-ratio: 1;
+  }
+
+  &:hover {
+    filter: brightness(1.5);
+    transform: translateY(-2px);
+  }
+
+  &:disabled:hover {
+    filter: brightness(1);
+    transform: none;
+  }
+
+  &:global(.rt-variant-outline) {
+    box-shadow: none;
+  }
+}
+
+.xyroButtonText {
+  z-index: 1;
+  font-weight: 700;
+
+  &.black {
+    color: var(--c-black);
+  }
+  &.white {
+    color: var(--c-white);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.xyroButtonShape {
+  position: absolute;
+  z-index: 0;
+}

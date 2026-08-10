@@ -1,0 +1,11 @@
+export * from './backers'
+export * from './partners'
+
+export { ReactComponent as PlayIcon } from './PlayIcon.svg'
+export { ReactComponent as CoinMarketCap } from './coin-market-cap.svg'
+export { default as XyroBubble } from './xyro-bubble'
+export { ReactComponent as PurplePoint } from './purple-point.svg'
+export { ReactComponent as BluePoint } from './blue-point.svg'
+export { ReactComponent as GreenPoint } from './green-point.svg'
+export { ReactComponent as BlueLightPoint } from './blue-light-point.svg'
+export { ReactComponent as CheckboxIcon } from './checkbox.svg'

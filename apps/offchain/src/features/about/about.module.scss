@@ -1,0 +1,663 @@
+@import '/src/shared/styles/breakpoints';
+
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  background-color: var(--c-black);
+  height: 10rem;
+  z-index: 10;
+}
+
+.launchAppBtn.launchAppBtn {
+  border-radius: 4.75rem;
+  background-color: var(--c-gray-70);
+  padding: 1rem 2rem;
+  transition: opacity 2s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.header {
+  max-width: 161rem;
+  margin: 0 auto;
+
+  @media screen and (width < $lg) {
+    padding: 0 3rem;
+  }
+}
+
+.socialItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 50%;
+  background-color: #484359; // Hardcoded for social items
+
+  @media screen and (width < $sm) {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+.socialItemIcon {
+  width: 50%;
+  height: 50%;
+}
+
+.socialItemFooter {
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color: var(--c-black);
+  border: 1px solid #484359;
+}
+
+.introWrapper {
+  margin-top: 4.5rem;
+  max-width: 113rem;
+  margin-bottom: 6rem;
+}
+
+.introDescriptionBlock {
+  max-width: 76rem;
+}
+
+.launchLinkWrapper {
+  text-decoration: none;
+  width: fit-content;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.launchButtonWrapperOutline {
+  position: relative;
+  margin-top: 2.5rem;
+  width: fit-content;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 255, 112, 20%) 0%,
+    rgba(128, 230, 102, 20%) 21.62%,
+    rgba(180, 104, 255, 20%) 62.17%,
+    rgba(101, 246, 255, 20%) 100%
+  );
+  border-radius: 12.5rem;
+  padding: 1rem;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+
+  &::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      #f4ff70 0%,
+      #80e666 21.62%,
+      #b468ff 62.17%,
+      #65f6ff 100%
+    );
+    transform: translate3d(0, 1rem, 0) scale(0.9);
+    filter: blur(3rem);
+    opacity: 0.5;
+  }
+
+  &::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: transparent;
+  }
+}
+
+.launchButtonWrapper {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #f4ff70 0%,
+    #80e666 21.62%,
+    #b468ff 62.17%,
+    #65f6ff 100%
+  );
+  border-radius: 12.5rem;
+  padding: 0.25rem;
+  z-index: 2;
+}
+
+.launchLink {
+  border-radius: 12.5rem;
+  padding: 2rem 0;
+  width: 40rem;
+  background-color: var(--black);
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.video {
+  margin-bottom: 14rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid var(--c-gray-40);
+  border-radius: 6.25rem;
+  max-width: 112.5rem;
+  max-height: 63.75rem;
+  width: 100%;
+  height: 100%;
+
+  & > video {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (width < $sm) {
+    border-radius: 4rem;
+  }
+}
+
+.videoPlayIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.investors {
+  grid-auto-rows: 1fr;
+}
+
+.investorItem {
+  border: 1px solid transparent;
+  border-radius: 2.5rem;
+  min-width: 31rem;
+  min-height: 16.5rem;
+  background-color: var(--gray-4);
+
+  @media screen and (width < $sm) {
+    min-width: 14rem;
+    min-height: 7.5rem;
+
+    & > svg {
+      transform: scale(0.7);
+    }
+  }
+}
+
+.incubatedBy {
+  margin-top: 13.25rem;
+  width: 100%;
+  height: 44rem;
+  border-radius: 5rem;
+  gap: 16rem;
+  background: linear-gradient(
+    180deg,
+    #002da8 -25.5%,
+    #003fbd 50.59%,
+    #e7f1ff 185.86%
+  );
+
+  @media screen and (width < $lg) {
+    gap: 3rem;
+    margin-top: 8rem;
+  }
+}
+
+.incubatedByText {
+  opacity: 0.6;
+}
+
+.incubatedByIcon {
+  width: 65rem;
+  height: 11.25rem;
+
+  @media screen and (width < $lg) {
+    width: 42rem;
+    height: 7rem;
+  }
+}
+
+.tractionWrapper {
+  position: relative;
+  padding: 5rem 6.25rem 6.25rem;
+  border-radius: 3.75rem;
+  background-color: var(--c-black);
+  border: 1px solid #484359;
+  overflow: hidden;
+  z-index: 1;
+  flex: 1;
+  align-self: stretch;
+
+  @media screen and (width < $lg) {
+    padding: 3.5rem 4rem;
+  }
+}
+
+.tractionShadowFirst {
+  position: absolute;
+  bottom: -28rem;
+  right: -10rem;
+  width: 47.5rem;
+  height: 35rem;
+  filter: blur(13.5rem);
+  transform: rotate(40deg);
+  z-index: -1;
+}
+
+.tractionShadowSecond {
+  position: absolute;
+  bottom: -14rem;
+  right: -21rem;
+  width: 35rem;
+  height: 35rem;
+  filter: blur(13.5rem);
+  transform: rotate(40deg);
+  z-index: -2;
+}
+
+.tractionPrimaryColorGreen {
+  background-color: var(--c-a-green);
+}
+
+.tractionSecondaryColorGreen {
+  background-color: #65a0ff;
+}
+
+.tractionPrimaryColorPurple {
+  background-color: var(--c-a-pink);
+}
+
+.tractionSecondaryColorPurple {
+  background-color: #8668ff;
+}
+
+.tractionTitle {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(98, 92, 119, 30%);
+  margin-bottom: 5rem;
+}
+
+.tractionStats {
+  gap: 5rem 7.5rem;
+
+  @media screen and (width < $lg) {
+    gap: 3.5rem 4rem;
+  }
+}
+
+.tractionItemValue {
+  font-size: 5.25rem;
+
+  @media screen and (width < $lg) {
+    font-size: 3.5rem;
+  }
+}
+
+.tractionLinkText {
+  text-decoration: underline;
+}
+
+.teamCardWrapper {
+  position: relative;
+  height: 64rem;
+  border-radius: 2.5rem;
+  background-color: var(--c-gray-90);
+  padding: 11.25rem 0 0 6.25rem;
+  background-image: url('/src/shared/images/about-page/team-background.png');
+  background-repeat: no-repeat;
+  background-size: 115% 107%;
+  background-position-x: -35rem;
+  background-position-y: -10rem;
+
+  @media screen and (width < $lg) {
+    height: 70rem;
+    padding: 5rem 4.5rem;
+    background-size: 155rem 75rem;
+  }
+}
+
+.teamCardBubble {
+  position: absolute;
+  top: 30%;
+  right: 15%;
+
+  @media screen and (width < $lg) {
+    width: 35%;
+    height: 35%;
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: 35rem;
+  }
+}
+
+.teamCardDescription {
+  font-size: 7rem;
+  max-width: 107rem;
+  line-height: 120%;
+
+  @media screen and (width < $lg) {
+    font-size: 5rem;
+  }
+}
+
+.teamCardDescriptionGradient {
+  background: linear-gradient(90deg, #3ff0ed 0%, #ff68f0 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutCardTitle {
+  font-size: 5rem;
+
+  @media screen and (width < $lg) {
+    font-size: 4rem;
+  }
+}
+
+.aboutCardText {
+  font-size: 2.25rem;
+
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.updatesCard {
+  flex: 1;
+  align-self: stretch;
+  height: 56.5rem;
+  padding: 6.25rem;
+  border-radius: 3.75rem;
+  border: 1px solid #2c2936;
+  background-color: var(--c-black);
+  background-image: url('/src/shared/images/about-page/updates-background.avif');
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (width < $lg) {
+    padding: 5rem 4.5rem;
+    flex: unset;
+    align-self: unset;
+    background-size: 100%;
+    background-position: bottom;
+  }
+}
+
+.progressCard {
+  flex: 1;
+  align-self: stretch;
+  height: 56.5rem;
+  padding: 6.25rem;
+  border-radius: 3.75rem;
+  background-color: var(--c-gray-90);
+
+  @media screen and (width < $lg) {
+    padding: 5rem 4.5rem;
+    gap: 12rem;
+    flex: unset;
+    align-self: unset;
+    height: unset;
+  }
+}
+
+.footerBanner {
+  position: relative;
+  height: 80rem;
+  border-radius: 10rem;
+  background: url('/src/shared/images/about-page/footer-banner.avif') 50% /
+    cover no-repeat;
+  backdrop-filter: blur(10px);
+  overflow-x: hidden;
+
+  @media screen and (width < $lg) {
+    height: 50rem;
+    padding: 0 2rem;
+  }
+}
+
+.footerBannerTitle {
+  max-width: 136rem;
+  font-size: 8.75rem;
+  text-align: center;
+  z-index: 2;
+
+  @media screen and (width < $lg) {
+    font-size: 5rem;
+  }
+}
+
+.footerBannerBlur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 80%;
+  background-color: #1d1a29;
+  filter: blur(12.5rem);
+}
+
+.roadmapBlock {
+  width: 100vw;
+
+  @media screen and (width < $lg) {
+    width: 100%;
+  }
+}
+
+.roadmapWrapper {
+  position: relative;
+  width: 100%;
+  gap: 11rem;
+  margin-bottom: 19rem;
+}
+
+.roadmapLine {
+  position: absolute;
+  height: 0.25rem;
+  width: 100%;
+  left: 0;
+  top: 30.3%;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(198, 195, 209, 10%) 0%,
+    #c6c3d1 49.59%,
+    rgba(198, 195, 209, 10%) 100%
+  );
+
+  @media screen and (width < $lg) {
+    top: 19rem;
+    left: 50%;
+    height: calc(100% - 21rem);
+    width: 0.25rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(198, 195, 209, 10%) 0%,
+      #c6c3d1 49.59%,
+      rgba(198, 195, 209, 10%) 100%
+    );
+    transform: translateX(-18.6rem);
+  }
+}
+
+.roadmapSection {
+  max-width: 33rem;
+
+  @media screen and (width < $lg) {
+    max-width: 100%;
+    width: fit-content;
+  }
+}
+
+.roadmapQuarter {
+  @media screen and (width < $lg) {
+    order: 2;
+  }
+}
+
+.roadmapActions {
+  @media screen and (width < $lg) {
+    padding-left: 6rem;
+  }
+}
+
+.roadmapAction {
+  @media screen and (width < $lg) {
+    max-width: 30rem;
+  }
+}
+
+.roadmapCheckbox {
+  min-width: 3rem;
+  min-height: 3rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--c-gray-80);
+}
+
+.roadmapCheckboxGreen {
+  background-color: var(--c-a-green);
+}
+
+.roadmapCheckboxPurple {
+  background-color: var(--c-a-pink);
+}
+
+.roadmapCheckboxBlue {
+  background-color: var(--c-a-blue);
+}
+
+.aboutPageWrapper {
+  position: relative;
+  max-width: 161rem;
+  margin: 0 auto;
+
+  @media screen and (width < $lg) {
+    padding: 0 2rem;
+  }
+}
+
+.headerBackground {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background: url('/src/shared/images/about-page/header-background.avif');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: -2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60rem;
+    background: linear-gradient(
+      270deg,
+      rgba(6, 9, 8, 0%) 0%,
+      #060908 43.54%,
+      #060908 55.39%,
+      rgba(6, 9, 8, 0%) 100%
+    );
+    z-index: -1;
+  }
+}
+
+.footerBackground {
+  position: absolute;
+  bottom: -2rem;
+  width: 100vw;
+  height: 100%;
+  background: url('/src/shared/images/about-page/footer-background.avif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.backersBlock {
+  gap: 4rem;
+  margin-bottom: 14rem;
+}
+
+.aboutBlockWrapper {
+  gap: 1.5rem;
+  margin-bottom: 26rem;
+
+  @media screen and (width < $lg) {
+    margin-bottom: 18rem;
+  }
+}
+
+.aboutBlockCards {
+  gap: 1.5rem;
+}
+
+.aboutFooter {
+  position: relative;
+  margin-top: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 13.5rem;
+  padding-bottom: 28rem;
+  overflow-y: clip;
+}
+
+.aboutFooterDescription {
+  font-size: 6.25rem;
+  line-height: 128%;
+  max-width: 131rem;
+  text-align: center;
+
+  @media screen and (width < $lg) {
+    font-size: 4rem;
+  }
+}
+
+.aboutFooterDescriptionGradient {
+  background: linear-gradient(
+    90deg,
+    #65f6ff 0%,
+    #b468ff 41.22%,
+    #ff68f0 72.39%,
+    #ffd670 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fadeInSection {
+  will-change: opacity, transform, visibility;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 1600ms ease-out,
+    transform 600ms ease-out,
+    visibility 1600ms ease-out;
+}
+
+.fadeInSectionVisible {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.fadeInSectionTransform {
+  transform: translateY(20vh);
+}

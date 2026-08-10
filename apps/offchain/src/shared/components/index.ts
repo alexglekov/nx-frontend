@@ -1,0 +1,37 @@
+export { XyroPulseDot } from './xyro-pulse-dot'
+
+// TODO: move all shared components to the shared/components folder
+export { DialogShared } from '../ui/dialog'
+export { InfoTooltip } from '../ui/info-tooltip/info-tooltip'
+export { XyroToken } from '../ui/xyro-token'
+export { XyroBadge } from '../ui/xyro-badge'
+export { XyroLogoLink } from '../ui/xyro-logo-link'
+export {
+  UserProfileLink,
+  UserProfileNameWithAvatar
+} from '../ui/user-profile-link'
+export { XyroNumeral } from '../ui/xyro-numeral'
+export { RadixText } from '../ui/radix-text'
+export { XyroLink } from '../ui/xyro-link'
+
+export { XyroAvatar } from '../ui/xyro-avatar/xyro-avatar'
+export { XyroLoadingSpinner, XyroLoading } from '../ui/xyro-loading-spinner'
+export { AmountField } from '../ui/amount-field/amount-field'
+export { ControllableAmountField } from '../ui/amount-field/controllable-amount-field'
+export { AssetSelect } from '../ui/asset-select/asset-select'
+export { BannerSlider } from '../ui/banner-slider/banner-slider'
+export { BetsTable, XyroTableHeader } from '../ui/bets-table'
+export { BetsTypeSwitcher } from '../ui/bets-type-switcher/bets-type-switcher'
+export { ContactUs } from '../ui/contact-us/contact-us'
+export { DatePicker } from '../ui/date-picker/date-picker'
+export { TimePicker } from '../ui/date-picker/time-picker'
+export { DotTitle } from '../ui/dot-title/dot-title'
+export { FormField } from '../ui/form-field/form-field'
+export { TodayLeaders as LeadersTable } from '../ui/leaders-table/today-leaders'
+export { TimeframeCountdown } from '../ui/timeframe-countdown/timeframe-countdown'
+export { XyroBox } from '../ui/xyro-box/xyro-box'
+export { XyroButton } from '../ui/xyro-button/xyro-button'
+export { XyroCard } from '../ui/xyro-card/xyro-card'
+export { GlobalLoaderOverlay } from '../ui/global-loader-overlay/global-loader-overlay'
+export { BetaWelcomeMessageModal } from '../ui/welcome-message-modal/welcome-message-modal'
+export { TetherToken } from '../ui/tether-token'

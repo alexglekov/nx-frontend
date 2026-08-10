@@ -1,0 +1,204 @@
+@import '/src/shared/styles/breakpoints';
+
+// COLORS
+.color-white.color-white.color-white {
+  color: var(--white);
+}
+
+.color-black.color-black.color-black {
+  color: var(--black);
+}
+
+.color-pink.color-pink.color-pink {
+  color: var(--pink);
+}
+
+.color-green.color-green.color-green {
+  color: var(--green);
+}
+
+.color-yellow.color-yellow.color-yellow {
+  color: var(--yellow);
+}
+
+.color-cyan.color-cyan.color-cyan {
+  color: var(--cyan);
+}
+
+.color-gray.color-gray.color-gray {
+  color: var(--gray);
+}
+.color-gray-light.color-gray-light.color-gray-light {
+  color: var(--gray-11);
+}
+.color-gray-dark.color-gray-dark.color-gray-dark {
+  color: var(--gray-7);
+}
+
+.color-setups.color-setups.color-setups {
+  color: var(--c-setups);
+}
+.color-rewards.color-rewards.color-rewards {
+  color: var(--c-rewards);
+}
+.color-up-down.color-up-down.color-up-down {
+  color: var(--c-up-down);
+}
+.color-bulls-eye.color-bulls-eye.color-bulls-eye {
+  color: var(--c-bulls-eye);
+}
+.color-one-vs-one.color-one-vs-one.color-one-vs-one {
+  color: var(--c-one-vs-one);
+}
+
+// BACKGROUND COLORS
+
+.background-gray.background-gray.background-gray {
+  background-color: var(--gray-9);
+}
+.background-gray-light.background-gray-light.background-gray-light {
+  background-color: var(--gray-11);
+}
+.background-gray-dark.background-gray-dark.background-gray-dark {
+  background-color: var(--gray-6);
+}
+
+.background-black.background-black.background-black {
+  background-color: var(--c-black);
+}
+
+.background-none.background-none.background-none {
+  background-color: transparent;
+}
+
+// BORDER COLORS
+
+.border-green.border-green.border-green {
+  border-color: var(--green);
+}
+
+.border-pink.border-pink.border-pink {
+  border-color: var(--pink);
+}
+
+// MISC
+
+.select-none.select-none.select-none {
+  user-select: none;
+}
+
+.cursor-pointer.cursor-pointer.cursor-pointer {
+  cursor: pointer;
+}
+
+.hidden.hidden.hidden {
+  display: none;
+}
+
+.no-wrap.no-wrap.no-wrap {
+  white-space: nowrap;
+}
+
+.vertical-align-middle.vertical-align-middle.vertical-align-middle {
+  vertical-align: middle;
+}
+
+.height-full.height-full.height-full.height-full {
+  height: 100%;
+}
+
+.width-full.width-full.width-full.width-full {
+  width: 100%;
+}
+
+.greater-than-xs-hidden.greater-than-xs-hidden.greater-than-xs-hidden {
+  @media screen and (width > $xs) {
+    display: none;
+  }
+}
+
+.less-than-sm-hidden.less-than-sm-hidden.less-than-sm-hidden {
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+// CLIP PATHS
+.xyro-border.xyro-border.xyro-border {
+  clip-path: polygon(
+    0.544% 50.016%,
+    0.544% 84.345%,
+    0.544% 84.345%,
+    0.731% 86.668%,
+    1.274% 88.871%,
+    2.142% 90.926%,
+    3.306% 92.802%,
+    4.738% 94.471%,
+    6.406% 95.902%,
+    8.282% 97.066%,
+    10.337% 97.935%,
+    12.54% 98.477%,
+    14.863% 98.665%,
+    67.352% 98.665%,
+    67.352% 98.665%,
+    68.531% 98.618%,
+    69.694% 98.479%,
+    70.838% 98.251%,
+    71.958% 97.934%,
+    73.047% 97.532%,
+    74.102% 97.046%,
+    75.118% 96.478%,
+    76.088% 95.831%,
+    77.009% 95.106%,
+    77.876% 94.305%,
+    93.482% 78.699%,
+    93.482% 78.699%,
+    94.282% 77.833%,
+    95.007% 76.912%,
+    95.654% 75.941%,
+    96.222% 74.926%,
+    96.708% 73.871%,
+    97.11% 72.781%,
+    97.427% 71.662%,
+    97.656% 70.518%,
+    97.794% 69.354%,
+    97.841% 68.176%,
+    97.841% 15.686%,
+    97.841% 15.686%,
+    97.654% 13.364%,
+    97.111% 11.16%,
+    96.243% 9.106%,
+    95.078% 7.23%,
+    93.647% 5.561%,
+    91.979% 4.13%,
+    90.102% 2.965%,
+    88.048% 2.097%,
+    85.844% 1.555%,
+    83.522% 1.367%,
+    31.032% 1.367%,
+    31.032% 1.367%,
+    29.854% 1.414%,
+    28.69% 1.553%,
+    27.546% 1.781%,
+    26.427% 2.098%,
+    25.337% 2.5%,
+    24.282% 2.986%,
+    23.267% 3.554%,
+    22.296% 4.201%,
+    21.375% 4.926%,
+    20.509% 5.726%,
+    4.903% 21.333%,
+    4.903% 21.333%,
+    4.102% 22.199%,
+    3.378% 23.12%,
+    2.73% 24.09%,
+    2.163% 25.106%,
+    1.677% 26.161%,
+    1.274% 27.25%,
+    0.958% 28.37%,
+    0.729% 29.514%,
+    0.59% 30.678%,
+    0.544% 31.856%,
+    0.544% 50.016%
+  );
+}

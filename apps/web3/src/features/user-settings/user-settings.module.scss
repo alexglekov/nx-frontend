@@ -1,0 +1,577 @@
+@import '/src/shared/styles/breakpoints';
+
+.settingsContainer.settingsContainer {
+  background-color: var(--gray-3);
+  border-radius: 5rem;
+}
+
+.cardHeadingText.cardHeadingText {
+  color: var(--white);
+  margin-bottom: 4rem;
+}
+
+.addAvatarBtn.addAvatarBtn {
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--gray-6);
+
+  @media (width < $sm) {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+}
+
+.avatar.avatar {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 100% !important;
+
+  @media (width < $sm) {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+}
+
+.switcher.switcher {
+  :global(.rt-SwitchThumb) {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--black);
+  }
+}
+
+.changeAvatarForm.changeAvatarForm {
+  max-height: unset;
+}
+
+.addAvatarChild.addAvatarChild {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--gray-a2);
+  border-radius: var(--radius-full);
+  background-color: var(--yellow);
+  z-index: 1;
+
+  @media (width < $sm) {
+    height: 3.5rem;
+    width: 3.5rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+.modalTriggerBtn.modalTriggerBtn.modalTriggerBtn {
+  max-width: 22rem;
+  padding: 2rem 3rem;
+  text-wrap: nowrap;
+}
+
+.dialogContent.dialogContent.dialogContent {
+  max-width: 51rem;
+  width: 100%;
+  padding: 4rem;
+  border-radius: 5rem;
+  border: 0.5rem solid var(--yellow-10);
+  background-color: var(--gray-4);
+
+  @media (width < $sm) {
+    width: 89%;
+    max-width: unset;
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    min-height: 0;
+  }
+}
+
+.changeNameContent.changeNameContent.changeNameContent {
+  @media (width < $sm) {
+    height: 58rem;
+  }
+}
+
+.changeBioContent.changeBioContent.changeBioContent {
+  @media (width < $sm) {
+    height: 66rem;
+  }
+}
+
+.chnageAvatarContent.chnageAvatarContent.chnageAvatarContent {
+  max-width: 65rem;
+
+  @media (width < $sm) {
+    height: 110rem;
+  }
+}
+
+.buttonsContainer.buttonsContainer {
+  margin-top: 12rem;
+}
+
+.submitBtn.submitBtn.submitBtn {
+  width: 100%;
+  height: 7.5rem;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--yellow);
+  cursor: pointer;
+
+  &:disabled {
+    .submitBtnText {
+      color: var(--black);
+      opacity: 0.3;
+    }
+  }
+}
+
+.deleteBtn.deleteBtn.deleteBtn {
+  width: 100%;
+  height: 7.5rem;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--pink);
+  cursor: pointer;
+
+  &:disabled {
+    .submitBtnText {
+      color: var(--black);
+      opacity: 0.3;
+    }
+  }
+}
+
+.submitBtnText.submitBtnText {
+  color: var(--black);
+}
+
+.cancelBtn.cancelBtn.cancelBtn {
+  height: 7.5rem;
+  font-weight: var(--font-weight-bold);
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.forgotPasswordBtn.forgotPasswordBtn {
+  margin-top: 5rem;
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--purple);
+  height: 5rem;
+  margin-bottom: 9rem;
+}
+
+.dotTitleText.dotTitleText {
+  color: var(--gray-11);
+}
+
+.dotTitleDot.dotTitleDot {
+  background-color: var(--gray-11);
+}
+
+.secondaryAvatarModalHeadingText.secondaryAvatarModalHeadingText {
+  max-width: 35.5rem;
+  color: var(--gray-11);
+}
+
+.fileUploader.fileUploader {
+  min-width: unset;
+}
+
+.radioGroup.radioGroup {
+  width: 100%;
+
+  :global(.rt-RadioGroupButton:where([data-state='unchecked'])) {
+    border: 1px solid var(--pink);
+    background-color: transparent;
+  }
+}
+
+.radioGroupLabel.radioGroupLabel {
+  color: var(--gray-11);
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.bioArea.bioArea {
+  min-height: 22rem;
+  border-radius: 2rem;
+  background-color: var(--black);
+  box-shadow: none;
+  width: 100%;
+
+  :global(.rt-TextAreaInput) {
+    padding: 2rem;
+  }
+}
+
+.deleteAccountWarning.deleteAccountWarning {
+  color: var(--pink);
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.deleteAccountButtonsContainer.deleteAccountButtonsContainer {
+  margin-top: 10.5rem;
+}
+
+.separator.separator {
+  height: 1px;
+  width: 100%;
+  background-color: var(--gray-5);
+}
+
+.trashIconContainer.trashIconContainer {
+  position: absolute;
+  background: transparent;
+  top: 17.5rem;
+  right: 1rem;
+  color: var(--white);
+  z-index: 2;
+}
+
+.uploadPhotoLabelContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.currentImagePreview {
+  width: 100%;
+}
+
+.mainItemTextTitle.mainItemTextTitle.mainItemTextTitle {
+  color: var(--c-gray-60);
+}
+
+.userBioText.userBioText {
+  max-width: 100rem;
+
+  @media (width < $sm) {
+    max-width: 50rem;
+  }
+
+  @media (width < $xs) {
+    max-width: 35rem;
+  }
+}
+
+.cropper {
+  width: 100%;
+  min-height: 50rem;
+
+  :global {
+    .cropper-crop-box,
+    .cropper-view-box {
+      border-radius: 50%;
+    }
+
+    .cropper-container {
+      width: 100% !important;
+    }
+
+    .cropper-view-box {
+      box-shadow: none;
+      outline: 0;
+    }
+
+    .cropper-face {
+      background-color: inherit !important;
+    }
+
+    .cropper-dashed,
+    .cropper-point.point-se,
+    .cropper-point.point-sw,
+    .cropper-point.point-nw,
+    .cropper-point.point-ne,
+    .cropper-line {
+      display: none !important;
+    }
+
+    .cropper-view-box {
+      outline: inherit !important;
+    }
+
+    .cropper-point {
+      // TODO: ADD SCALABLE DOTS IF IT WILL BE REQUIRED
+      //   background-color: rgba(218, 218, 218, 0.5);
+      //   height: 8px;
+      //   width: 8px;
+      display: none;
+    }
+
+    .point {
+      &-n {
+        top: -8px !important;
+        transform: translateX(-50%);
+        margin-left: 0 !important;
+      }
+
+      &-s {
+        bottom: -8px !important;
+        transform: translateX(-50%);
+        margin-left: 0 !important;
+      }
+
+      &-w {
+        left: -8px !important;
+        transform: translateY(-50%);
+        margin-top: 0 !important;
+      }
+
+      &-e {
+        right: -8px !important;
+        transform: translateY(-50%);
+        margin-top: 0 !important;
+      }
+    }
+  }
+}
+
+.enterBioTitle.enterBioTitle {
+  color: var(--white);
+}
+
+.socialsSectionDescription.socialsSectionDescription {
+  color: var(--gray-11);
+}
+
+.userSettingsSocialsItemWrapper.userSettingsSocialsItemWrapper {
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background-color: var(--c-gray-90);
+  gap: 3rem;
+  cursor: pointer;
+}
+
+.socialsItemNick.socialsItemNick {
+  color: var(--c-gray-60);
+}
+
+.socialsItemLogo.socialsItemLogo {
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: var(--c-gray-60);
+  clip-path: polygon(
+    0.021% 39.58%,
+    0.021% 76.581%,
+    0.021% 76.581%,
+    0.023% 78.763%,
+    0.033% 80.733%,
+    0.062% 82.508%,
+    0.118% 84.107%,
+    0.211% 85.546%,
+    0.35% 86.844%,
+    0.543% 88.017%,
+    0.8% 89.084%,
+    1.13% 90.062%,
+    1.543% 90.968%,
+    1.543% 90.968%,
+    1.968% 91.723%,
+    2.439% 92.448%,
+    2.954% 93.141%,
+    3.512% 93.8%,
+    4.11% 94.422%,
+    4.746% 95.007%,
+    5.42% 95.552%,
+    6.128% 96.056%,
+    6.87% 96.517%,
+    7.643% 96.932%,
+    7.643% 96.932%,
+    8.57% 97.336%,
+    9.569% 97.658%,
+    10.66% 97.91%,
+    11.861% 98.099%,
+    13.188% 98.234%,
+    14.66% 98.325%,
+    16.295% 98.38%,
+    18.111% 98.408%,
+    20.125% 98.419%,
+    22.356% 98.42%,
+    60.06% 98.42%,
+    60.06% 98.42%,
+    61.647% 98.419%,
+    63.083% 98.415%,
+    64.384% 98.403%,
+    65.564% 98.381%,
+    66.641% 98.343%,
+    67.63% 98.287%,
+    68.545% 98.209%,
+    69.404% 98.106%,
+    70.222% 97.972%,
+    71.014% 97.806%,
+    71.014% 97.806%,
+    71.707% 97.632%,
+    72.393% 97.437%,
+    73.072% 97.222%,
+    73.743% 96.985%,
+    74.406% 96.729%,
+    75.061% 96.452%,
+    75.706% 96.155%,
+    76.342% 95.838%,
+    76.968% 95.501%,
+    77.584% 95.145%,
+    77.584% 95.145%,
+    78.264% 94.715%,
+    78.939% 94.244%,
+    79.621% 93.724%,
+    80.325% 93.146%,
+    81.065% 92.502%,
+    81.853% 91.784%,
+    82.704% 90.983%,
+    83.632% 90.093%,
+    84.651% 89.103%,
+    85.773% 88.006%,
+    88.218% 85.615%,
+    88.218% 85.615%,
+    89.34% 84.518%,
+    90.352% 83.522%,
+    91.263% 82.615%,
+    92.082% 81.782%,
+    92.816% 81.011%,
+    93.475% 80.288%,
+    94.066% 79.6%,
+    94.598% 78.933%,
+    95.08% 78.273%,
+    95.52% 77.608%,
+    95.52% 77.608%,
+    95.884% 77.006%,
+    96.228% 76.394%,
+    96.552% 75.772%,
+    96.856% 75.141%,
+    97.139% 74.501%,
+    97.402% 73.852%,
+    97.643% 73.196%,
+    97.864% 72.532%,
+    98.063% 71.861%,
+    98.241% 71.184%,
+    98.241% 71.184%,
+    98.411% 70.41%,
+    98.548% 69.61%,
+    98.654% 68.77%,
+    98.733% 67.875%,
+    98.791% 66.908%,
+    98.829% 65.855%,
+    98.852% 64.701%,
+    98.864% 63.429%,
+    98.868% 62.025%,
+    98.869% 60.474%,
+    98.869% 24.704%,
+    98.869% 23.324%,
+    98.869% 23.324%,
+    98.868% 21.143%,
+    98.857% 19.173%,
+    98.828% 17.398%,
+    98.772% 15.799%,
+    98.679% 14.359%,
+    98.54% 13.062%,
+    98.347% 11.888%,
+    98.09% 10.822%,
+    97.76% 9.844%,
+    97.348% 8.938%,
+    97.348% 8.938%,
+    96.923% 8.182%,
+    96.451% 7.457%,
+    95.936% 6.764%,
+    95.379% 6.106%,
+    94.781% 5.483%,
+    94.144% 4.898%,
+    93.47% 4.353%,
+    92.762% 3.849%,
+    92.02% 3.389%,
+    91.247% 2.973%,
+    91.247% 2.973%,
+    90.321% 2.57%,
+    89.321% 2.247%,
+    88.23% 1.996%,
+    87.03% 1.807%,
+    85.703% 1.671%,
+    84.23% 1.581%,
+    82.595% 1.526%,
+    80.78% 1.497%,
+    78.765% 1.487%,
+    76.534% 1.485%,
+    75.123% 1.485%,
+    39.018% 1.485%,
+    39.018% 1.485%,
+    37.447% 1.486%,
+    36.025% 1.49%,
+    34.737% 1.502%,
+    33.568% 1.524%,
+    32.501% 1.561%,
+    31.522% 1.616%,
+    30.615% 1.692%,
+    29.763% 1.794%,
+    28.953% 1.925%,
+    28.168% 2.088%,
+    28.168% 2.088%,
+    27.481% 2.259%,
+    26.801% 2.451%,
+    26.128% 2.663%,
+    25.462% 2.895%,
+    24.803% 3.147%,
+    24.154% 3.419%,
+    23.513% 3.711%,
+    22.881% 4.022%,
+    22.259% 4.353%,
+    21.648% 4.703%,
+    21.648% 4.703%,
+    20.971% 5.125%,
+    20.3% 5.589%,
+    19.621% 6.1%,
+    18.92% 6.669%,
+    18.183% 7.302%,
+    17.397% 8.008%,
+    16.549% 8.794%,
+    15.623% 9.67%,
+    14.608% 10.643%,
+    13.488% 11.722%,
+    13.488% 11.722%,
+    10.855% 14.261%,
+    10.855% 14.261%,
+    9.714% 15.361%,
+    8.685% 16.359%,
+    7.758% 17.269%,
+    6.926% 18.104%,
+    6.179% 18.877%,
+    5.51% 19.603%,
+    4.908% 20.294%,
+    4.367% 20.964%,
+    3.877% 21.627%,
+    3.429% 22.296%,
+    3.429% 22.296%,
+    3.059% 22.902%,
+    2.709% 23.518%,
+    2.379% 24.144%,
+    2.07% 24.78%,
+    1.782% 25.425%,
+    1.515% 26.078%,
+    1.269% 26.739%,
+    1.044% 27.409%,
+    0.841% 28.085%,
+    0.66% 28.768%,
+    0.66% 28.768%,
+    0.487% 29.549%,
+    0.348% 30.356%,
+    0.24% 31.203%,
+    0.159% 32.107%,
+    0.101% 33.083%,
+    0.062% 34.146%,
+    0.038% 35.312%,
+    0.026% 36.595%,
+    0.022% 38.013%,
+    0.021% 39.58%
+  );
+}

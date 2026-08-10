@@ -1,0 +1,49 @@
+.notificationListWrapper.notificationListWrapper {
+  background-color: var(--gray-3);
+  border-radius: 5rem;
+}
+
+.titleContainer {
+  padding: 0 4.5rem;
+  padding-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.notificationsAmountBadge.notificationsAmountBadge {
+  background-color: var(--c-a-purple);
+  border-radius: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.notificationList.notificationList {
+  padding: 0rem 4rem;
+  padding-bottom: 3rem;
+}
+
+.notificationListItemContainer.notificationListItemContainer {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gray-4);
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.notificationItemCratedAtText {
+  color: var(--gray-7);
+}
+
+.notificationItemText {
+  color: var(--gray-11);
+}
+
+.notificationListItemInnerWrapper.notificationListItemInnerWrapper:hover {
+  background-color: var(--gray-4);
+  border-radius: 1.5rem;
+}
+
+.notificationInactive.notificationInactive.notificationInactive {
+  opacity: 0.5;
+}

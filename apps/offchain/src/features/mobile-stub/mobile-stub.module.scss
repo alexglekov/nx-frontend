@@ -1,0 +1,70 @@
+@import '/src/shared/styles/breakpoints';
+
+.stubContainer.stubContainer.stubContainer {
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  animation-name: fade-in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.mainContent.mainContent.mainContent {
+  height: 100%;
+  display: grid;
+  align-items: flex-start;
+  grid-template-rows: min-content;
+  padding: 0.5rem;
+}
+
+.headerTitle.headerTitle.headerTitle {
+  padding: 0;
+}
+
+.mainTitle.mainTitle.mainTitle {
+  max-width: 51rem;
+  width: 100%;
+  color: var(--white);
+}
+
+.titleGreen.titleGreen {
+  color: var(--c-a-yellow);
+}
+
+.secondaryTitle.secondaryTitle.secondaryTitle {
+  color: var(--gray);
+  max-width: 51rem;
+  width: 100%;
+}
+
+.adventureText.adventureText.adventureText {
+  color: var(--white);
+  max-width: 60rem;
+  font-size: 4rem;
+  background-image: linear-gradient(to right, var(--yellow), var(--orange));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 500;
+}
+
+.comingSoonText.comingSoonText.comingSoonText {
+  max-width: 64.25rem;
+}
+
+.emoji.emoji.emoji {
+  color: initial;
+}
+
+.socialLinks {
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}

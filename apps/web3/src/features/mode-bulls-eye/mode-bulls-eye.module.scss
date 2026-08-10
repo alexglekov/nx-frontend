@@ -1,0 +1,262 @@
+@import '/src/shared/styles/breakpoints';
+
+.bullsEyeFormWrapper {
+  background-color: var(--gray-4);
+  border-radius: 5rem;
+  padding: 2.5rem;
+  min-height: 81.5rem;
+}
+
+.headerWrapper {
+  text-overflow: ellipsis;
+}
+
+.titleText.titleText.titleText {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 33%;
+
+  @media screen and (width < $sm) {
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+}
+
+.bullsEyeGraph {
+  background-color: var(--gray-4);
+  border-radius: 5rem;
+
+  .graphInnerWrapper {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 2.5rem;
+
+      .title {
+        font-size: 3.5rem;
+      }
+      .timer {
+        font-size: 2.5rem;
+      }
+      .price {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+.timerCounter {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2.5rem;
+  flex-shrink: 0;
+  min-width: 17rem;
+  min-height: 12rem;
+
+  & .timerBackground {
+    position: absolute;
+    z-index: 0;
+  }
+
+  @media screen and (width <= 768px) {
+    padding: 1.5rem;
+    min-width: 13rem;
+    min-height: 9rem;
+  }
+}
+
+.timeframeCountdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: stroke-dashoffset 0.3s ease-in-out;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 3px solid var(--c-black);
+  z-index: 1;
+}
+
+.timerText.timerText {
+  text-wrap: nowrap;
+  z-index: 1;
+}
+
+.myBetWrapper.myBetWrapper {
+  background-color: var(--c-black);
+  padding: 1.25rem 2rem;
+  border-radius: 2rem;
+}
+
+.myWinnerBetWrapper.myWinnerBetWrapper {
+  background-color: var(--c-black);
+  border-radius: 2rem;
+}
+
+.winnerListTopIcon.winnerListTopIcon {
+  max-width: 4.5rem;
+  max-height: 4rem;
+}
+
+.bullsEyeBetConfirm.bullsEyeBetConfirm.bullsEyeBetConfirm {
+  background-color: var(--green);
+  color: var(--c-black);
+  font-size: 2rem;
+  height: 6.5rem;
+  width: 100%;
+
+  @media screen and (width < $sm) {
+    margin-bottom: 2rem;
+  }
+}
+
+.betAmountField.betAmountField.betAmountField {
+  background-color: var(--black);
+  border-radius: 1.5rem;
+  position: relative;
+
+  &:global(.rt-TextFieldInput) {
+    color: var(--gray-9);
+    padding-left: 1.5rem;
+  }
+
+  &:global(.rt-TextFieldInput::placeholder) {
+    color: var(--gray-9);
+    opacity: 0.5;
+  }
+}
+
+:global(.rt-TextFieldRoot):has(.betAmountField)::before {
+  content: '$';
+  right: 1.25rem;
+  color: var(--pink);
+  position: absolute;
+  z-index: 2;
+  top: 1.75rem;
+  color: var(--gray-9);
+  opacity: 0.5;
+}
+
+.bullsEyeFormSubmit.bullsEyeFormSubmit.bullsEyeFormSubmit {
+  width: 100%;
+}
+
+.betAssetText {
+  font-weight: var(--font-weight-bold);
+  color: var(--c-white);
+}
+
+.winnersModalOverlay {
+  background-color: color-mix(in srgb, var(--black), transparent 80%);
+  backdrop-filter: blur(5rem);
+  border-radius: 1rem;
+  z-index: 3;
+  animation: fade-in 0.3s ease forwards;
+}
+
+.winnersModal {
+  background-image: url('/src/shared/icons/background-element-icons/up-down-winner-background-element.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 35rem;
+  height: 40rem;
+  border-radius: 2.5rem;
+  border: 3px solid;
+  background-color: var(--c-black);
+  border-color: var(--cyan);
+}
+
+.gameStatusText {
+  font-size: 5rem;
+  line-height: 1.4;
+  padding: 0 2rem;
+  max-width: 25rem;
+  text-wrap: wrap;
+  word-break: normal;
+}
+
+.gameStatusSecondaryText {
+  line-height: 1.4;
+  padding: 0 2rem;
+  max-width: 25rem;
+  text-wrap: wrap;
+  word-break: normal;
+}
+
+.winText {
+  margin-bottom: 2rem;
+  color: var(--green);
+}
+
+.decorationsIcon.decorationsIcon {
+  position: absolute;
+  left: -11rem;
+  top: -4rem;
+}
+
+.winnerListItemWrapper.winnerListItemWrapper {
+  background-color: var(--black);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.winnerListItemBorder.winnerListItemBorder {
+  border: 1px solid var(--green);
+}
+
+.winnerListItemAmountText.winnerListItemAmountText {
+  color: var(--c-gray-60);
+}
+
+.betInviteAlertWrapper.betInviteAlertWrapper {
+  background-color: color-mix(in srgb, var(--c-a-lazur), transparent 90%);
+  border-radius: 2rem;
+  padding: 1.5rem 0;
+}
+
+.betInviteAlertText.betInviteAlertText {
+  color: var(--c-a-lazur);
+  max-width: 24rem;
+}
+
+.tableItemPlace.tableItemPlace {
+  width: 15rem;
+}
+
+.exactBadgeWrapper.exactBadgeWrapper.exactBadgeWrapper {
+  border-radius: 1rem;
+  padding: 0.75rem;
+  background-color: rgba(255, 141, 58, 10%);
+}
+
+.myBetsScrollArea.myBetsScrollArea.myBetsScrollArea {
+  width: 100%;
+  max-height: 18rem;
+  padding: 0 0.75rem;
+
+  @media screen and (width < $sm) {
+    padding: 2rem;
+    max-height: 19rem;
+  }
+}
+
+.myBetsScrollAreaActive.myBetsScrollAreaActive.myBetsScrollAreaActive {
+  box-shadow:
+    inset 3rem -6rem 3rem -3rem var(--c-black-alpha-1),
+    inset -3rem 6rem 3rem -3rem var(--c-black-alpha-1),
+    inset 0 0 0 1px var(--gray-4);
+  padding-top: 1rem;
+  border-radius: 1rem;
+
+  @media screen and (width < $sm) {
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    padding: 2rem 0.25rem;
+  }
+}

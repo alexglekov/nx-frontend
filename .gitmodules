@@ -1,0 +1,6 @@
+[submodule "apps/web3/src/features/price-chart/tradingview"]
+	path = apps/web3/src/features/price-chart/tradingview
+	url = git@github.com:xyro-io/charting_library.git
+[submodule "apps/web3/public/tradingview"]
+	path = apps/web3/public/tradingview
+	url = git@github.com:xyro-io/charting_library.git

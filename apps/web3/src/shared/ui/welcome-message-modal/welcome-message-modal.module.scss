@@ -1,0 +1,108 @@
+@import '/src/shared/styles/breakpoints';
+
+.dialogContainer.dialogContainer.dialogContainer {
+  background-color: var(--gray-3);
+  padding: 3.75rem 6rem;
+  box-shadow: none;
+  width: 100%;
+
+  @media screen and (width < $sm) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 102rem;
+    padding: 3.75rem 3rem;
+    width: 91.55%;
+  }
+}
+
+.mobileSlider.mobileSlider.mobileSlider {
+  height: 57rem;
+
+  & > :global(.swiper-pagination-bullets) {
+    top: 55rem;
+
+    & > :global(.swiper-pagination-bullet) {
+      background-color: var(--c-a-green);
+    }
+  }
+}
+
+.mobileDialogCloseButton.mobileDialogCloseButton.mobileDialogCloseButton {
+  right: 3.25rem;
+}
+
+.title {
+  font-size: 4rem;
+  line-height: 5rem;
+  padding: 0 2rem;
+}
+
+.description {
+  padding: 0 3rem;
+  max-width: 47rem;
+
+  @media screen and (width < $lg) {
+    padding: 0 6rem;
+  }
+}
+
+.bannerInfoWrapper.bannerInfoWrapper.bannerInfoWrapper {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  @media screen and (width < $sm) {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+}
+
+.submitBtn.submitBtn.submitBtn {
+  width: 100%;
+  max-width: 38.5rem;
+  height: 7.5rem;
+  box-shadow: none;
+}
+
+.rewardsNavigateButton.rewardsNavigateButton.rewardsNavigateButton {
+  width: 100%;
+  max-width: 38.5rem;
+  height: 7.5rem;
+  box-shadow: none;
+  background: none;
+}
+
+.modalFooterText.modalFooterText {
+  opacity: 0.5;
+  padding: 0 6rem;
+}
+
+.welcomeWindowStepContainer.welcomeWindowStepContainer.welcomeWindowStepContainer {
+  border-radius: 2.5rem;
+  background-color: var(--gray-4);
+  padding: 3rem;
+  max-width: 46rem;
+
+  @media screen and (width < $sm) {
+    height: 53rem;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.stepDescriptionContainer.stepDescriptionContainer {
+  gap: 2.5rem;
+}
+
+.welcomeWindowStepImage.welcomeWindowStepImage.welcomeWindowStepImage {
+  width: 100%;
+  border-radius: 1.5rem;
+
+  @media screen and (width < $sm) {
+    width: 20rem;
+  }
+}
+
+.articleLink {
+  font-weight: var(--font-weight-bold);
+  color: var(--c-a-green);
+}

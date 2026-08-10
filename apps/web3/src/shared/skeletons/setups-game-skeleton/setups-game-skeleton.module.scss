@@ -1,0 +1,16 @@
+@import '/src/shared/styles/breakpoints';
+
+.setupsContainer.setupsContainer.setupsContainer {
+  background-color: var(--gray-4);
+  border-radius: 5rem;
+  padding: 2rem;
+}
+
+.gridWrapper.gridWrapper.gridWrapper {
+  row-gap: 5rem;
+
+  @media (width <= $md) {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+}

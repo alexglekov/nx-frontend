@@ -1,0 +1,68 @@
+.winnerModal.winnerModal.winnerModal {
+  padding: 0.5rem;
+  z-index: 3;
+  animation: fade-in 0.3s ease forwards;
+
+  :global(.rt-Separator) {
+    background-color: var(--gray-5);
+  }
+}
+
+.winnerModalInnerWrapper.winnerModalInnerWrapper {
+  backdrop-filter: blur(5rem);
+  border-radius: 4rem;
+
+  // TODO: CHECK THIS COLOR, must be a bit different
+  background: var(--color-overlay);
+}
+
+.mainWindow.mainWindow.mainWindow {
+  border: 0.5rem solid currentcolor;
+  border-radius: 5rem;
+  width: 100%;
+  max-width: 82rem;
+  padding: 4rem;
+  background-color: var(--c-gray-90);
+}
+
+.whiteColor.whiteColor {
+  color: var(--white);
+}
+
+.grayColor.grayColor {
+  color: var(--c-gray-40);
+}
+
+.winnersListContainer.winnersListContainer {
+  background-color: var(--c-black);
+  border-radius: 2.5rem;
+}
+
+.winnerItemContainer {
+  padding: 0.75rem 1.25rem;
+}
+
+.winnerItemContainerBorder {
+  border: 1px solid currentcolor;
+  border-radius: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.winnerPositionText {
+  min-width: 4rem;
+  color: var(--c-gray-60);
+}
+
+.refreshPoolsTimerText {
+  max-width: 11rem;
+  color: var(--c-gray-40);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

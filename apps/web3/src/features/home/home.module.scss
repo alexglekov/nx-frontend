@@ -1,0 +1,593 @@
+@import '/src/shared/styles/breakpoints';
+
+.lastBetsTableInfoContainer.lastBetsTableInfoContainer.lastBetsTableInfoContainer {
+  @media screen and (width < $sm) {
+    gap: 3.5rem;
+    margin-bottom: 0.75rem;
+    padding-right: 2rem;
+  }
+}
+
+.lastBetsTableWrapper.lastBetsTableWrapper {
+  margin-top: 13.5rem;
+
+  @media screen and (width < $sm) {
+    margin-top: 6rem;
+
+    & > :global(.rt-CardInner) {
+      padding: 2.5rem;
+    }
+  }
+}
+
+.tableTitle.tableTitle {
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.betsTypeSwitcher.betsTypeSwitcher {
+  // TODO: Activate when proper design will be provided, now switcher is too big for mobile
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.homeWrap {
+  background-color: var(--c-black);
+}
+
+.cardWrapper {
+  width: 100%;
+  text-decoration: none;
+  color: initial;
+  min-height: 30.25rem;
+}
+
+.modeCard.modeCard {
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: var(--gray-3);
+  transition: filter 0.2s ease-in-out;
+  min-height: 30.25rem;
+
+  &.updown {
+    background: linear-gradient(
+      83.28deg,
+      #16141d 38.18%,
+      #112630 52.52%,
+      #0a3e4b 63.84%,
+      #086b74 73.72%,
+      #088288 82.34%,
+      #089a9e 88.54%,
+      #08d9d6 99.38%
+    );
+  }
+
+  &.bullseye {
+    background: linear-gradient(
+      81.69deg,
+      #16141d 24.84%,
+      #0f2323 41.97%,
+      #06352a 53.95%,
+      #175943 66.38%,
+      #308e67 82.33%,
+      #44b985 92.76%,
+      #5ff4ad 102.77%
+    );
+  }
+
+  &.meme-wars {
+    background: linear-gradient(
+      115deg,
+      #16141d 8.28%,
+      #1a0f23 32.11%,
+      #220635 48.78%,
+      #441759 66.1%,
+      #77308e 88.29%,
+      #b144b9 102.81%,
+      #f45fcc 116.74%
+    );
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
+  @media screen and (width < $lg) {
+    min-height: 26.5rem;
+  }
+
+  @media screen and (width < $sm) {
+    min-height: 22.5rem;
+  }
+
+  .cardLogo {
+    position: absolute;
+    width: 35rem;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+
+    &.referrals {
+      top: 42%;
+      left: 47%;
+      width: 40rem;
+    }
+
+    &.rewards {
+      top: 50%;
+      width: 50rem;
+    }
+
+    &.bullseye {
+      top: 48%;
+      width: 40rem;
+      left: 27%;
+    }
+
+    &.updown {
+      top: 50%;
+      width: 38rem;
+      left: 27%;
+    }
+
+    &.setup {
+      width: 37rem;
+    }
+
+    &.onevsone {
+      width: 38.5rem;
+      top: 50%;
+    }
+
+    &.staking {
+      top: 55%;
+      width: 62rem;
+    }
+
+    &.airdrop {
+      width: 35rem;
+    }
+
+    &.token {
+      top: 30%;
+      width: 35rem;
+    }
+
+    &.meme-wars {
+      left: 35%;
+      top: 50%;
+      width: 66rem;
+    }
+
+    @media screen and (width < $sm) {
+      width: 20rem;
+
+      &.onevsone {
+        top: 50%;
+      }
+
+      &.rewards {
+        width: 70rem;
+        top: 70%;
+      }
+
+      &.referrals {
+        width: 35rem;
+        top: 40%;
+      }
+
+      &.staking {
+        width: 60rem;
+        top: 53%;
+      }
+
+      &.token {
+        top: 35%;
+        width: 25rem;
+      }
+
+      &.airdrop {
+        width: 25rem;
+      }
+
+      &.meme-wars {
+        left: 30%;
+      }
+    }
+  }
+
+  .cardBackgroundElement {
+    position: absolute;
+    width: 60rem;
+    height: 60rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--c-black);
+    opacity: 0.3;
+
+    &.referrals {
+      width: 50rem;
+      opacity: 1;
+      left: 53%;
+      top: 55%;
+      box-shadow: none;
+    }
+
+    &.rewards {
+      width: 40rem;
+      opacity: 1;
+      left: 53%;
+      top: 43%;
+      box-shadow: none;
+    }
+
+    &.updown {
+      width: 80rem;
+      left: 40%;
+      top: 50%;
+      height: unset;
+      opacity: 1;
+      opacity: 0.8;
+    }
+
+    &.bullseye {
+      width: 100rem;
+      height: unset;
+      left: 80%;
+      opacity: 0.1;
+    }
+
+    &.onevsone {
+      top: 50%;
+      opacity: 1;
+      width: unset;
+      height: unset;
+    }
+
+    &.setup {
+      top: 40%;
+      opacity: 1;
+      width: unset;
+      height: unset;
+    }
+
+    &.staking {
+      width: 27rem;
+      opacity: 1;
+    }
+
+    &.airdrop {
+      top: 80%;
+      left: 45%;
+      width: 90rem;
+    }
+
+    &.meme-wars {
+      top: 50%;
+      width: 130rem;
+      opacity: 0.3;
+    }
+
+    @media screen and (width < $sm) {
+      width: 40rem;
+      height: 40rem;
+
+      &.rewards {
+        top: 58%;
+        left: 30%;
+      }
+
+      &.referrals {
+        top: 58%;
+        left: 30%;
+      }
+
+      &.staking {
+        left: 50%;
+        top: 50%;
+      }
+
+      &.airdrop {
+        left: 45%;
+        top: 70%;
+      }
+    }
+  }
+
+  .cardTitle.cardTitle {
+    color: var(--c-white);
+    margin-top: 11.5rem;
+
+    &.stakingTitle.stakingTitle {
+      margin-top: 15.5rem;
+
+      @media screen and (width < $sm) {
+        margin-top: 14rem;
+      }
+    }
+
+    &.rewardsTitle {
+      margin-top: 14.5rem;
+    }
+
+    &.airdropTitle {
+      margin-top: 13rem;
+    }
+
+    &.tokenTitle {
+      margin-top: 13rem;
+    }
+
+    &.meme-warsTitle {
+      margin-left: 24rem;
+      margin-top: 5rem;
+      font-size: 4rem;
+
+      @media screen and (width < $sm) {
+        font-size: 3.5rem;
+      }
+    }
+
+    &.referralsTitle.referralsTitle {
+      margin-top: 15rem;
+
+      @media screen and (width < $sm) {
+        margin-top: 15.5rem;
+      }
+    }
+
+    @media screen and (width < $sm) {
+      font-size: 3.5rem;
+    }
+  }
+
+  .cardDescription.cardDescription {
+    text-align: center;
+    max-width: 23rem;
+    font-size: 1.5rem;
+
+    &.meme-warsDescription {
+      margin-left: 24rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  .cardDescriptionLarge.cardDescriptionLarge {
+    margin-left: 50%;
+
+    @media screen and (width < $sm) {
+      &.referralsDescription {
+        margin-left: 0;
+        max-width: 22rem;
+      }
+
+      &.stakingDescription {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .cardTitleLarge.cardTitleLarge {
+    margin-top: 6rem;
+    margin-left: 50%;
+
+    &.rewardsTitle {
+      margin-top: 5.5rem;
+    }
+
+    &.stakingTitle {
+      margin-top: 7.5rem;
+
+      @media screen and (width < $sm) {
+        margin-top: 11.5rem;
+        margin-left: 0;
+      }
+    }
+
+    &.referralsTitle {
+      margin-top: 6.5rem;
+      margin-left: 50%;
+      text-align: center;
+
+      @media screen and (width < $sm) {
+        margin-top: 11.5rem;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .backgroundDisabled,
+  .logoDisabled {
+    filter: grayscale(1);
+  }
+
+  .cardCallToActionTitle.cardCallToActionTitle {
+    color: var(--c-white);
+
+    @media screen and (width < $sm) {
+      font-size: 4rem;
+      max-width: 40rem;
+    }
+  }
+
+  .modeCardDescription.modeCardDescription.modeCardDescription {
+    color: var(--gray-7);
+    max-width: 21rem;
+  }
+
+  .playerAmountText {
+    color: var(--white);
+    margin-top: 1px;
+  }
+}
+
+.highlightElement {
+  position: absolute;
+}
+
+.modeCardInfoContainer.modeCardInfoContainer.modeCardInfoContainer {
+  z-index: 5;
+  min-height: 30.25rem;
+}
+
+.callToActionCard {
+  background-color: var(--gray-3);
+  background-repeat: no-repeat;
+  background-position: 12rem center;
+  background-size: cover;
+  height: 100%;
+  min-height: 30.25rem;
+  background-image: url('/src/shared/images/banners/banner-part-all-modes.png');
+  box-shadow:
+    inset -1em 0 8rem var(--gray-3) /* internal shadow from right side of image */,
+    inset 0 -1rem 8rem var(--gray-3) /* internal shadow from bottom of image */;
+}
+
+.achievementWrapper {
+  background-color: var(--c-black);
+  border-radius: 3rem;
+  padding: 8rem 3rem;
+  width: 100%;
+}
+
+.achievemntsContainer.achievemntsContainer {
+  border-radius: 5rem;
+}
+
+.achievementImage {
+  width: 11rem;
+  height: 11rem;
+}
+
+.pulseContainer {
+  position: relative;
+}
+
+.sectionTitle.sectionTitle.sectionTitle {
+  font-size: 5.25rem;
+}
+
+.cardsSectionsWrapper.cardsSectionsWrapper {
+  gap: 7.5rem;
+}
+
+.cardCallToActionText.cardCallToActionText {
+  @media screen and (width < $sm) {
+    font-size: 3rem;
+  }
+}
+
+.extraModeCards.extraModeCards {
+  @media screen and (width < $sm) {
+    & > :nth-child(1),
+    & > :nth-child(4) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.gameModeCards.gameModeCards {
+  @media screen and (width >= $sm) {
+    & > :nth-child(1) {
+      grid-column: 1 / span 2;
+    }
+
+    & > :nth-child(2) {
+      grid-column: 3;
+    }
+
+    & > :nth-child(3) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    & > :nth-child(4) {
+      grid-column: 2 / span 3;
+      grid-row: 2;
+    }
+
+    & > :nth-child(5) {
+      grid-column: 1 / span 3;
+      grid-row: 3;
+    }
+  }
+
+  @media screen and (width < $sm) {
+    & > :nth-child(1),
+    & > :nth-child(4),
+    & > :nth-child(5) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.cashBackTabWrapper.cashBackTabWrapper.cashBackTabWrapper {
+  background-color: var(--gray-4);
+  padding: 3.75rem 5rem;
+  border-radius: 3.75rem;
+}
+
+.paymentsWillStartText.paymentsWillStartText {
+  color: var(--c-a-lazur);
+  opacity: 0.7;
+}
+
+.roundProgressBar {
+  z-index: 1;
+}
+
+.timeframeCountdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: stroke-dashoffset 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 3px solid var(--c-black);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.timerTimeText {
+  color: var(--c-a-lazur);
+}
+
+.cashBackAvailabilityText {
+  max-width: 44rem;
+}
+
+.gogoToProfileLink.gogoToProfileLink {
+  @media screen and (width < $sm) {
+    min-width: 100%;
+  }
+}
+
+.goToProfileBtn.goToProfileBtn.goToProfileBtn {
+  background-color: var(--c-a-lazur);
+  min-height: 60px;
+  min-width: 166px;
+
+  @media screen and (width < $sm) {
+    min-width: 100%;
+  }
+}
+
+.modeCardComingSoonBadge.modeCardComingSoonBadge {
+  position: absolute;
+  padding: 0.5rem 1.25rem;
+  right: 1.25rem;
+  background-color: var(--c-a-lazur);
+  border-radius: 6.25rem;
+}
+
+.modeCardNewBadge.modeCardNewBadge {
+  background-color: var(--c-a-green);
+}

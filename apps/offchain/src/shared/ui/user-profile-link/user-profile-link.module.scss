@@ -1,0 +1,41 @@
+@import '/src/shared/styles/breakpoints';
+
+.separator.separator {
+  width: 100%;
+}
+
+.dialogContent.dialogContent {
+  max-width: 73.25rem;
+  width: 100%;
+  border-radius: 5.25rem;
+  border: 0.5rem solid var(--pink);
+  background-color: #201E27;
+
+  @media (width < $sm) {
+    width: 90%;
+    max-width: unset;
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    min-height: 0;
+  }
+}
+
+.wrapper.wrapper {
+  padding: 5rem;
+  min-width: 73.25rem;
+}
+
+.button {
+  padding: 0;
+
+  height: 100%;
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:global(.rt-BaseButton.rt-Button:disabled) {
+    filter: brightness(1);
+    color: var(--white);
+  }
+}

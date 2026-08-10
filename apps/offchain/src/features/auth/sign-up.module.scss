@@ -1,0 +1,343 @@
+@import '/src/shared/styles/breakpoints';
+
+.authButton.authButton.authButton {
+  height: 8.5rem;
+  background-color: var(--gray-5);
+  flex-grow: 1;
+  color: var(--white);
+  transition: box-shadow 0.1s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 2px var(--yellow);
+  }
+}
+
+.initAuthButton.initAuthButton.initAuthButton {
+  height: 8.5rem;
+  background-color: var(--black);
+  width: max-content;
+  border-radius: var(--b-radius-2);
+  position: relative;
+  box-shadow: none;
+  color: var(--white);
+  box-shadow: 0 0 0 1.25rem var(--c-white-alpha-2);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--black);
+  }
+
+  &::after {
+    position: absolute;
+    inset: -0.5rem;
+    background-image: linear-gradient(90deg, var(--pink-7), var(--cyan-7));
+    content: '';
+    z-index: -1;
+    border-radius: var(--b-radius-3);
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    position: absolute;
+    background-image: linear-gradient(90deg, var(--pink), var(--cyan));
+    border-radius: var(--b-radius-3);
+    filter: blur(3.25rem);
+    transition: background 0.5s ease;
+    top: 0.25rem;
+    z-index: -1;
+
+    &:hover {
+      background-image: linear-gradient(270deg, var(--pink), var(--cyan));
+    }
+  }
+}
+
+.dialogRoot.dialogRoot.dialogRoot {
+  padding: 0;
+  border-radius: var(--b-radius-2);
+  max-width: none;
+  overflow: hidden;
+  border: none;
+  max-height: 90.25vh;
+  min-width: 52rem;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.dialogContainer.dialogContainer.dialogContainer {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 3px solid #ff68f0;
+  border-radius: 4.5rem;
+  overflow: hidden;
+  width: 100%;
+
+  @media screen and (width < $sm) {
+    padding: 0;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+.assetContainer.assetContainer.assetContainer {
+  width: 100%;
+  background-color: var(--c-black-alpha-1);
+  border-radius: 100%;
+  max-width: 7rem;
+  max-height: 7rem;
+  aspect-ratio: 1;
+}
+
+.discordBackground.discordBackground.discordBackground {
+  background-color: #5d7ded; // Hardcode for the Discord logo
+}
+
+.logInButton.logInButton.logInButton {
+  width: 100%;
+}
+
+.singUpCheckBoxText.singUpCheckBoxText {
+  color: var(--gray);
+  max-width: 33rem;
+}
+
+.signInButton.signInButton.signInButton {
+  padding: 0 3rem;
+  background-color: transparent;
+}
+
+.signUpButton.signUpButton.signUpButton {
+  background-color: var(--yellow);
+}
+
+.backToLoginContainer.backToLoginContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signUpInitStepVideo {
+  // TODO: add video preview bg-image
+  inset: -2rem;
+  object-fit: cover;
+  position: absolute;
+  width: calc(100% + 4rem);
+  height: calc(100% + 4rem);
+}
+
+.dialogSignUpInitStep {
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (width < $sm) {
+    grid-template-columns: 1fr;
+  }
+
+  & :global(#sign-up-init-image) {
+    inset: -2rem;
+    position: absolute;
+    width: calc(100% + 4rem);
+    height: calc(100% + 4rem);
+  }
+}
+
+.authBgVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.authHeroButton.authHeroButton.authHeroButton {
+  z-index: 1;
+
+  & > button {
+    flex-grow: 0;
+    font-size: 4rem;
+
+    & > svg {
+      height: 8rem;
+      width: 43rem;
+    }
+  }
+
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.dialogRootConnectWallet.dialogRootConnectWallet.dialogRootConnectWallet {
+  min-height: 48rem;
+
+  @media screen and (width < $sm) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.connectWalletButton.connectWalletButton.connectWalletButton {
+  border-radius: 0;
+  clip-path: polygon(
+    -0.002% 41.386%,
+    -0.002% 87.128%,
+    -0.002% 87.128%,
+    0.041% 89.038%,
+    0.167% 90.85%,
+    0.367% 92.539%,
+    0.637% 94.082%,
+    0.968% 95.454%,
+    1.354% 96.63%,
+    1.787% 97.588%,
+    2.263% 98.302%,
+    2.772% 98.748%,
+    3.309% 98.902%,
+    92.218% 98.902%,
+    92.218% 98.902%,
+    92.476% 98.867%,
+    92.731% 98.765%,
+    92.983% 98.595%,
+    93.23% 98.361%,
+    93.471% 98.062%,
+    93.705% 97.701%,
+    93.931% 97.278%,
+    94.148% 96.796%,
+    94.355% 96.255%,
+    94.552% 95.657%,
+    98.882% 81.448%,
+    98.882% 81.448%,
+    99.086% 80.719%,
+    99.271% 79.937%,
+    99.436% 79.107%,
+    99.581% 78.234%,
+    99.705% 77.323%,
+    99.807% 76.379%,
+    99.888% 75.406%,
+    99.945% 74.41%,
+    99.979% 73.395%,
+    99.989% 72.367%,
+    99.868% 12.812%,
+    99.868% 12.812%,
+    99.821% 10.913%,
+    99.693% 9.113%,
+    99.49% 7.435%,
+    99.22% 5.903%,
+    98.889% 4.542%,
+    98.504% 3.375%,
+    98.071% 2.426%,
+    97.598% 1.719%,
+    97.091% 1.277%,
+    96.556% 1.124%,
+    7.841% 1.124%,
+    7.841% 1.124%,
+    7.545% 1.169%,
+    7.253% 1.304%,
+    6.967% 1.525%,
+    6.688% 1.831%,
+    6.418% 2.219%,
+    6.158% 2.686%,
+    5.91% 3.231%,
+    5.675% 3.851%,
+    5.454% 4.544%,
+    5.25% 5.307%,
+    0.848% 23.208%,
+    0.848% 23.208%,
+    0.691% 23.895%,
+    0.549% 24.617%,
+    0.423% 25.371%,
+    0.312% 26.153%,
+    0.218% 26.96%,
+    0.139% 27.789%,
+    0.078% 28.637%,
+    0.034% 29.5%,
+    0.007% 30.376%,
+    -0.002% 31.261%,
+    -0.002% 41.386%
+  );
+}
+
+.wizardDialogNewContainer.wizardDialogNewContainer.wizardDialogNewContainer {
+  border: 3px solid #ff68f0;
+}
+
+.authInputField.authInputField.authInputField {
+  height: 6rem;
+  border-radius: 1.5rem;
+
+  & > :global(.rt-TextFieldInput) {
+    padding: 1rem;
+  }
+
+  & > :global(.rt-TextFieldInput::placeholder) {
+    color: var(--c-gray-60);
+  }
+
+  & > :global(.rt-TextFieldInput:focus) {
+    box-shadow: none;
+  }
+
+  & > :global(.rt-TextFieldInput:disabled) {
+    background-color: var(--gray-4);
+  }
+}
+
+.createAccountButton.createAccountButton {
+  width: 100%;
+  background-color: #d55fff;
+  height: 7.5rem;
+}
+
+.createEmailAccountButton.createEmailAccountButton {
+  width: 100%;
+  background-color: var(--cyan-7);
+  height: 7.5rem;
+}
+
+.createEmailAccountButton.createEmailAccountButton:disabled {
+  background-color: var(--gray-7);
+}
+
+.createAccountButton.createAccountButton:disabled {
+  background-color: var(--gray-7);
+}
+
+// NOTE: Hardcoded in px as we need to keep style consistency with Safari webkit
+.authCheckBox.authCheckBox.authCheckBox {
+  width: 16px;
+  height: 16px;
+  background-color: var(--gray-4);
+  border: 1px solid var(--gray-6);
+  border-radius: 0.5rem;
+}
+
+.termsLink.termsLink.termsLink {
+  text-decoration: none;
+  color: var(--cyan);
+}
+
+.passwordCloseButton.passwordCloseButton {
+  position: absolute;
+  right: 2rem;
+  top: 4.75rem;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.checkboxTick.checkboxTick {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

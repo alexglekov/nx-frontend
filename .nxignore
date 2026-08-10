@@ -1,0 +1,4 @@
+apps/web3/public/tradingview
+apps/web3/src/features/price-chart/tradingview
+apps/offchain/public/tradingview
+apps/offchain/src/features/price-chart/tradingview

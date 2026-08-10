@@ -1,0 +1,277 @@
+@import '/src/shared/styles/breakpoints';
+
+.tokenInfoChangeText {
+  color: var(--c-a-green);
+}
+
+.cardHeaderText {
+  color: var(--c-gray-20);
+}
+
+.buybackedValueText {
+  color: var(--c-gray-40);
+}
+
+.cardWrapper {
+  flex: 1 1 0;
+  padding: 3.75rem;
+  border-radius: 5.25rem;
+  background-color: var(--c-gray-90);
+}
+
+.xyroSupplyStats {
+  max-width: 35rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3.75rem;
+  background-color: var(--c-black);
+}
+
+.burntXyroLine {
+  border-radius: 1.25rem;
+  background-color: var(--pink);
+  height: 0.5rem;
+}
+
+.lockedXyroLine {
+  border-radius: 1.25rem;
+  background-color: var(--gray-8);
+  height: 0.5rem;
+}
+
+.circulatingXyroLine {
+  border-radius: 1.25rem;
+  background-color: var(--c-a-green);
+  height: 0.5rem;
+}
+
+.supplyLine {
+  width: 3.75rem;
+  height: 0.5rem;
+  border-radius: 1.25rem;
+}
+
+.supplyLineGreen {
+  background-color: var(--c-a-green);
+}
+
+.supplyLinePink {
+  background-color: var(--pink);
+}
+
+.supplyLineGray {
+  background-color: var(--gray-8);
+}
+
+.buybackTypeSwitcherButton.buybackTypeSwitcherButton.buybackTypeSwitcherButton {
+  color: var(--c-gray-40);
+  padding: 0 8rem;
+}
+
+.buybackTypeSwitcherWrapper {
+  width: fit-content;
+  background-color: var(--c-gray-90);
+}
+
+.tokenInfoTooltip {
+  border-radius: 30rem;
+  background-color: var(--c-gray-90);
+}
+
+.contractAddress {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  @media screen and (width < $sm) {
+    max-width: 36rem;
+  }
+}
+
+.buybackSwapTab,
+.buybackBridgeTab {
+  min-height: 88rem;
+  width: 100%;
+  border-radius: 3.75rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (width < $sm) {
+    background-image: none;
+    min-height: 80rem;
+  }
+}
+
+.buybackBridgeTab {
+  background-image: url('../../shared/images/buy-back-bridge-background.png');
+}
+
+.buybackSwapTab {
+  background-image: url('../../shared/images/buy-back-trade-background.png');
+}
+
+.swapCard {
+  border-radius: 4rem;
+  background-color: var(--c-gray-80);
+}
+
+.buyBackSwitchButton.buyBackSwitchButton {
+  text-decoration: none;
+  color: var(--c-gray-70);
+
+  &:hover {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.buyBackSwitchButtonActive.buyBackSwitchButtonActive {
+  color: var(--c-white);
+}
+
+.buyBackInputPercentButton.buyBackInputPercentButton.buyBackInputPercentButton {
+  color: var(--c-gray-40);
+  &:hover {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    color: var(--c-gray-40);
+    opacity: 0.6;
+  }
+}
+
+.buyBackInput.buyBackInput {
+  width: 100%;
+  border-radius: 3rem;
+  background-color: var(--c-gray-100);
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.buyBackTokenInput.buyBackTokenInput.buyBackTokenInput {
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  & > :global(.rt-TextFieldInput) {
+    background-color: transparent;
+    font-size: 2.5rem;
+    margin-left: -1.5rem;
+  }
+}
+
+.buyBackInputSeparator.buyBackInputSeparator {
+  display: block;
+  height: 5rem;
+  width: 2px;
+  background-color: var(--c-gray-80);
+}
+
+.buybackTokenInputSubtitle.buybackTokenInputSubtitle {
+  color: var(--c-gray-60);
+}
+
+.buybackTokenInputLable.buybackTokenInputLable {
+  color: var(--c-gray-40);
+}
+
+.buybackInputPercents.buybackInputPercents {
+  align-self: flex-end;
+}
+
+.buybackInputBalance.buybackInputBalance {
+  align-self: flex-start;
+
+  @media screen and (width < $sm) {
+    width: fit-content;
+    margin-left: 4rem;
+  }
+}
+
+.swapArrows {
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24.5px);
+}
+
+.swapButton.swapButton {
+  width: 100%;
+  min-height: 7.5rem;
+  background-color: var(--c-a-lime);
+  color: var(--black);
+  font-weight: 600;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.swapButton.swapButton:disabled {
+  background-color: var(--gray-6);
+  color: var(--gray-8);
+  filter: none;
+}
+
+.swapButtonDisabled.swapButtonDisabled {
+  background-color: var(--gray-7);
+  span {
+    color: var(--gray-9);
+  }
+}
+
+.buyBackInputFocused.buyBackInputFocused {
+  background-color: var(--black);
+}
+
+.buyBackInputError.buyBackInputError {
+  outline: 1px solid var(--pink);
+}
+
+.buybackTokenInputError.buybackTokenInputError {
+  color: var(--pink);
+}
+
+.tradeStatContainer {
+  border: 1px solid var(--gray-7);
+  padding: 0.75rem 3rem;
+  border-radius: 9rem;
+}
+
+.linkStatContainer {
+  padding: 0.75rem 3rem;
+  border-radius: 9rem;
+  background-color: var(--gray-7);
+}
+
+.buybackReviewDialog.buybackReviewDialog.buybackReviewDialog {
+  min-width: 52rem;
+  background-color: var(--gray-4);
+}
+
+.buybackReviewDialogSeparator {
+  width: 100%;
+  height: 2px;
+  opacity: 0.7;
+}
+
+.reviewDialogDataTitle {
+  color: var(--c-gray-40);
+}
+
+.buyBackInfoTooltip {
+  background-color: var(--black);
+  border-radius: 3rem;
+  max-width: 34.5rem;
+  padding: 1rem 2rem;
+}
+
+.reviewDialogButton.reviewDialogButton {
+  min-height: 7.5rem;
+}
+
+.reviewDialogAssetTradgeArrow {
+  margin-left: 1rem;
+}

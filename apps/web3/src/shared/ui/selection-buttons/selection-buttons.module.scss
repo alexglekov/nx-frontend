@@ -1,0 +1,110 @@
+.selectionButtons {
+  filter: none !important;
+  max-width: 100%;
+
+  .selectionButton.selectionButton {
+    min-width: 8rem;
+    width: 100%;
+    flex: 1;
+    /* stylelint-disable-next-line custom-property-pattern */
+    filter: var(--button-filter__solid-active);
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.radixSelectionButtons.radixSelectionButtons.radixSelectionButtons {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.selectionButtons.switch {
+  background-color: var(--black);
+  border-radius: calc(var(--b-radius) * 3); // full round
+  max-width: 100%;
+  border: 0.5rem solid var(--black);
+
+  .selectionButton:global(.rt-variant-soft) {
+    background-color: var(--black);
+  }
+}
+
+// NOTE: complex styles to rearrange the xyro button compoent's appearance
+.betDirectionButtons button {
+  &:global(.rt-variant-outline) > svg > path {
+    fill: transparent;
+    stroke-width: 0.25rem;
+  }
+
+  /**
+  * depends on #BetDirectionType
+  * {@link file://./../../types.ts#BetDirectionType}
+  */
+  &[value='UP'] {
+    &:global(.rt-variant-solid) > svg > path {
+      fill: var(--green);
+      stroke: var(--green);
+    }
+
+    &:global(.rt-variant-outline) {
+      & > div {
+        color: var(--green);
+      }
+      & > svg > path {
+        stroke: var(--green);
+      }
+    }
+  }
+
+  &[value='TP'] {
+    &:global(.rt-variant-solid) > svg > path {
+      fill: var(--green);
+      stroke: var(--green);
+    }
+
+    &:global(.rt-variant-outline) {
+      & > div {
+        color: var(--green);
+      }
+      & > svg > path {
+        stroke: var(--green);
+      }
+    }
+  }
+
+  /**
+   * depends on #BetDirectionType
+   * {@link file://./../../types.ts#BetDirectionType}
+   */
+  &[value='DOWN'] {
+    &:global(.rt-variant-solid) > svg > path {
+      fill: var(--pink);
+      stroke: var(--pink);
+    }
+
+    &:global(.rt-variant-outline) {
+      & > div {
+        color: var(--pink);
+      }
+      & > svg > path {
+        stroke: var(--pink);
+      }
+    }
+  }
+
+  &[value='SL'] {
+    &:global(.rt-variant-solid) > svg > path {
+      fill: var(--pink);
+      stroke: var(--pink);
+    }
+
+    &:global(.rt-variant-outline) {
+      & > div {
+        color: var(--pink);
+      }
+      & > svg > path {
+        stroke: var(--pink);
+      }
+    }
+  }
+}

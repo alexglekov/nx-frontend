@@ -1,0 +1,27 @@
+@import '/src/shared/styles/breakpoints';
+
+.tableItemAssetShortName {
+  color: var(--c-white-alpha-2);
+}
+
+.tableItemDirectionWrapper {
+  padding: 0.7rem 1.1rem;
+  border-radius: 1.2rem;
+  background-color: var(--c-black);
+}
+
+.tableItemAsset {
+  @media screen and (width < $sm) {
+    min-width: 14rem;
+  }
+}
+
+.tableItemAssetShortName {
+  color: var(--c-white-alpha-2);
+}
+
+.conditionResultItemWrapper.conditionResultItemWrapper {
+  padding: 0.75rem 1rem;
+  border-radius: 1.25rem;
+  background-color: var(--c-black);
+}

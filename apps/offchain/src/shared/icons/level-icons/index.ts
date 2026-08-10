@@ -1,0 +1,6 @@
+export { ReactComponent as LevelTierOne } from './level-tier-one.svg'
+export { ReactComponent as LevelTierTwo } from './level-tier-two.svg'
+export { ReactComponent as LevelTierThree } from './level-tier-three.svg'
+export { ReactComponent as LevelTierFour } from './level-tier-four.svg'
+export { ReactComponent as LevelTierFive } from './level-tier-five.svg'
+export { ReactComponent as CurrentLevelProgress } from './current-level-progress.svg'

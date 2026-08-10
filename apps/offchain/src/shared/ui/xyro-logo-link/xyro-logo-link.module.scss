@@ -1,0 +1,21 @@
+@import 'src/shared/styles/breakpoints';
+
+.logoLink {
+  cursor: pointer;
+
+  &.withPadding {
+    padding: 2.5rem 2rem;
+
+    @media screen and (width < $sm) {
+      padding: 2rem;
+    }
+  }
+}
+
+.logoText.logoText {
+  height: 3rem;
+
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}

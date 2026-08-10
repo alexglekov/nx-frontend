@@ -1,0 +1,111 @@
+name: Build push and deploy feature branch
+on:
+  push:
+    branches-ignore:
+      - stage
+      - alpha
+      - dev
+      - develop
+      - main
+      - master
+
+jobs:
+  build:
+    name: build and deploy
+    runs-on: werf
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.TOKEN_GITHUB }}
+          submodules: 'true'
+
+      - name: Update submodules
+        id: update
+        run: git submodule update --remote --recursive
+
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v5
+
+      - name: Npm build
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@xyro-io'
+      - run: npm install -g nx@latest
+      - run: |
+          npm ci
+          cd apps/web3
+          npm ci
+          cd ../offchain
+          npm ci
+          cd ../..
+          nx build offchain
+          nx build web3
+        env:
+          VITE_BACKEND_URL: backend-dev.xyrotech.net
+          VITE_STAND: test
+          VITE_THIRD_WEB_API_KEY: 3c0d5e17df9272071f4e2c7357e377f4
+          VITE_WSS_PROVIDER: wss://arbitrum-sepolia-rpc.publicnode.com
+          VITE_HTTP_PROVIDER: https://arb-sepolia.g.alchemy.com/v2/V3QeVlAT9lOobpQuPEM3KGWrVYVBTbTf
+          VITE_ETH_HTTP_PROVIDER: https://ethereum-sepolia.blockpi.network/v1/rpc/d0d2697fa2accb8172214b6fcf604f7da370074c
+          VITE_TECH_ISSUES_FLAG: false
+      - run: npm install -g wrangler
+
+      - name: Deploy
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID}}
+        run: |
+          TEST=$(curl -X GET \
+            -H 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN'' \
+            -H 'Content-Type: application/json' \
+            'https://api.cloudflare.com/client/v4/accounts/'$CLOUDFLARE_ACCOUNT_ID'/pages/projects/'${{ env.GITHUB_REF_SLUG_URL }}'-offchain-front' | jq -r '.result')
+          if [ "$TEST" = "null" ]
+          then
+                wrangler pages project create ${{ env.GITHUB_REF_SLUG_URL }}-offchain-front --production-branch=${{ env.GITHUB_REF_SLUG_URL }}
+                wrangler pages deploy apps/offchain/dist/ --project-name ${{ env.GITHUB_REF_SLUG_URL }}-offchain-front --branch=${{ env.GITHUB_REF_SLUG_URL }}
+                curl -X POST \
+                -H 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN'' \
+                -H 'Content-Type: application/json' \
+                -d '{"name": "'"${{ env.GITHUB_REF_SLUG_URL }}-offchain-front.xyro.io"'"}' \
+                'https://api.cloudflare.com/client/v4/accounts/'$CLOUDFLARE_ACCOUNT_ID'/pages/projects/'${{ env.GITHUB_REF_SLUG_URL }}'-offchain-front/domains'
+                DOMAIN=$(curl -X GET \
+                  -H 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN'' \
+                  -H 'Content-Type: application/json' \
+                  'https://api.cloudflare.com/client/v4/accounts/'$CLOUDFLARE_ACCOUNT_ID'/pages/projects/'${{ env.GITHUB_REF_SLUG_URL }}'-offchain-front' | jq -r '.result.subdomain')
+                curl -X POST \
+                -H 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN'' \
+                -H 'Content-Type: application/json' \
+                -d '{"content": "'"$DOMAIN"'","name": "'"${{ env.GITHUB_REF_SLUG_URL }}-offchain-front.xyro.io"'","proxied": true,"type": "CNAME"}' \
+                'https://api.cloudflare.com/client/v4/zones/'$CF_ZONE_ID'/dns_records'
+          else
+                wrangler pages deploy apps/offchain/dist/ --project-name ${{ env.GITHUB_REF_SLUG_URL }}-offchain-front --branch=${{ env.GITHUB_REF_SLUG_URL }}
+          fi
+          TEST=$(curl -X GET \
+            -H 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN'' \
+            -H 'Content-Type: application/json' \
+            'https://api.cloudflare.com/client/v4/accounts/'$CLOUDFLARE_ACCOUNT_ID'/pages/projects/'${{ env.GITHUB_REF_SLUG_URL }}'-front' | jq -r '.result')
+          if [ "$TEST" = "null" ]
+          then
+                wrangler pages project create ${{ env.GITHUB_REF_SLUG_URL }}-front --production-branch=${{ env.GITHUB_REF_SLUG_URL }}
+                wrangler pages deploy apps/web3/dist/ --project-name ${{ env.GITHUB_REF_SLUG_URL }}-front --branch=${{ env.GITHUB_REF_SLUG_URL }}
+                curl -X POST \
+                -H 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN'' \
+                -H 'Content-Type: application/json' \
+                -d '{"name": "'"${{ env.GITHUB_REF_SLUG_URL }}-front.xyro.io"'"}' \
+                'https://api.cloudflare.com/client/v4/accounts/'$CLOUDFLARE_ACCOUNT_ID'/pages/projects/'${{ env.GITHUB_REF_SLUG_URL }}'-front/domains'
+                DOMAIN=$(curl -X GET \
+                  -H 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN'' \
+                  -H 'Content-Type: application/json' \
+                  'https://api.cloudflare.com/client/v4/accounts/'$CLOUDFLARE_ACCOUNT_ID'/pages/projects/'${{ env.GITHUB_REF_SLUG_URL }}'-front' | jq -r '.result.subdomain')
+                curl -X POST \
+                -H 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN'' \
+                -H 'Content-Type: application/json' \
+                -d '{"content": "'"$DOMAIN"'","name": "'"${{ env.GITHUB_REF_SLUG_URL }}-front.xyro.io"'","proxied": true,"type": "CNAME"}' \
+                'https://api.cloudflare.com/client/v4/zones/'$CF_ZONE_ID'/dns_records'
+          else
+                wrangler pages deploy apps/web3/dist/ --project-name ${{ env.GITHUB_REF_SLUG_URL }}-front --branch=${{ env.GITHUB_REF_SLUG_URL }}
+          fi

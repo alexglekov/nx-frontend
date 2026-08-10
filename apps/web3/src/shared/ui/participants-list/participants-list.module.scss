@@ -1,0 +1,243 @@
+@import '/src/shared/styles/breakpoints';
+
+.poolSizeTitle {
+  color: var(--gray-7);
+}
+
+.scrollArea > div {
+  transition: box-shadow 0.5s ease;
+  border-radius: var(--b-radius);
+  padding-right: 0.75rem;
+
+  &:has(div:nth-child(16)) {
+    box-shadow:
+      inset 3rem -6rem 3rem -3rem var(--c-black-alpha-1),
+      inset -3rem 6rem 3rem -3rem var(--c-black-alpha-1),
+      inset 0 0 0 1px var(--gray-4);
+  }
+}
+
+.scrollAreaBullsEye > div {
+  transition: box-shadow 0.5s ease;
+  border-radius: var(--b-radius);
+
+  &:has(div:nth-child(8)) {
+    box-shadow:
+      inset 3rem -6rem 3rem -3rem var(--c-black-alpha-1),
+      inset -3rem 6rem 3rem -3rem var(--c-black-alpha-1),
+      inset 0 0 0 1px var(--gray-4);
+  }
+}
+
+.participantBetListContainer.participantBetListContainer.participantBetListContainer {
+  padding: 2rem 1rem;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  container-name: pool-info;
+
+  &:has(:nth-child(6)) {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:has(:nth-child(13)) {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 45rem;
+    padding: 2rem 0;
+
+    .participantBetContainer {
+      padding: 0.75rem 0;
+    }
+
+    .participantBetAvatar :global(.rt-AvatarRoot) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+
+    .participantBetAmount {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media screen and (width < $sm) {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+
+    & :global(.rt-AvatarRoot) {
+      box-sizing: content-box;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+}
+
+.participantBetListContainerBullseye.participantBetListContainerBullseye.participantBetListContainerBullseye {
+  padding: 2rem 1rem;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  container-name: pool-info;
+
+  &:has(:nth-child(6)) {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:has(:nth-child(9)) {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 45rem;
+    padding: 2rem 0;
+
+    .participantBetContainer {
+      padding: 0.75rem 0;
+    }
+
+    .participantBetAvatar :global(.rt-AvatarRoot) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+
+    .participantBetAmount {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media screen and (width < $sm) {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+
+    & :global(.rt-AvatarRoot) {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+}
+
+.participantBetListContainerBullseyeMyBet.participantBetListContainerBullseyeMyBet.participantBetListContainerBullseyeMyBet.participantBetListContainerBullseyeMyBet {
+  &:has(:nth-child(9)) {
+    max-height: 25rem;
+  }
+}
+
+.participantBetListContainerBullseyeMyBets.participantBetListContainerBullseyeMyBets.participantBetListContainerBullseyeMyBets.participantBetListContainerBullseyeMyBets {
+  &:has(:nth-child(9)) {
+    max-height: 30rem;
+  }
+}
+
+.participantBetContainer.participantBetContainer.participantBetContainer {
+  &.ownBet {
+    width: 100%;
+    display: flex;
+    padding: 1rem 0;
+    justify-self: center;
+    border-radius: 1rem;
+    background-color: var(--gray-3);
+  }
+
+  @media screen and (width < $sm) {
+    padding: 0;
+    margin-right: -2rem;
+    width: auto;
+    border: 0.75rem solid var(--gray-4);
+    z-index: 1;
+    border-radius: 50%;
+
+    &.ownBet {
+      width: auto;
+      padding: 0;
+      border-radius: 50%;
+      border-color: var(--black);
+    }
+
+    .participantBetAmount {
+      display: none;
+    }
+  }
+}
+
+.participantListCounter {
+  z-index: 2;
+  border: 0.75rem solid var(--gray-4);
+}
+
+.blueContainer.blueContainer.blueContainer {
+  border-radius: 1.5rem;
+  background-color: color-mix(in srgb, var(--cyan) 90%, transparent);
+}
+
+.lightBlueContainer.lightBlueContainer {
+  border-radius: 1.5rem;
+  background-color: color-mix(in srgb, var(--cyan) 80%, transparent);
+}
+
+.blueContainerText.blueContainerText {
+  color: var(--c-a-lazur);
+  max-width: 13rem;
+}
+
+.blueContainerTextSecondary.blueContainerTextSecondary {
+  color: var(--c-a-lazur);
+  max-width: 13rem;
+  opacity: 0.5;
+}
+
+.blueContainerWarningText.blueContainerWarningText {
+  color: var(--c-a-lazur);
+  max-width: 15rem;
+}
+
+.yellowContainer.yellowContainer {
+  border-radius: 1.5rem;
+  background-color: #ccf9941a;
+  max-width: 26rem;
+}
+
+.yellowContainerText.yellowContainerText {
+  color: var(--c-a-yellow);
+  max-width: 15rem;
+}
+
+.lightBetText.lightBetText.lightBetText {
+  font-weight: var(--font-weight-light);
+}
+
+.winStreakIcon.winStreakIcon.winStreakIcon {
+  position: absolute;
+  top: -1rem;
+  right: 4.5rem;
+  z-index: 10;
+  border: 2px solid var(--gray-4);
+  border-radius: 50%;
+  background-color: var(--gray-4);
+
+  @media screen and (width < $sm) {
+    right: 0;
+  }
+}
+
+.winStreakIconMyBet.winStreakIconMyBet.winStreakIconMyBet {
+  position: absolute;
+  top: 0;
+  right: 4.5rem;
+  z-index: 10;
+  border: 2px solid var(--gray-3);
+  border-radius: 50%;
+  background-color: var(--gray-3);
+
+  @media screen and (width < $sm) {
+    right: 0;
+    top: -1rem;
+  }
+}

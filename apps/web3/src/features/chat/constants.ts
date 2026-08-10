@@ -1,0 +1,2 @@
+export const MAX_SYMBOLS_INPUT_VALUE = 300
+export const DEFAULT_SKIP_ELEMENTS_AMOUNT = 15

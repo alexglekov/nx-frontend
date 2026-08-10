@@ -1,0 +1,73 @@
+@import '/src/shared/styles/breakpoints';
+
+.wrapper {
+  border-radius: 4rem;
+  background-color: var(--c-gray-90);
+  padding: 0.25rem;
+  margin: 0 auto;
+  width: fit-content;
+
+  transition: all 400ms;
+
+  &.left {
+    border: 2px solid #98facb;
+    box-shadow:
+      0 2px 16px 0 rgba(118, 255, 190, 0.8),
+      0 1px 35px 0 rgba(95, 244, 173, 0.5);
+  }
+
+  &.right {
+    border: 2px solid #f0b9fe;
+    box-shadow:
+      0 2px 16px 0 rgba(255, 104, 240, 0.8),
+      0 1px 34px 0 rgba(222, 104, 255, 0.7);
+  }
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.tabSwitch {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    top: 0;
+    transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+    border-radius: 5rem;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    height: 100%;
+    z-index: 0;
+  }
+
+  &.left::after {
+    left: 0;
+    background: linear-gradient(94deg, #beffe0 6.81%, #5ff4ad 95.23%);
+  }
+
+  &.right::after {
+    left: 50%;
+    background: linear-gradient(95deg, #fbd1ff 6.94%, #ff6ff1 98.73%);
+  }
+}
+
+.tab.tab {
+  width: 100%;
+  flex: 1;
+  background: transparent;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  transition: color 400ms;
+  font-weight: bold;
+
+  color: var(--c-gray-60);
+
+  &.active {
+    color: var(--c-gray-100);
+  }
+}

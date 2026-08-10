@@ -1,0 +1,548 @@
+@import '/src/shared/styles/breakpoints';
+
+.lastBetsTableInfoContainer.lastBetsTableInfoContainer.lastBetsTableInfoContainer {
+  @media screen and (width < $sm) {
+    gap: 3.5rem;
+    margin-bottom: 0.75rem;
+    padding-right: 2rem;
+  }
+}
+
+.lastBetsTableWrapper.lastBetsTableWrapper {
+  margin-top: 13.5rem;
+
+  @media screen and (width < $sm) {
+    margin-top: 6rem;
+
+    & > :global(.rt-CardInner) {
+      padding: 2.5rem;
+    }
+  }
+}
+
+.tableTitle.tableTitle {
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.betsTypeSwitcher.betsTypeSwitcher {
+  // TODO: Activate when proper design will be provided, now switcher is too big for mobile
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.homeWrap {
+  position: relative;
+  background-color: var(--c-black);
+}
+
+.cardWrapper {
+  width: 100%;
+  text-decoration: none;
+  color: initial;
+  min-height: 30.25rem;
+}
+
+.highlightElement {
+  position: absolute;
+}
+
+.modeCardInfoContainer.modeCardInfoContainer.modeCardInfoContainer {
+  z-index: 5;
+  min-height: 30.25rem;
+}
+
+.callToActionCard {
+  background-color: var(--gray-3);
+  background-repeat: no-repeat;
+  background-position: 12rem center;
+  background-size: cover;
+  height: 100%;
+  min-height: 30.25rem;
+  background-image: url('/src/shared/images/banners/banner-part-all-modes.png');
+  box-shadow:
+    inset -1em 0 8rem var(--gray-3) /* internal shadow from right side of image */,
+    inset 0 -1rem 8rem var(--gray-3) /* internal shadow from bottom of image */;
+}
+
+.achievementWrapper {
+  background-color: var(--c-black);
+  border-radius: 3rem;
+  padding: 8rem 3rem;
+  width: 100%;
+}
+
+.achievemntsContainer.achievemntsContainer {
+  border-radius: 5rem;
+}
+
+.achievementImage {
+  width: 11rem;
+  height: 11rem;
+}
+
+.pulseContainer {
+  position: relative;
+}
+
+.sectionTitle.sectionTitle.sectionTitle {
+  font-size: 5.25rem;
+}
+
+.cardsSectionsWrapper.cardsSectionsWrapper {
+  gap: 7.5rem;
+}
+
+.cardCallToActionText.cardCallToActionText {
+  @media screen and (width < $sm) {
+    font-size: 3rem;
+  }
+}
+
+.extraModeCards.extraModeCards {
+  @media screen and (width < $sm) {
+    & > :nth-child(1),
+    & > :nth-child(4) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.gameModeCards.gameModeCards {
+  @media screen and (width >= $sm) {
+    & > :nth-child(1) {
+      grid-column: 1 / span 2;
+    }
+
+    & > :nth-child(2) {
+      grid-column: 3;
+    }
+
+    & > :nth-child(3) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    & > :nth-child(4) {
+      grid-column: 2 / span 3;
+      grid-row: 2;
+    }
+
+    & > :nth-child(5) {
+      grid-column: 1 / span 3;
+      grid-row: 3;
+    }
+  }
+
+  @media screen and (width < $sm) {
+    & > :nth-child(1),
+    & > :nth-child(4),
+    & > :nth-child(5) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.cashBackTabWrapper.cashBackTabWrapper.cashBackTabWrapper {
+  background-color: var(--gray-4);
+  padding: 3.75rem 5rem;
+  border-radius: 3.75rem;
+}
+
+.paymentsWillStartText.paymentsWillStartText {
+  color: var(--c-a-lazur);
+  opacity: 0.7;
+}
+
+.roundProgressBar {
+  z-index: 1;
+}
+
+.timeframeCountdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: stroke-dashoffset 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 3px solid var(--c-black);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.timerTimeText {
+  color: var(--c-a-lazur);
+}
+
+.cashBackAvailabilityText {
+  max-width: 44rem;
+}
+
+.gogoToProfileLink.gogoToProfileLink {
+  @media screen and (width < $sm) {
+    min-width: 100%;
+  }
+}
+
+.goToProfileBtn.goToProfileBtn.goToProfileBtn {
+  background-color: var(--c-a-lazur);
+  min-height: 60px;
+  min-width: 166px;
+
+  @media screen and (width < $sm) {
+    min-width: 100%;
+  }
+}
+
+.modeCardComingSoonBadge.modeCardComingSoonBadge {
+  position: absolute;
+  padding: 0.5rem 1.25rem;
+  right: 1.25rem;
+  background-color: var(--c-a-lazur);
+  border-radius: 6.25rem;
+}
+
+.modeCardNewBadge.modeCardNewBadge {
+  background-color: var(--c-a-green);
+}
+
+// INTRO
+.introContainer.introContainer {
+  min-height: 40.75rem;
+  z-index: 3;
+
+  @media screen and (width >= $sm) {
+    margin-bottom: -10rem;
+  }
+}
+
+.introDepositContainer.introDepositContainer {
+  height: fit-content;
+}
+
+.introImage.introImage {
+  position: absolute;
+  height: 80rem;
+  top: -5rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.introTitleBox.introTitleBox {
+  @media screen and (width < $sm) {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url('/src/shared/images/intro-background-mobile.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    min-height: 50rem;
+    margin-bottom: -20rem;
+  }
+}
+
+// DEPOSIT CARD
+.depositCard.depositCard {
+  min-width: 52.25rem;
+  max-width: 35%;
+  width: 100%;
+  background-color: var(--gray-4);
+  border-radius: 3.75rem;
+
+  @media screen and (width < $sm) {
+    max-width: 100%;
+  }
+}
+
+.depositAmountField.depositAmountField {
+  flex: 1;
+  border-radius: 0;
+  outline: none;
+
+  &:global(.rt-TextFieldInput) {
+    color: var(--c-white);
+  }
+
+  &:global(.rt-TextFieldInput::placeholder) {
+    opacity: 0.5;
+  }
+}
+
+.depositForm.depositForm {
+  background-color: var(--black);
+  border-radius: 3.75rem;
+}
+
+.assetSelect.assetSelect {
+  padding-inline: 3rem 1rem;
+  border-left: 1px solid var(--c-gray-80);
+}
+
+.goToGames.goToGames {
+  width: 100%;
+}
+
+.goToGamesBtn.goToGamesBtn {
+  width: 100%;
+  background-color: var(--c-a-pink);
+  padding: 3rem;
+  border-radius: 3.75rem;
+}
+
+// GAME LIST
+.gameList.gameList {
+  z-index: 3;
+}
+
+.seeMore.seeMore {
+  color: var(--c-a-lazur);
+}
+
+.gameContainer.gameContainer {
+  &:hover .gameImage {
+    filter: brightness(1.2);
+    transform: scale(1.03);
+  }
+}
+
+.gameImage.gameImage {
+  object-fit: cover;
+  border-radius: 3.75rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.introText.introText {
+  font-size: 5.25rem;
+}
+
+.introTitle.introTitle {
+  @media screen and (width < $sm) {
+    margin-top: -14rem;
+  }
+}
+
+.seeMore.seeMore {
+  text-decoration: none;
+}
+
+.assetSelectTrigger.assetSelectTrigger.assetSelectTrigger {
+  background-color: var(--black);
+  border-radius: 1.75rem;
+  box-shadow: none;
+  padding-left: 8rem;
+  cursor: pointer;
+
+  & > :global(.rt-SelectTriggerInner) {
+    color: var(--gray-9);
+  }
+
+  @media screen and (width < $sm) {
+    min-height: 8.5rem;
+  }
+}
+
+.assetSelectTriggerFull.assetSelectTriggerFull.assetSelectTriggerFull {
+  padding-left: 1rem;
+}
+
+.assetSelectTrigger.assetSelectTrigger.assetSelectTrigger > span {
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.selectTriggerNewIcon.selectTriggerNewIcon {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.assetSelectContent.assetSelectContent.assetSelectContent {
+  background-color: var(--black);
+  margin-top: 6.5rem;
+  padding-left: -2rem;
+  padding: 1rem;
+  border-radius: 3rem;
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--gray-4), var(--gray-6) 25%),
+    0 12px 60px var(--black-a5),
+    0 12px 32px -16px var(--black-a7);
+
+  :global(.rt-SelectItemIndicator) {
+    display: none;
+  }
+}
+
+.assetSelectItem.assetSelectItem.assetSelectItem {
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.depositCardAssetSelectWrapper.depositCardAssetSelectWrapper {
+  border-left: 1px solid var(--gray-6);
+  padding-left: 1rem;
+}
+
+.actionLink.actionLink {
+  color: var(--c-a-lazur);
+  text-decoration: none;
+}
+
+.seeMoreWrapper.seeMoreWrapper.seeMoreWrapper {
+  padding: 1rem 2rem;
+  background-color: color-mix(in srgb, var(--c-a-lazur) 30%, transparent);
+  border-radius: 3rem;
+}
+
+.seeMoreWrapper.seeMoreWrapper.seeMoreWrapper:hover {
+  background-color: color-mix(in srgb, var(--c-a-lazur) 10%, transparent);
+  transition: 0.3s;
+}
+
+.seeMoreWrapper.seeMoreWrapper.seeMoreWrapper:not(:hover) {
+  background-color: color-mix(in srgb, var(--c-a-lazur) 30%, transparent);
+  transition: 0.3s;
+}
+
+.bonusBannerWrapper.bonusBannerWrapper {
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+  background-image: url('/src/shared/images/welcome-pack-background.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  @media screen and (width >= $sm) {
+    &:hover {
+      background-size: 110%;
+      filter: brightness(1.3);
+    }
+  }
+
+  @media screen and (width < $sm) {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.bonusBannerInfo.bonusBannerInfo {
+  max-width: 41.5rem;
+}
+
+.bonusBannerPercentage.bonusBannerPercentage {
+  color: var(--pink);
+  font-size: 7.75rem;
+}
+
+.bonusDescription.bonusDescription {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.bonusBannerButton.bonusBannerButton {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.referralBannerWrapper.referralBannerWrapper {
+  height: 50rem;
+  display: flex;
+  border-radius: 5rem;
+  background-image: url('/src/shared/images/referral-background.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  @media screen and (width >= $sm) {
+    &:hover {
+      background-size: 105%;
+      filter: brightness(1.2);
+    }
+  }
+
+  @media screen and (width < $sm) {
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.referralBannerButton.referralBannerButton {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.referralBannerText.referralBannerText {
+  max-width: 53.125rem;
+  margin-bottom: 4rem;
+  font-size: 3.25rem;
+
+  @media screen and (width < $sm) {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+.referralBannerTitle.referralBannerTitle {
+  background: linear-gradient(90deg, #ff68f0 12.5%, #8247e5 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.referralBannerInfo.referralBannerInfo {
+  margin: 4rem 6.25rem;
+
+  @media screen and (width < $sm) {
+    margin: 0;
+  }
+}
+
+.telegramBannerWrapper.telegramBannerWrapper {
+  height: 22.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+  background-image: url('/src/shared/images/telegram-home-banner.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  @media (width < $sm) {
+    height: 100%;
+    padding: 2rem;
+    background-size: cover;
+    background-position: right;
+  }
+}
+
+.tgBannerPercentageText.tgBannerPercentageText.tgBannerPercentageText {
+  color: #7cb1ff;
+}
+
+.tgBannerCTA.tgBannerCTA.tgBannerCTA {
+  height: 7.5rem;
+
+  @media (width < $sm) {
+    width: 100%;
+  }
+}

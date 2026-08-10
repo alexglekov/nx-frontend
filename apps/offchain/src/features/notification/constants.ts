@@ -1,0 +1,1 @@
+export const NOTIFICATION_TOAST_INIT_TITLE = 'INIT'

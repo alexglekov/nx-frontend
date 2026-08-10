@@ -1,0 +1,162 @@
+export { ReactComponent as EmptyTableStateIcon } from './empty-table-state-icon.svg'
+export { ReactComponent as ChartWithBgIcon } from './chart.svg'
+export { ReactComponent as UpdownTimerContainerSVG } from './up-down-timer-container.svg'
+export { ReactComponent as BullsEyeItemCardIcon } from './bulls-eye-item-card-icon.svg'
+export { ReactComponent as BullsEyeTextItemContainer } from './bulls-eye-text-items-container.svg'
+export { ReactComponent as PopularPoolBadgeSVG } from './pools-badge.svg'
+export { ReactComponent as XyroBorderedSlicedBox } from './xyro-bordered-sliced-box.svg'
+export { ReactComponent as XyroBorderedSlicedBox2 } from './xyro-bordered-sliced-box-2.svg'
+export { ReactComponent as XyroSlicedContainer } from './xyro-sliced-container.svg'
+
+export { ReactComponent as DepositIcon } from './deposit.svg'
+export { ReactComponent as WithdrawIcon } from './withdraw.svg'
+export { ReactComponent as OperationFailIcon } from './operation-fail-icon.svg'
+export { ReactComponent as OperationSuccessIcon } from './operation-success-icon.svg'
+export { ReactComponent as EmptyStateNotificationIcon } from './empty-state-notification-icon.svg'
+export { ReactComponent as WinningToastBadge } from './winning-toast-badge.svg'
+
+export { ReactComponent as ParticipantsBadge } from './participants.svg'
+export { ReactComponent as TotalPrizePoolBadge } from './total-pool-size.svg'
+
+export { ReactComponent as BonusIcon } from './bonus-icon.svg'
+
+export { ReactComponent as NoPredictIcon } from './no-predict-icon.svg'
+export { ReactComponent as LargestWinIcon } from './largest-win-icon.svg'
+export { ReactComponent as SwapTetherToken } from './swap-tether-token.svg'
+export { ReactComponent as SwapXyroToken } from './swap-xyro-token.svg'
+export { ReactComponent as SwapArrows } from './swap-arrows.svg'
+export { ReactComponent as CircleArrowDown } from './circle-arrow-down.svg'
+export { ReactComponent as InfoCircleFill } from './info-circle-fill.svg'
+export { ReactComponent as RakebackIconOneVsOne } from './rakeback-icon-1v1.svg'
+export { ReactComponent as RakebackIconBullsEye } from './rakeback-icon-BullsEye.svg'
+export { ReactComponent as RakebackIconSetups } from './rakeback-icon-Setups.svg'
+export { ReactComponent as RakebackIconUpDown } from './rakeback-icon-UpDown.svg'
+
+export { default as profileWinratePath } from './profile-winrate.svg'
+export { default as profileLargestWinPath } from './profile-largest-win.svg'
+export { default as profileTotalBetsPath } from './profile-total-bets.svg'
+export { default as imageFallbackPath } from './image-fallback.svg'
+
+export { ReactComponent as SearchIcon } from './search-icon.svg'
+
+export { ReactComponent as GameCrownIcon } from './game-crown-icon.svg'
+export { ReactComponent as GameFullscreenIcon } from './game-fullscreen-icon.svg'
+export { ReactComponent as GameLikeIcon } from './game-like-icon.svg'
+export { ReactComponent as GamePromotionIcon } from './game-promotion-icon.svg'
+
+export { ReactComponent as AccountProfileRounded } from './account-profile-rounded.svg'
+export { ReactComponent as DatePickerRounded } from './datepicker-rounded.svg'
+export { ReactComponent as SettingsRounded } from './settings-rounded.svg'
+
+export {
+  default as BiggestWinCardIconPath,
+  ReactComponent as BiggestWinCardIcon
+} from './biggest-win-card-icon.svg'
+export {
+  default as NumberOfPoolsParticipantsCardIconPath,
+  ReactComponent as NumberOfPoolsParticipantsCardIcon
+} from './number-of-pools-participants-card-icon.svg'
+export {
+  default as TotalPoolSizeCardIconPath,
+  ReactComponent as TotalPoolSizeCardIcon
+} from './total-pool-size-card-icon.svg'
+
+export {
+  default as modeUpDownCardIconPath,
+  ReactComponent as ModeUpDownCard
+} from './card-mode-up-down.svg'
+export {
+  default as modeStakingCardIconPath,
+  ReactComponent as ModeStakingCard
+} from './card-mode-staking.svg'
+export {
+  default as modeTokenCardIconPath,
+  ReactComponent as ModeTokenCard
+} from './card-mode-token.svg'
+export {
+  default as modeAirdropCardIconPath,
+  ReactComponent as ModeAirdropCard
+} from './card-mode-airdrop.svg'
+export {
+  default as modeStakingCardBackgroundIconPath,
+  ReactComponent as ModeStakingCardBackground
+} from './card-mode-staking-background.svg'
+export {
+  default as modeTokenCardBackgroundIconPath,
+  ReactComponent as ModeTokenCardBackground
+} from './card-mode-token-background.svg'
+export {
+  default as modeAirdropCardBackgroundIconPath,
+  ReactComponent as ModeAirdropCardBackground
+} from './card-mode-airdrop-background.svg'
+export {
+  default as modeOneVsOneCardIconPath,
+  ReactComponent as ModeOneVsOneCard
+} from './card-mode-one-vs-one.svg'
+export {
+  default as modeSetupsCardIconPath,
+  ReactComponent as ModeSetupsCard
+} from './card-mode-setups.svg'
+export {
+  default as modeX1000CardIconPath,
+  ReactComponent as ModeX1000Card
+} from './card-mode-x1000.svg'
+export {
+  default as modeBullsEyeCardIconPath,
+  ReactComponent as ModeBullsEyeCard
+} from './card-mode-bulls-eye.svg'
+export {
+  default as rewardsCardIconPath,
+  ReactComponent as RewardsIcon
+} from './rewards.svg'
+export {
+  default as referralsCardIconPath,
+  ReactComponent as ReferralsIcon
+} from './referrals.svg'
+
+export {
+  default as modeRewardsCardIconPath,
+  ReactComponent as ModeRewardsCard
+} from './card-mode-rewards.svg'
+export {
+  default as modeReferralsCardIconPath,
+  ReactComponent as ModeReferralsCard
+} from './card-mode-referrals.svg'
+
+export {
+  default as x1000CardLogoPath,
+  ReactComponent as X1000CardLogo
+} from './home-card-icon-x1000.svg'
+export {
+  default as setupsCardLogoPath,
+  ReactComponent as SetupsCardLogo
+} from './home-card-icon-setups.svg'
+export {
+  default as bullsEyeCardLogoPath,
+  ReactComponent as BullsEyeCardLogo
+} from './home-card-icon-bulls-eye.svg'
+export {
+  default as oneVsOneCardLogoPath,
+  ReactComponent as OneVsOneCardLogo
+} from './home-card-icon-1vs1.svg'
+export {
+  default as upDownCardLogoPath,
+  ReactComponent as UpDownCardLogo
+} from './home-card-icon-up-down.svg'
+
+export {
+  default as BullsEyeTopFirstIconPath,
+  ReactComponent as BullsEyeTopFirst
+} from '../box-icons/bulls-eye-top-first.svg'
+export {
+  default as BullsEyeTopSecondIconPath,
+  ReactComponent as BullsEyeTopSecond
+} from '../box-icons/bulls-eye-top-second.svg'
+export {
+  default as BullsEyeTopThirdIconPath,
+  ReactComponent as BullsEyeTopThird
+} from '../box-icons/bulls-eye-top-third.svg'
+export {
+  default as modeMemeWarsCardIconPath,
+  ReactComponent as ModeMemeWarsCard
+} from './card-mode-meme-wars.svg'

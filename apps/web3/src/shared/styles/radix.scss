@@ -1,0 +1,49 @@
+/* Radix components reassignments */
+.rt-TextField {
+  padding: 0.5rem 1.25rem;
+}
+
+.rt-TextFieldRoot {
+  box-shadow: none;
+}
+
+.rt-BaseButton.rt-Button {
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:disabled {
+    filter: brightness(0.6);
+    color: var(--black);
+  }
+}
+
+.rt-Card.rt-Card {
+  // padding: 0;
+  &::after {
+    box-shadow: none; // NOTE: remove a card border for the RadixCard component
+  }
+}
+
+.rt-BaseMenuContent {
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--gray-4), var(--gray-6) 25%),
+    0 12px 60px var(--black-a5),
+    0 12px 32px -16px var(--black-a7);
+}
+
+.rt-TextFieldInput {
+  background-color: var(--black);
+
+  &::placeholder {
+    color: var(--c-gray-40);
+  }
+}
+
+.rt-Link {
+  outline: none;
+}
+
+.rt-TooltipContent {
+  max-width: unset;
+}

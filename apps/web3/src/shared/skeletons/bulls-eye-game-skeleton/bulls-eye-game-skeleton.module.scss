@@ -1,0 +1,27 @@
+@import '/src/shared/styles/clip-path';
+@import '/src/shared/styles/breakpoints';
+
+.graphWrapper {
+  border-radius: 5rem;
+  padding: 3rem;
+  width: 100%;
+  background-color: var(--gray-4);
+}
+
+.timerFormer {
+  clip-path: polygon($xyro-shape-clip-path);
+}
+
+.poolSkeletonWrapper.poolSkeletonWrapper.poolSkeletonWrapper {
+  border-radius: 5rem;
+}
+
+.bullsEyePoolSkeleton {
+  border-radius: 4rem;
+  background-color: var(--gray-4);
+  padding: 0 1rem;
+
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}

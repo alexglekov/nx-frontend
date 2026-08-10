@@ -1,0 +1,190 @@
+@import 'src/shared/styles/breakpoints';
+
+.toastViewport.toastViewport.toastViewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+  margin: 0;
+  list-style: none;
+  z-index: 99999;
+  outline: none;
+  width: 23vw;
+
+  @media screen and (width < $sm) {
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.toastRoot.toastRoot.toastRoot {
+  display: flex;
+  flex-direction: column;
+  color: var(--gray-1);
+  border-radius: calc(var(--b-radius) * 2);
+  border: none;
+  column-gap: 2rem;
+  padding: 3rem 5rem;
+  box-shadow:
+    hsl(206 22% 7% / 35%) 0 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0 10px 20px -15px;
+  position: relative;
+  background-color: var(--gray-10);
+
+  &[data-state='open'] {
+    animation: slide-in 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  &[data-state='closed'] {
+    animation: hide 100ms ease-in;
+  }
+
+  &[data-swipe='move'] {
+    transform: translateX(var(--radix-toast-swipe-move-x));
+  }
+
+  &[data-swipe='cancel'] {
+    transform: translateX(0);
+    transition: transform 200ms ease-out;
+  }
+
+  &[data-swipe='end'] {
+    animation: swipe-out 100ms ease-out;
+  }
+
+  &.error {
+    background-color: var(--c-error);
+  }
+
+  &.loss {
+    background-color: var(--c-error);
+    gap: 2.5rem;
+  }
+
+  &.success {
+    background-color: var(--c-success);
+  }
+
+  &.info {
+    background-color: var(--c-info);
+  }
+
+  &.warning {
+    background-color: var(--c-warning);
+  }
+
+  &.reject {
+    background-color: var(--c-warning);
+    gap: 2.5rem;
+  }
+
+  &.win {
+    background-color: var(--c-success);
+    gap: 2.5rem;
+  }
+}
+
+.toastTitle {
+  grid-area: title;
+}
+
+.toastTitleLimiter {
+  max-width: 27.5rem;
+}
+
+.toastDescription {
+  grid-area: description;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.toastDecorations {
+  position: absolute;
+  width: 100%;
+  right: 2rem;
+  bottom: -2.5rem;
+}
+
+.toastAction {
+  grid-area: action;
+}
+
+.toastClose.toastClose.toastClose {
+  position: absolute;
+  top: 0;
+  left: -3rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 100%;
+  background-color: var(--gray-12);
+  border: 2px solid var(--gray-1);
+  color: var(--c-black);
+  cursor: pointer;
+  transition: color 100ms ease-out;
+
+  & svg {
+    width: 4rem;
+    stroke: currentcolor;
+    stroke-width: 0.25rem;
+  }
+
+  &:hover {
+    color: var(--gray-8);
+  }
+}
+
+.winAmountContainer.winAmountContainer {
+  border-radius: 1rem;
+  background-color: var(--black);
+  padding: 0.5rem 1rem;
+}
+
+.actionButton.actionButton.actionButton {
+  background-color: transparent;
+  border: 1px solid var(--black);
+  height: 5rem;
+}
+
+.winningToastBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(calc(100% + var(--viewport-padding)));
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes swipe-out {
+  from {
+    transform: translateX(var(--radix-toast-swipe-end-x));
+  }
+
+  to {
+    transform: translateX(calc(100% + var(--viewport-padding)));
+  }
+}

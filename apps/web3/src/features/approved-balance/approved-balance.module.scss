@@ -1,0 +1,240 @@
+@import '/src/shared/styles/breakpoints';
+
+.approvePopoverTrigger.approvePopoverTrigger.approvePopoverTrigger {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  &:hover {
+    background-color: var(--gray-5);
+  }
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.approvedAmountBox.approvedAmountBox.approvedAmountBox {
+  z-index: 1;
+  position: relative;
+  min-width: 33rem;
+  padding: 0.25rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    90deg,
+    #f4ff70 0%,
+    #80e666 22%,
+    #b468ff 62%,
+    #65f6ff 100%
+  );
+
+  &::before {
+    content: '';
+    height: 13.5rem;
+    position: absolute;
+    inset: -1rem;
+    transform: translate(0, 7rem);
+    z-index: -1;
+    background: linear-gradient(
+      90deg,
+      #f4ff70 0%,
+      #80e666 22%,
+      #b468ff 62%,
+      #65f6ff 100%
+    );
+    filter: blur(2rem);
+  }
+}
+
+.approvedAmountContent.approvedAmountContent.approvedAmountContent {
+  background-color: var(--black);
+  border-radius: 2rem;
+  padding: 2rem;
+  z-index: 10;
+}
+
+.approvedBalanceContent.approvedBalanceContent.approvedBalanceContent {
+  background-color: var(--c-gray-90);
+  border-radius: 2rem;
+  padding: 4rem;
+}
+
+.approvedContentSubtitle.approvedContentSubtitle.approvedContentSubtitle {
+  color: var(--gray-9);
+}
+
+.approvedAmountTitle.approvedAmountTitle.approvedAmountTitle {
+  text-transform: uppercase;
+  color: var(--gray-7);
+}
+
+.approvedFormAmount.approvedFormAmount.approvedFormAmount {
+  width: 100%;
+}
+
+.approvedFormButton.approvedFormButton.approvedFormButton {
+  width: 100%;
+  background-color: var(--c-a-green);
+  color: var(--black);
+  cursor: pointer;
+}
+
+.approvedFormButtonDisabled.approvedFormButtonDisabled.approvedFormButtonDisabled {
+  background-color: var(--gray-7);
+  span {
+    color: var(--gray-9);
+  }
+}
+
+.approvedFormAmountLabel.approvedFormAmountLabel.approvedFormAmountLabel {
+  align-self: flex-start;
+}
+
+.approvedBalanceContentWrapper.approvedBalanceContentWrapper.approvedBalanceContentWrapper {
+  transform: translate(-3rem, 3rem);
+}
+
+.approvedAmountTokenIcon.approvedAmountTokenIcon.approvedAmountTokenIcon {
+  color: var(--yellow);
+}
+
+.balanceWrap.balanceWrap.balanceWrap {
+  border-radius: 1rem;
+  background-color: var(--gray-5);
+}
+
+.balanceTitle.balanceTitle.balanceTitle {
+  opacity: 0.6;
+}
+
+.balanceValue.balanceValue.balanceValue {
+  padding-top: 0.16rem;
+}
+
+.approvedDivider.approvedDivider.approvedDivider {
+  width: 2px;
+  background-color: var(--gray-7);
+  height: 3.5rem;
+  align-self: center;
+  opacity: 0.4;
+}
+
+.amountFieldXyroIcon {
+  position: absolute;
+  color: var(--yellow);
+  z-index: 1;
+  transform: translateY(-50%);
+  bottom: 0;
+  right: 6rem;
+}
+
+.approveBalanceForm {
+  width: 100%;
+}
+
+.amountFieldMaxButton.amountFieldMaxButton.amountFieldMaxButton {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.oldTreasuryWrapper {
+  padding: 1.5rem 1.75rem;
+  background-color: #d7ffa4;
+  border-radius: 2.5rem;
+  max-width: 50rem;
+}
+
+.oldTreasuryText {
+  color: var(--c-gray-80);
+}
+
+.oldTreasuryButton.oldTreasuryButton {
+  background-color: var(--black);
+  border-radius: 3.75rem;
+  padding: 1rem 2rem;
+  height: 5rem;
+}
+
+.approvedBalanceRakebackGame {
+  width: 26rem;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.approvedBalanceRakebackWrap {
+  flex-direction: row;
+
+  @media screen and (width < $sm) {
+    flex-direction: column;
+  }
+}
+
+.approvedBalanceRakebackClaimButton.approvedBalanceRakebackClaimButton.approvedBalanceRakebackClaimButton {
+  background-color: var(--c-a-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 7rem;
+
+  &:disabled {
+    color: var(--c-gray-20);
+    background-color: var(--c-gray-40);
+  }
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.approvedAmountSeparator.approvedAmountSeparator.approvedAmountSeparator {
+  width: 2px;
+  height: 6rem;
+  background-color: var(--c-gray-80);
+  align-self: center;
+}
+
+.typeSwitcherWrapper {
+  background-color: var(--c-gray-90);
+  border-radius: 12.5rem;
+}
+
+.typeSwitcherSection.typeSwitcherSection.typeSwitcherSection {
+  background-color: transparent;
+  color: var(--c-gray-40);
+  width: 50%;
+}
+
+.typeSwitcherActiveSection.typeSwitcherActiveSection.typeSwitcherActiveSection {
+  width: 50%;
+  &:global(.rt-Button) {
+    background-color: var(--c-a-snow);
+    color: var(--c-black);
+  }
+}
+
+.betsAmountMark {
+  color: var(--gray-6);
+}
+
+.typeSwitcherIconWrap {
+  height: 3rem;
+}
+
+.typeSwitcherIconWrapXyro {
+  :global(svg) {
+    border-radius: 100%;
+    background-color: var(--c-black);
+  }
+}
+
+.approvedBalanceAmountFieldMaxButtonText {
+  color: var(--c-gray-60);
+}

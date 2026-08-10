@@ -1,0 +1,7 @@
+export { OnboradingModeUpDownPage } from './up-down'
+export { OnboradingModeBullsEyePage } from './bulls-eye'
+export { OnboradingModeSetupsPage } from './setups'
+export { OnboradingModeOneVsOnePage } from './one-vs-one'
+export { OnboradingModeTreasurePage } from './treasure'
+export { OnboradingModeReferralProgramPage } from './referral-program'
+export { OnboradingModeRewardsSystemPage } from './rewards-system'

@@ -1,0 +1,52 @@
+@import '/src/shared/styles/breakpoints';
+
+.title {
+  white-space: nowrap;
+  font-size: 5.25rem;
+}
+
+.loadButton.loadButton.loadButton {
+  border: 1px solid var(--c-a-pink);
+  color: var(--c-a-pink);
+  border-radius: 3.75rem;
+  min-width: 50rem;
+  padding: 2.25rem 3rem;
+}
+
+.searchBox {
+  width: 20rem;
+  flex: 1;
+  height: 6rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border-radius: 3.75rem;
+  outline: 1px solid var(--c-gray-40);
+
+  & > :global(.rt-TextFieldInput) {
+    color: var(--c-gray-40);
+    padding-left: 4rem;
+    background-color: var(--black);
+  }
+
+  & > :global(.rt-TextFieldInput::placeholder) {
+    color: var(--c-gray-60);
+  }
+
+  @media screen and (width < $lg) {
+    width: 100%;
+  }}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  color: var(--c-gray-40);
+}
+
+.searchWrapper {
+  @media screen and (width < $lg) {
+    width: 100%;
+    order: -1;
+  }
+}

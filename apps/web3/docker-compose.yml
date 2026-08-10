@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  front:
+    container_name: xyro-front
+    build:
+      context: ./
+    environment:
+      VITE_BACKEND_URL: https://backend.dev.xyro.io
+      VITE_BACKEND_SUBSCRIPTION: ws://backend.dev.xyro.io/subscription
+      VITE_SHOW_MODES_TO_NON_LOGGED_IN_USERS: false
+    ports:
+      - 3000:80

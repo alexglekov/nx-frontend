@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
+  <style>
+    .icon {
+      fill: #4469EC; 
+    }
+  </style>
+  <!-- NOTE: fallback path -->
+  <path stroke="#fff7" class="icon" stroke-linejoin="round" stroke-width=".5" d="M28.46 21.05a.28.28 0 0 0-.02.25l4.8 11.83L11.5 5.16l8.84 7.57c.08.07.19.10.29.05L37 6.66l-8.54 14.39ZM3 13.73 7.51 4l23.05 30.21L3 13.73Zm9.22 10.79 6.52 4.34L3.16 36l9.06-11.48Z"/>
+
+  <path fill="url(#a)" stroke="url(#b)" stroke-linejoin="round" stroke-width=".5" d="M28.46 21.05a.28.28 0 0 0-.02.25l4.8 11.83L11.5 5.16l8.84 7.57c.08.07.19.10.29.05L37 6.66l-8.54 14.39ZM3 13.73 7.51 4l23.05 30.21L3 13.73Zm9.22 10.79 6.52 4.34L3.16 36l9.06-11.48Z"/>
+
+  <defs>
+    <linearGradient id="a" x1="0.47" x2="0.52" y1="0.06" y2="0.91" gradientUnits="objectBoundingBox">
+      <stop offset=".1" stop-color="#4469EC"/>
+      <stop offset=".35" stop-color="#AEB1FD"/>
+      <stop offset=".54" stop-color="#fff"/>
+      <stop offset=".58" stop-color="#2743A8"/>
+      <stop offset=".7" stop-color="#40A4ED"/>
+      <stop offset="1" stop-color="#7FD5FA"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0.47" x2="0.52" y1="0.06" y2="0.91" gradientUnits="objectBoundingBox">
+      <stop stop-color="#fff"/>
+      <stop offset=".54" stop-color="#94B6F8"/>
+      <stop offset=".57" stop-color="#fff" stop-opacity=".94"/>
+      <stop offset="1" stop-color="#8098EF"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,136 @@
+@import '/src/shared/styles/breakpoints';
+
+.onboardingContainer.onboardingContainer.onboardingContainer {
+  background-color: var(--gray-4);
+  border-radius: 5rem;
+  padding: 6.25rem 12.75rem 12.5rem 6.25rem;
+
+  @media screen and (width < $sm) {
+    padding: 3rem;
+    width: 100%;
+  }
+}
+
+.navigationListContainer.navigationListContainer.navigationListContainer {
+  background-color: var(--c-gray-80);
+  padding: 2rem 2.5rem;
+  border-radius: 4.5rem;
+  min-width: 27.25rem;
+  margin-right: 10rem;
+  max-height: 64rem;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+    margin-right: 0;
+    max-width: unset;
+  }
+}
+
+.onboardingNavigationItem.onboardingNavigationItem.onboardingNavigationItem {
+  min-height: 5rem;
+  padding: 0 2.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+    padding: 1rem;
+    min-height: 3rem;
+    justify-content: center;
+    text-wrap: nowrap;
+  }
+}
+
+.onboardingNavigationItemActive.onboardingNavigationItemActive.onboardingNavigationItemActive {
+  background-color: var(--green);
+  border-radius: 5.75rem;
+  padding-left: 2.5rem;
+  padding-right: 0;
+
+  @media screen and (width < $sm) {
+    font-size: 2rem;
+    min-height: 3rem;
+    padding-left: 0;
+    padding: 1rem;
+  }
+}
+
+.onboardingNavigationItemTextActive.onboardingNavigationItemTextActive.onboardingNavigationItemTextActive.onboardingNavigationItemTextActive {
+  color: var(--black);
+}
+
+.onboardingPageTitle.onboardingPageTitle {
+  color: var(--white);
+  font-size: 6rem;
+  margin-top: 6.25rem;
+}
+
+.onboardingModeContentContainer.onboardingModeContentContainer.onboardingModeContentContainer {
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.onboardingBanner {
+  max-width: 100%;
+}
+
+.onboardingBannerRounded {
+  max-width: 100%;
+  border-radius: 2.5rem;
+}
+
+.upDownContentContainer.upDownContentContainer {
+  gap: 10rem;
+}
+
+.exampleBox.exampleBox.exampleBox {
+  padding: 3.75rem;
+  background-color: var(--c-gray-60);
+  border-radius: 5rem;
+  width: 110%;
+  margin-left: -5%;
+  overflow: hidden;
+
+  @media screen and (width < $sm) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.exampleBoxWithoutBackground.exampleBoxWithoutBackground.exampleBoxWithoutBackground {
+  padding: 3.75rem;
+  border-radius: 5rem;
+  overflow: hidden;
+}
+
+.exampleBoxSpecialText.exampleBoxSpecialText.exampleBoxSpecialText {
+  color: var(--c-a-lazur);
+}
+
+.exampleBoxArtifacts {
+  position: absolute;
+  top: -1.75rem;
+  left: -0.75rem;
+  width: 102%;
+  height: 100%;
+
+  @media screen and (width > 1435px) {
+    display: none;
+  }
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: '••     ';
+}
+
+.bullsEyeExampleList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: '••     ';
+}

@@ -1,0 +1,151 @@
+@import '/src/shared/styles/breakpoints';
+
+.textWhite.textWhite {
+  color: var(--c-white);
+}
+
+.amountInput.amountInput.amountInput {
+  height: 6rem;
+  width: 100%;
+}
+
+.amountInput.amountInput::placeholder {
+  color: var(--gray-4);
+}
+
+.topUpButton.topUpButton.topUpButton {
+  width: 100%;
+  height: 7.5rem;
+  font-weight: var(--font-weight-medium);
+  background-color: var(--yellow);
+}
+
+.cancelButton.cancelButton.cancelButton {
+  height: 7.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--yellow);
+  background-color: transparent;
+}
+
+.topUpButtonDisabled.topUpButtonDisabled {
+  height: 7.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.feeText.feeText {
+  color: var(--gray);
+  font-weight: 700;
+}
+
+.xyroToken.xyroToken.xyroToken {
+  position: absolute;
+  top: 3.75rem;
+  right: 1rem;
+}
+
+.xyroTokenWithDraw.xyroTokenWithDraw.xyroTokenWithDraw {
+  position: absolute;
+  top: 5.5rem;
+  right: 1rem;
+}
+
+.withdrawPercentageItem.withdrawPercentageItem {
+  width: 6.25rem;
+  cursor: pointer;
+}
+
+.withdrawPercentageItemText.withdrawPercentageItemText {
+  color: var(--gray);
+  z-index: 1;
+}
+
+.withdrawPercentageItemTextActive.withdrawPercentageItemTextActive {
+  color: var(--c-black);
+  z-index: 1;
+}
+
+.withdrawPercentageButton.withdrawPercentageButton.withdrawPercentageButton {
+  position: absolute;
+  display: block;
+  width: 6.25rem;
+  height: 4rem;
+  color: var(--yellow-10);
+}
+
+.confirmOperationText.confirmOperationText {
+  color: var(--c-white);
+  max-width: 43rem;
+  font-weight: 300;
+}
+
+.linkContainer.linkContainer {
+  cursor: pointer;
+  margin-bottom: 12rem;
+}
+
+.linkContainer.linkContainer:hover {
+  text-decoration: var(--c-a-lazur) underline;
+}
+
+.metamaskIconContainer.metamaskIconContainer {
+  border-radius: 100%;
+  background-color: var(--c-white);
+  width: 2rem;
+  height: 2rem;
+}
+
+.mintDialogHeading {
+  width: 40rem;
+}
+
+.mintDialogButton {
+  width: 100%;
+  span {
+    color: var(--c-black);
+  }
+}
+
+.mintAmountForm {
+  margin-top: 5rem;
+}
+
+.mintButtonWrap {
+  margin-top: 5rem;
+}
+
+.mintFee {
+  margin-bottom: 2rem;
+}
+
+.mintContractLink.mintContractLink {
+  display: flex;
+  margin-top: 2rem;
+  color: var(--blue-9);
+  svg {
+    margin-left: 1.5rem;
+  }
+}
+
+.mintAmount {
+  width: 38rem;
+}
+
+.mintTitleHeading {
+  width: 43rem;
+  margin-top: 2rem;
+}
+
+.mintDialogTitle {
+  width: 40rem;
+  margin-top: 0.5rem;
+}
+
+.mintDialog.mintDialog.mintDialog {
+  max-width: 68.5rem;
+  width: 100%;
+  padding: 4rem 0;
+
+  @media screen and (width < $sm) {
+    border-radius: 4rem 4rem 0 0;
+  }
+}

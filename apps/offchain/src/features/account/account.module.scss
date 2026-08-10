@@ -1,0 +1,399 @@
+@import '/src/shared/styles/breakpoints';
+
+.accountBalance.accountBalance.accountBalance {
+  padding: 3rem;
+  border-radius: 3.75rem;
+  background-color: var(--c-gray-90);
+}
+
+.balanceCard.balanceCard.balanceCard {
+  background-color: var(--c-gray-100);
+  border-radius: 3.75rem;
+  padding: 3rem;
+}
+
+.depositCTAButton.depositCTAButton.depositCTAButton {
+  background-color: var(--pink);
+  min-height: 5rem;
+  width: 15rem;
+  flex: 1;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.withdrawCTAButton.withdrawCTAButton.withdrawCTAButton {
+  background-color: transparent;
+  border: 1px solid var(--pink);
+  min-height: 5rem;
+  width: 15rem;
+  flex: 1;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.levelItemWrapper.levelItemWrapper.levelItemWrapper {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  padding-block-end: 1rem;
+  border-bottom: 1px solid var(--c-gray-90);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.levelHeaderTitle.levelHeaderTitle.levelHeaderTitle {
+  color: var(--c-gray-60);
+}
+
+.levelHeaderWrapper.levelHeaderWrapper.levelHeaderWrapper {
+  border: none;
+}
+
+.accountLevelWrapper.accountLevelWrapper.accountLevelWrapper {
+  padding: 3rem;
+  border-radius: 3.75rem;
+  background-color: var(--c-gray-100);
+}
+
+.accountProfileTierText.accountProfileTierText.accountProfileTierText {
+  white-space: nowrap;
+}
+
+.accountProfileTierTable.accountProfileTierTable.accountProfileTierTable {
+  width: 100%;
+}
+
+.accountProfileTierTableHeader.accountProfileTierTableHeader.accountProfileTierTableHeader {
+  background-color: transparent;
+}
+
+.accountProfileTierTableCell.accountProfileTierTableCell.accountProfileTierTableCell {
+  height: 6rem;
+}
+
+.accountProfileTierTableContainer.accountProfileTierTableContainer.accountProfileTierTableContainer.accountProfileTierTableContainer {
+  height: fit-content;
+}
+
+.accountLevels.accountLevels.accountLevels {
+  width: 100%;
+  border-radius: 3.75rem;
+  background-color: var(--c-gray-90);
+  padding: 3rem;
+}
+
+.accountProfileTier.accountProfileTier.accountProfileTier {
+  background-color: var(--c-gray-100);
+  border-radius: 3.75rem;
+  padding: 2rem 3.75rem;
+}
+
+.basicInfoInput.basicInfoInput.basicInfoInput {
+  height: 6rem;
+  border-radius: 1.5rem;
+  width: 100%;
+
+  & > :global(.rt-TextFieldInput) {
+    padding: 1rem;
+  }
+
+  & > :global(.rt-TextFieldInput::placeholder) {
+    color: var(--c-gray-60);
+  }
+
+  & > :global(.rt-TextFieldInput:focus) {
+    box-shadow: none;
+  }
+
+  & > :global(.rt-TextFieldInput:disabled) {
+    background-color: var(--gray-4);
+  }
+}
+
+.accountBioInfoInput.accountBioInfoInput.accountBioInfoInput {
+  height: 17.25rem;
+  background-color: var(--black);
+  box-shadow: none;
+  width: 100%;
+
+  :global(.rt-TextAreaInput) {
+    padding: 2rem;
+
+    &::placeholder {
+      color: var(--c-gray-60);
+    }
+  }
+}
+
+.updateAccountInfoBtn.updateAccountInfoBtn.updateAccountInfoBtn {
+  background-color: var(--pink);
+  height: 7.5rem;
+  width: 20.75rem;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.accountInfoWrapper.accountInfoWrapper.accountInfoWrapper {
+  border-radius: 3.75rem;
+  background-color: var(--c-gray-90);
+  padding: 3rem;
+}
+
+.accountTabSwitcher.accountTabSwitcher.accountTabSwitcher {
+  color: var(--c-gray-40);
+  font-weight: 700;
+  padding: 1.25rem 2rem;
+  border-radius: 12.5rem;
+  transition: 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.accountTabSwitcher.accountTabSwitcher.accountTabSwitcher:not(
+    .accountTabSwitcherActive
+  ):hover {
+  background-color: rgba(210, 255, 254, 0.5);
+  color: var(--black);
+}
+
+.accountTabSwitcherActive.accountTabSwitcherActive.accountTabSwitcherActive {
+  background-color: #d2fffe;
+  color: var(--black);
+}
+
+.accountSectionSwitcher.accountSectionSwitcher {
+  background-color: var(--gray-4);
+  padding: 0.5rem;
+  border-radius: 3rem;
+}
+
+.accountNavigation.accountNavigation {
+  @media screen and (width < 370px) {
+    flex-direction: column;
+  }
+}
+
+.accountSectionTab.accountSectionTab.accountSectionTab {
+  background-color: var(--black);
+  min-height: 6.25rem;
+  width: 20.75rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: flex-start;
+
+  @media screen and (width < $sm) {
+    width: fit-content;
+    width: 14.75rem;
+  }
+
+  @media screen and (width < 420px) {
+    width: fit-content;
+    justify-content: center;
+    width: 11.75rem;
+  }
+
+  @media screen and (width < 370px) {
+    width: 9.75rem;
+  }
+}
+
+.tabImage.tabImage.tabImage {
+  @media screen and (width < 420px) {
+    display: none;
+  }
+
+  @media screen and (width < 370px) {
+    display: none;
+  }
+}
+
+.accountSectionTabActiveProfile.accountSectionTabActiveProfile.accountSectionTabActiveProfile {
+  background-color: var(--c-a-sky);
+}
+
+.accountSectionTabActiveHistory.accountSectionTabActiveHistory.accountSectionTabActiveHistory {
+  background-color: #ff8d3a;
+}
+
+.accountSectionTabActiveBonus.accountSectionTabActiveBonus.accountSectionTabActiveBonus {
+  background-color: #ecb2ff;
+}
+
+.accountSectionTabActiveSettings.accountSectionTabActiveSettings.accountSectionTabActiveSettings {
+  background-color: var(--c-a-lazur);
+}
+
+.logoutText.logoutText {
+  color: #d55fff;
+}
+
+.settingsContainerWrapper.settingsContainerWrapper {
+  background-color: var(--gray-4);
+  border-radius: 3.75rem;
+  padding: 3.75rem;
+}
+
+.passwordCloseButton.passwordCloseButton {
+  position: absolute;
+  right: 2rem;
+  top: 4.5rem;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.submitBtn.submitBtn.submitBtn {
+  width: 100%;
+  height: 7.5rem;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--pink);
+  cursor: pointer;
+
+  &:disabled {
+    .submitBtnText {
+      color: var(--black);
+      opacity: 0.3;
+    }
+  }
+}
+
+.emailVerifyButton.emailVerifyButton.emailVerifyButton {
+  width: 100%;
+  height: 7.5rem;
+  background-color: transparent;
+  border: 1px solid var(--pink);
+}
+
+.emailVerifyLink.emailVerifyLink.emailVerifyLink {
+  width: 17.5rem;
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.emailVerifyAccountBtn.emailVerifyAccountBtn.emailVerifyAccountBtn {
+  background-color: var(--pink);
+  border: none;
+}
+
+.envelopeClosedIcon.envelopeClosedIcon.envelopeClosedIcon {
+  transition: opacity 0.5s ease;
+}
+
+.envelopeAnimation.envelopeAnimation.envelopeAnimation {
+  animation: moveUp 2s ease-in-out infinite;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-0.5rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(2rem);
+    opacity: 0.4;
+  }
+}
+
+.envelopeOpenIcon.envelopeOpenIcon.envelopeOpenIcon {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.emailVerificationInput.emailVerificationInput.emailVerificationInput {
+  & > :global(.rt-TextFieldInput) {
+    padding-right: 8rem;
+  }
+}
+
+.iconVerifyEmail.iconVerifyEmail.iconVerifyEmail {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+}
+
+.accountCurrentLevel.accountCurrentLevel.accountCurrentLevel {
+  padding: 1rem 2rem;
+  border-radius: 3.75rem;
+  background-color: var(--c-gray-100);
+}
+
+.accountCurrentLevelText.accountCurrentLevelText.accountCurrentLevelText {
+  white-space: nowrap;
+}
+
+.accountBonusesHeaderBlock.accountBonusesHeaderBlock {
+  background-color: var(--gray-4);
+  border-radius: 3.75rem;
+  padding: 3rem;
+  min-height: 17.5rem;
+}
+
+.bonusListWrapper.bonusListWrapper {
+  background-color: var(--gray-4);
+  border-radius: 3.75rem;
+  padding: 3.75rem;
+}
+
+.accountBunusesListItem.accountBunusesListItem {
+  border-radius: 5rem;
+  padding: 3rem;
+  background-color: var(--gray-3);
+}
+
+.accountWelcomePackListItem.accountWelcomePackListItem {
+  border-radius: 5rem;
+  padding: 3rem;
+  background-color: var(--gray-3);
+  min-width: 36.5rem;
+  flex: 1 1 30%;
+}
+
+.welcomePackListItemButton.welcomePackListItemButton {
+  background-color: #d55fff;
+  height: 5rem;
+}
+
+.welcomePackListItemButtonActivated.welcomePackListItemButtonActivated.welcomePackListItemButtonActivated {
+  background-color: #5ff4ad33;
+  border: 1px solid #5ff4ad;
+  height: 5rem;
+}
+
+.welcomePackListItemButtonClosed.welcomePackListItemButtonClosed.welcomePackListItemButtonClosed {
+  border: 1px solid var(--c-gray-40);
+  background-color: var(--c-gray-60);
+  height: 5rem;
+}
+
+.tierColumnPrizeText.tierColumnPrizeText.tierColumnPrizeText {
+  white-space: nowrap;
+}
+
+.progressBar.progressBar.progressBar {
+  width: 100%;
+}
+
+.cashbackItem.cashbackItem.cashbackItem {
+  background-color: var(--c-gray-90);
+  border-radius: 3.75rem;
+  padding: 3.75rem;
+  height: 100%;
+  width: 100%;
+}
+
+.cashbackDescription.cashbackDescription.cashbackDescription {
+  max-width: 72.75rem;
+}

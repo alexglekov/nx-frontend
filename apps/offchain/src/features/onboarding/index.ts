@@ -1,0 +1,8 @@
+export { OnboardingUpDown } from './components/onboarding-up-down'
+export { OnboardingBullsEye } from './components/onboarding-bullseye'
+export { OnboardingSetups } from './components/onboarding-setups'
+export { OnboardingOneOvOne } from './components/onboarding-one-vs-one'
+export { OnboardingMemeWars } from './components/onboarding-meme-wars'
+export { OnboardingTreasure } from './components/onboarding-treasure'
+export { OnboardingReferralProgram } from './components/onboarding-referral-program'
+export { OnboardingRewardsSystem } from './components/onboarding-rewards-system'

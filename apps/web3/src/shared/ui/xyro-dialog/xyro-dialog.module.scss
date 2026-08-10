@@ -1,0 +1,85 @@
+@import '/src/shared/styles/breakpoints';
+
+.contentContainer.contentContainer.contentContainer {
+  animation-duration: initial;
+  max-width: max-content;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  z-index: 60;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--gray-3);
+  border-radius: calc(var(--b-radius) * 2);
+
+  @media (width < $sm) {
+    bottom: 0;
+    left: 0;
+    top: unset;
+    max-width: unset;
+    width: 100%;
+    min-height: 50vh;
+    animation-duration: 0.33s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.contentContainer.contentContainer.contentContainer:focus {
+  outline: none;
+}
+
+.contentContainerClosedAnimation.contentContainerClosedAnimation.contentContainerClosedAnimation {
+  animation-name: slideUp;
+}
+
+.contentContainerOpenAnimation.contentContainerOpenAnimation.contentContainerOpenAnimation {
+  animation-name: slideDown;
+}
+
+.closeButton.closeButton.closeButton {
+  position: absolute;
+  top: 2rem;
+  z-index: 10;
+  right: 3rem;
+  background-color: var(--color-panel);
+
+  @media (width > $sm) {
+    display: none;
+  }
+}
+
+.dialogScrollArea {
+  max-height: 83vh;
+  overflow-y: visible;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.dialogOverlay.dialogOverlay.dialogOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgb(0 0 0 / 90%);
+  backdrop-filter: blur(2rem);
+  max-width: 100%;
+}

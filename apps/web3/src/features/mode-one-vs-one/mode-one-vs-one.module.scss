@@ -1,0 +1,629 @@
+@import '/src/shared/styles/breakpoints';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container.container.container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.5fr 3fr;
+  grid-template-areas: 'form graph';
+  gap: 1rem;
+  height: 100%;
+}
+
+.onboardingCard.onboardingCard {
+  background-color: var(--c-a-lavender);
+}
+
+.smallButton {
+  font-size: 1.5rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    min-width: 6rem;
+    min-height: 3rem;
+  }
+}
+
+.createPredictFormWrapper.createPredictFormWrapper.createPredictFormWrapper {
+  grid-area: form;
+  height: 100%;
+  min-width: 42.5rem;
+  border-radius: 5rem;
+}
+
+.createPredictForm.createPredictForm.createPredictForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-self: start;
+  row-gap: 2rem;
+  border-radius: var(--b-radius);
+}
+
+.createPredictAssetSelect.createPredictAssetSelect.createPredictAssetSelect {
+  grid-area: asset-select;
+  min-width: 0;
+}
+
+.createPredictWrapper.createPredictWrapper.createPredictWrapper {
+  grid-template-areas: 'asset-select' 'graph';
+}
+
+.createNewOneVsOneTitle.createNewOneVsOneTitle {
+  color: var(--c-a-lavender);
+
+  @media screen and (width < $sm) {
+    color: var(--white);
+  }
+}
+
+.formBackgroundElement {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.1;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(32%, -44%);
+}
+
+.checkBoxLabel {
+  color: var(--c-white);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.confirmationDialog.confirmationDialog.confirmationDialog {
+  max-width: 42rem;
+  width: 100%;
+  padding: 4rem 2.5rem 2.5rem;
+  border-radius: 5rem;
+  border: 0.5rem solid var(--c-a-lavender);
+}
+
+.gameCreateDialog.gameCreateDialog.gameCreateDialog {
+  @media screen and (width < $sm) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.confirmationDialogTitle.confirmationDialogTitle {
+  color: var(--c-a-lavender);
+}
+
+.confirmGameBtn.confirmGameBtn.confirmGameBtn {
+  width: 100%;
+  height: 7.5rem;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--c-a-lavender);
+  cursor: pointer;
+}
+
+.acceptGameBtn.acceptGameBtn.acceptGameBtn {
+  width: 100%;
+  height: 7.5rem;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--c-a-lazur);
+  cursor: pointer;
+}
+
+.rejectGameBtn.rejectGameBtn.rejectGameBtn {
+  width: 100%;
+  height: 7.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--c-a-lavender);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.rejectGameBtnWhite.rejectGameBtnWhite.rejectGameBtnWhite {
+  color: var(--white);
+}
+
+.buttonsContainer.buttonsContainer {
+  margin-top: 4rem;
+}
+
+.privateLabel {
+  border-radius: 1rem;
+  height: min-content;
+  background-color: var(--c-gray-90);
+  padding: 1.5rem;
+  color: var(--c-gray-20);
+}
+
+.privateLockIcon {
+  margin-right: 1.5rem;
+}
+
+.gameViewDialogFields {
+  margin-top: 2.75rem;
+}
+
+.fieldTitle {
+  color: #d2d2d4;
+}
+
+.fieldValue {
+  color: var(--white);
+}
+
+.upDownBadge {
+  background-color: #ff68f0;
+  border-radius: 1.25rem;
+  color: var(--c-black);
+  padding: 0.25rem 1rem;
+}
+
+.upDownBadgeGreen {
+  background-color: var(--c-a-green);
+}
+
+.upDownBadgeTitle {
+  margin-left: 0.75rem;
+}
+
+.participant {
+  margin-right: 1rem;
+  width: 18.25rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: var(--c-black);
+
+  @media screen and (width < $sm) {
+    width: 100%;
+  }
+}
+
+.createGameButtonWrap.createGameButtonWrap.createGameButtonWrap {
+  display: none;
+
+  @media screen and (width < $sm) {
+    display: flex;
+  }
+}
+
+.createGameButton.createGameButton.createGameButton {
+  width: max-content;
+  color: var(--black);
+}
+
+.gameContentDialogTitle {
+  @media screen and (width < $sm) {
+    display: none;
+  }
+}
+
+.gameViewDialogTitle {
+  display: none;
+
+  @media screen and (width < $sm) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.gameParticipants {
+  position: relative;
+  margin-top: 2.25rem;
+}
+
+.participantBadgeTitle {
+  color: var(--c-gray-60);
+}
+
+.participantsVS {
+  width: 4rem;
+  height: 4rem;
+  top: calc(50% - 2rem);
+  left: calc(50% - 2.5rem);
+  position: absolute;
+  border-radius: 100%;
+  background-color: var(--c-gray-100);
+}
+
+.emptyParticipant {
+  background-color: transparent;
+  border: 1px dashed #484359;
+}
+
+.exactBadge {
+  color: var(--black);
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding: 1rem 0.5rem;
+  background-color: #d55fff; // No variable for this color
+}
+
+.exactBadgeOwnPredict {
+  background-color: var(--c-a-lime);
+}
+
+.assetIconWrapper {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 1.75rem;
+}
+
+.assetIdTitle {
+  color: var(--c-gray-40);
+}
+
+.gameTimer {
+  max-width: 38rem;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+    max-width: 100%;
+  }
+}
+
+.gameTimerCounter {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--black);
+}
+
+.gameClock {
+  margin-right: 1rem;
+}
+
+.acceptGameTimer.acceptGameTimer.acceptGameTimer {
+  background-color: #ccf9941a;
+  color: var(--c-a-lime);
+}
+
+.inProgressGameTimer {
+  background-color: rgba(63, 240, 237, 10%);
+  color: #3ff0ed;
+}
+
+.gameViewDialogContent.gameViewDialogContent.gameViewDialogContent {
+  background-color: var(--black);
+  border: none;
+  box-shadow: none;
+  border-radius: 5rem;
+  max-width: 126.5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.gameViewInfoContainer.gameViewInfoContainer.gameViewInfoContainer {
+  background-color: var(--c-gray-100);
+  border-radius: 5rem;
+  padding: 4rem 2.5rem;
+
+  @media screen and (width < $sm) {
+    border-radius: 0;
+    padding-top: 1rem;
+  }
+}
+
+.gameViewInfoTitle.gameViewInfoTitle.gameViewInfoTitle {
+  color: var(--c-gray-40);
+}
+
+.chartContainer.chartContainer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-gray-100);
+  border-radius: 5rem;
+  overflow: hidden;
+  min-width: 62rem;
+
+  @media screen and (width <= 768px) {
+    min-width: unset;
+  }
+}
+
+.youSayExactPriceInput.youSayExactPriceInput.youSayExactPriceInput {
+  width: 100%;
+  height: 6rem;
+  border-radius: 1.1rem;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  background-color: var(--black);
+  overflow: hidden;
+}
+
+.youSayExactPriceInputError.youSayExactPriceInputError.youSayExactPriceInputError {
+  border: 1px solid var(--pink);
+}
+
+.participantUserContainer.participantUserContainer.participantUserContainer {
+  width: 15rem;
+}
+
+.participantUserName.participantUserName.participantUserName {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dialogOpenBtn.dialogOpenBtn.dialogOpenBtn {
+  width: 100%;
+  background-color: var(--c-one-vs-one);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.loaderContainer {
+  min-width: 43.5rem;
+  backdrop-filter: blur(20px) brightness(2);
+  border-radius: calc(var(--b-radius) * 2);
+  row-gap: 1rem;
+  padding: 3rem;
+  color: var(--white);
+}
+
+.tableInfoContainer.tableInfoContainer.tableInfoContainer {
+  @media screen and (width < $sm) {
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.tableWrapper.tableWrapper {
+  & > :global(.rt-CardInner) {
+    @media screen and (width < $sm) {
+      padding: 2.5rem;
+    }
+  }
+}
+
+.tableTitle.tableTitle {
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.stepTitle.stepTitle {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.predictFieldWrapper {
+  background-color: var(--black);
+  border-radius: 2rem;
+}
+
+.betTypeWrapper.betTypeWrapper.betTypeWrapper {
+  background-color: var(--gray-4);
+}
+
+.betTypeButton.betTypeButton.betTypeButton {
+  color: var(--gray-9);
+}
+
+.selectedAssetName {
+  font-weight: var(--font-weight-bold);
+}
+
+.fieldTitleNew.fieldTitleNew.fieldTitleNew {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+
+  @media screen and (width < $sm) {
+    font-size: 2rem;
+  }
+}
+
+.fieldTitleSecondary.fieldTitleSecondary.fieldTitleSecondary {
+  font-size: 1.5rem;
+  color: #8b8a8f;
+
+  @media screen and (width < $sm) {
+    font-size: 2rem;
+  }
+}
+
+.amountFieldToken.amountFieldToken.amountFieldToken {
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 6rem;
+
+  &.rightIcon {
+    padding-right: 5rem;
+  }
+
+  &[data-invalid] {
+    box-shadow: 0 0 0 0.25rem var(--c-error);
+  }
+}
+
+.opponentSelectCheckbox.opponentSelectCheckbox.opponentSelectCheckbox {
+  cursor: pointer;
+}
+
+.amountField.amountField.amountField {
+  border-radius: 1.5rem;
+  width: 100%;
+
+  & > :global(.rt-TextFieldInput) {
+    background-color: var(--gray-4);
+    padding-left: 1.5rem;
+  }
+}
+
+.amountFieldXyroIcon {
+  position: absolute;
+  color: var(--yellow);
+  z-index: 1;
+  transform: translateY(-50%);
+  bottom: 0;
+
+  &.left {
+    left: 1.5rem;
+  }
+
+  &.right {
+    right: 1.5rem;
+  }
+}
+
+.payoutWrapper {
+  width: 40%;
+}
+
+.payoutContainer.payoutContainer.payoutContainer {
+  background-color: #ff8d3a33;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  color: #ff8d3a;
+}
+
+.checkBoxText.checkBoxText.checkBoxText {
+  color: var(--gray-9);
+}
+
+.timeFrimeSelector.timeFrimeSelector.timeFrimeSelector {
+  padding: 0.5rem 1rem;
+  color: var(--gray-9);
+  border-radius: 1rem;
+  border: 1px solid #2f2c36;
+  cursor: pointer;
+}
+
+.timeFrimeSelectorActive.timeFrimeSelectorActive.timeFrimeSelectorActive {
+  background-color: var(--white);
+}
+
+.timeframeSelector.timeframeSelector.timeframeSelector {
+  & button:global(.rt-variant-solid) {
+    color: var(--white);
+    background-color: var(--gray-6);
+    font-weight: 700;
+  }
+}
+
+.selectTrigger.selectTrigger.selectTrigger.selectTrigger {
+  height: 6rem;
+  background-color: var(--black);
+  border-radius: 1.5rem;
+  color: var(--gray-9);
+  font-size: 2rem;
+  box-shadow: none;
+  width: 100%;
+  z-index: 5;
+  justify-content: flex-start;
+  padding-left: 1.25rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--c-gray-80);
+  }
+}
+
+.selectedDropdownItem {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+}
+
+.popOverSelect.popOverSelect.popOverSelect {
+  position: relative;
+  width: 43.5rem;
+  background-color: var(--gray-2);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 3rem;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.comboxSearch {
+  width: 100%;
+  height: 6rem;
+  font-size: 2rem;
+
+  & > :global(.rt-TextFieldInput) {
+    color: var(--c-gray-40);
+    padding-left: 1.5rem;
+    background-color: var(--black);
+  }
+
+  & > :global(.rt-TextFieldInput::placeholder) {
+    color: var(--c-gray-40);
+  }
+}
+
+.userList.userList.userList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.opponentName.opponentName.opponentName {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--gray-9);
+}
+
+.conditionSelectTrigger.conditionSelectTrigger.conditionSelectTrigger {
+  height: 6rem;
+}
+
+.gameViewDialogResult {
+  background-color: var(--black);
+  border-radius: 3rem;
+}
+
+.gameViewDialogResultTitle {
+  color: var(--pink);
+}
+
+.gameViewDialogResultTitleWinner {
+  color: var(--c-a-lime);
+}
+
+.copyButtonMobile.copyButtonMobile.copyButtonMobile {
+  position: absolute;
+  left: 2rem;
+  top: 1.5rem;
+  outline: none;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.dropdownItem.dropdownItem.dropdownItem {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+
+  &:hover {
+    background-color: var(--c-gray-80);
+  }
+}

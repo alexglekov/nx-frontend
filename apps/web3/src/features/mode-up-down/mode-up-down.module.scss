@@ -1,0 +1,414 @@
+@import '/src/shared/styles/breakpoints';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  container-name: up-down-mode;
+  container-type: inline-size;
+}
+
+.upDownGame {
+  display: grid;
+  grid-template-areas:
+    'upPool graph downPool'
+    'bets bets bets';
+  grid-template-columns: 1fr minmax(60rem, 4fr) 1fr;
+  grid-template-rows: 2fr auto;
+  grid-column-gap: 0;
+  margin: 1rem 0;
+  background-color: var(--gray-4);
+  border-radius: 5rem;
+
+  @container up-down-mode (width <= 100rem) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'upPool downPool'
+      'graph graph'
+      'bets bets';
+  }
+}
+
+.onboarding {
+  padding: 2.5rem;
+  background-color: var(--color-panel);
+  border-radius: var(--b-radius);
+}
+
+.upDownGraph {
+  background-color: var(--gray-3);
+  border-radius: 5rem;
+  grid-area: graph;
+
+  .graphInnerWrapper {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 2.5rem;
+
+      .title {
+        font-size: 3.5rem;
+      }
+      .timer {
+        font-size: 2.5rem;
+      }
+      .price {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+.history.history.history {
+  flex-grow: 0;
+  flex-shrink: 1;
+
+  .gameResult {
+    flex-grow: 0;
+    background-color: var(--gray-4);
+    border-radius: var(--b-radius);
+  }
+}
+
+.upDownButton.upDownButton {
+  border-radius: var(--b-radius);
+  height: 7.5rem;
+
+  &:disabled {
+    color: var(--white);
+  }
+
+  @media screen and (width < $sm) {
+    min-height: 8rem;
+  }
+}
+
+.upButton {
+  grid-area: upButton;
+}
+
+.downButton {
+  grid-area: downButton;
+}
+
+.betsContainer {
+  grid-area: bets;
+  grid-template-areas: 'upButton betAmountButtons downButton';
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  padding: 1.5rem 3rem;
+  margin: 2.5rem;
+  border-radius: calc(var(--b-radius) * 2);
+  min-height: 12rem;
+
+  @container up-down-mode (max-width: 768px) {
+    grid-template-areas:
+      'betAmountButtons betAmountButtons'
+      'upButton downButton';
+    grid-template-rows: 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (width < $sm) {
+    background-color: var(--black);
+    padding: 2.5rem;
+    row-gap: 2.5rem;
+    margin: 2rem;
+    grid-template-rows: 0.5fr 1fr;
+  }
+}
+
+.betAmountButtons {
+  grid-area: betAmountButtons;
+}
+
+.betAmountButton.betAmountButton {
+  outline: none;
+  flex-grow: 1;
+
+  @container up-down-mode (max-width: 768px) {
+    padding: 1rem 2rem;
+    width: auto;
+  }
+
+  &[data-state='off'] {
+    background-color: var(--gray-5);
+  }
+
+  &[data-state='on'] {
+    filter: var(--button-filter__solid-active);
+    background-color: var(--yellow);
+    color: var(--black);
+
+    :global(.rt-Text) {
+      color: var(--black);
+    }
+
+    :global(.rt-Flex) > svg {
+      color: var(--black);
+    }
+  }
+
+  &[disabled] {
+    filter: brightness(0.3);
+  }
+
+  :global(.rt-Text) {
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  :global(.rt-Flex) > svg {
+    color: var(--yellow);
+  }
+}
+
+.onboardingCard.onboardingCard {
+  background-color: var(--c-up-down);
+  position: relative;
+}
+
+.tableHeader.tableHeader {
+  height: 6.5rem;
+}
+
+.tableHeaderCell.tableHeaderCell {
+  width: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--gray);
+  padding-left: 0;
+}
+
+.tableBodyCell.tableBodyCell {
+  width: 0;
+  padding-left: 0;
+  height: 10.2rem;
+}
+
+.tableBodyCell.tableBodyCell:last-child {
+  width: 12rem;
+  padding-left: 0;
+  height: 10.2rem;
+}
+
+.tableBodyRowClassname.tableBodyRowClassname:last-child > .tableBodyCell {
+  box-shadow: none;
+}
+
+.assetText {
+  color: var(--c-white);
+  width: 20rem;
+  font-weight: 500;
+}
+
+.titleText.titleText.titleText {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 45rem;
+
+  @media screen and (width < $sm) {
+    margin-top: 2rem;
+    max-width: 100%;
+    width: unset;
+  }
+}
+
+.timerText.timerText {
+  text-wrap: nowrap;
+  z-index: 1;
+}
+
+.timerCounter {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2.5rem;
+  flex-shrink: 0;
+  min-width: 17rem;
+  min-height: 12rem;
+
+  & .timerBackground {
+    position: absolute;
+    z-index: 0;
+  }
+
+  @container up-down-mode (width <= 768px) {
+    padding: 1.5rem;
+    min-width: 13rem;
+    min-height: 9rem;
+  }
+}
+
+.timeframeCountdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: stroke-dashoffset 0.3s ease-in-out;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 3px solid var(--c-black);
+  z-index: 1;
+}
+
+.winnersModalOverlay {
+  // TODO: Check this color, might be different
+  background-color: rgba($color: var(--c-black), $alpha: 20%);
+  backdrop-filter: blur(5rem);
+  border-radius: 1rem;
+  z-index: 3;
+  animation: fade-in 0.3s ease forwards;
+}
+
+.winnersModal {
+  background-image: url('/src/shared/icons/background-element-icons/up-down-winner-background-element.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 35rem;
+  height: 45rem;
+  border-radius: 2.5rem;
+  border: 3px solid;
+  background-color: var(--c-black);
+  border-color: var(--cyan);
+}
+
+.gameStatusText {
+  font-size: 5rem;
+  line-height: 1.4;
+  padding: 0 2rem;
+  max-width: 25rem;
+  text-wrap: wrap;
+  word-break: normal;
+}
+
+.winText {
+  margin-bottom: 2rem;
+  color: var(--green);
+}
+
+.decorationsIcon.decorationsIcon {
+  position: absolute;
+  left: -11rem;
+  top: -4rem;
+}
+
+.cardBackgroundElement {
+  position: absolute;
+  color: var(--white);
+  opacity: 0.05;
+}
+
+.poolBetsCountText.poolBetsCountText.poolBetsCountText {
+  color: var(--gray-9);
+}
+
+.betPayoutInfoContainer {
+  margin-top: auto;
+}
+
+.poolSizeTitle {
+  color: var(--gray-7);
+}
+
+.payoutPercentBadge.payoutPercentBadge.payoutPercentBadge {
+  margin: 0 auto;
+  width: fit-content;
+  background-color: #ff8d3a33;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.selectionBtnsWrapper.selectionBtnsWrapper.selectionBtnsWrapper {
+  align-self: end;
+}
+
+.statsItemWonDot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--c-white);
+}
+
+.carouselItemWonTitle {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+  color: var(--c-white-alpha-1);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tableInfoContainer.tableInfoContainer.tableInfoContainer {
+  @media screen and (width < $sm) {
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.tableWrapper.tableWrapper {
+  & > :global(.rt-CardInner) {
+    @media screen and (width < $sm) {
+      padding: 2.5rem;
+    }
+  }
+}
+
+.tableTitle.tableTitle {
+  @media screen and (width < $sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.upPool {
+  grid-area: upPool;
+}
+
+.downPool {
+  grid-area: downPool;
+}
+
+.conditionResultItemWrapper.conditionResultItemWrapper {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-3);
+  background-color: var(--c-black);
+}
+
+.upDownGraphHeaderPricesContainer.upDownGraphHeaderPricesContainer.upDownGraphHeaderPricesContainer {
+  min-width: 21rem;
+
+  @media screen and (width < $sm) {
+    min-width: unset;
+  }
+}
+
+.upDownInfoTooltip.upDownInfoTooltip.upDownInfoTooltip {
+  background-color: var(--black);
+  border-radius: 3rem;
+  max-width: 34.5rem;
+  padding: 2rem;
+}
+
+.upDownInfoTooltipField.upDownInfoTooltipField.upDownInfoTooltipField {
+  padding: 1.5rem 0.5rem;
+}
+
+.upDownInfoTooltipSeparator.upDownInfoTooltipSeparator.upDownInfoTooltipSeparator {
+  width: 100%;
+  margin: 1.5rem 0;
+}

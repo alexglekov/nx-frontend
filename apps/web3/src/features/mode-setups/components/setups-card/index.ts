@@ -1,0 +1,1 @@
+export { SetupsCard } from './setups-card'

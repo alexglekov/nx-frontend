@@ -1,0 +1,26 @@
+.dialogContainer.dialogContainer.dialogContainer {
+  border-radius: 5.5rem;
+  max-width: 40rem;
+}
+
+.loaderContainer {
+  backdrop-filter: blur(20px) brightness(2);
+  border-radius: calc(var(--b-radius) * 2);
+  row-gap: 1rem;
+  padding: 3rem;
+  color: var(--white);
+}
+
+.headerLabel {
+  color: var(--gray);
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

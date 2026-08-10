@@ -1,0 +1,51 @@
+name: Build push and deploy (Dev branch) to DO
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    name: build and deploy
+    runs-on: github-runners-do
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.TOKEN_GITHUB }}
+          submodules: 'true'
+
+      - name: Update submodules
+        id: update
+        run: git submodule update --remote --recursive
+
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v4
+
+      - name: Npm build
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@xyro-io'
+      - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm run build
+        env:
+          VITE_BACKEND_URL: backend-dev.xyrotech.net
+          VITE_STAND: dev
+          VITE_THIRD_WEB_API_KEY: 3c0d5e17df9272071f4e2c7357e377f4
+          VITE_WSS_PROVIDER: wss://arbitrum-sepolia-rpc.publicnode.com
+          VITE_HTTP_PROVIDER: https://arb-sepolia.g.alchemy.com/v2/V3QeVlAT9lOobpQuPEM3KGWrVYVBTbTf
+          VITE_ETH_HTTP_PROVIDER: https://ethereum-sepolia.blockpi.network/v1/rpc/d0d2697fa2accb8172214b6fcf604f7da370074c
+          VITE_TECH_ISSUES_FLAG: false
+      - run: npm install -g wrangler
+
+      - name: Deploy
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID}}
+        run: |
+          wrangler pages deploy dist/ --project-name dev-do --branch=main

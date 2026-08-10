@@ -1,0 +1,45 @@
+@import '/src/shared/styles/breakpoints';
+
+.dialogContainer.dialogContainer.dialogContainer {
+  background-color: var(--gray-3);
+  box-shadow: none;
+  max-width: 135rem;
+  max-height: 66rem;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../images/welcome-message-modal-background.png');
+  background-size: 100% 100%;
+  border-radius: 7rem;
+
+  @media screen and (width < $sm) {
+    min-height: 102rem;
+    width: 95%;
+    left: 2.5%;
+    top: 12.5%;
+
+    background-image: url('../../images/welcome-message-modal-background-mobile.png');
+  }
+
+  @media screen and (width < 376px) {
+    top: 4.5%;
+  }
+}
+
+.stepDescriptionText.stepDescriptionText {
+  max-width: 39rem;
+}
+
+.actionButtonGreen.actionButtonGreen {
+  max-width: 23.25rem;
+  width: 100%;
+  height: 7.5rem;
+  background-color: var(--green);
+}
+
+.actionButtonBlack.actionButtonBlack {
+  max-width: 26.75rem;
+  width: 100%;
+  height: 8rem;
+  background-color: var(--black);
+  border: 4px solid var(--pink);
+}

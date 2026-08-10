@@ -1,0 +1,295 @@
+@import '/src/shared/styles/breakpoints';
+
+.bannerSliderContainerClosed.bannerSliderContainerClosed.bannerSliderContainerClosed {
+  margin: 0 auto 1rem;
+
+  :global(.rt-CardInner) {
+    padding: 0;
+  }
+}
+
+.bannerSliderContainer.bannerSliderContainer.bannerSliderContainer {
+  background-color: transparent;
+  width: 100%;
+  max-width: 100vw;
+  container-name: banner;
+  container-type: inline-size;
+  position: relative;
+  padding: 0;
+
+  &::before {
+    box-shadow: none;
+  }
+
+  .collapseButton.collapseButton.collapseButton {
+    position: absolute;
+    right: 6rem;
+    top: 6rem;
+    z-index: 2;
+    padding: 0 1.25rem;
+
+    .arrowDownSingle {
+      transition: 0.3s;
+    }
+
+    .arrowDownSingleReversed {
+      transform: scaleY(-1);
+      transition: 0.3s;
+    }
+
+    @media screen and (width < $sm) {
+      right: 1rem;
+      top: 6rem;
+    }
+  }
+
+  .collapseButtonClosed.collapseButtonClosed.collapseButtonClosed {
+    @media screen and (width < $sm) {
+      right: 6rem;
+      top: 6rem;
+    }
+  }
+
+  .headingText.headingText {
+    line-height: 1.33;
+    width: 60%;
+  }
+
+  .headingDescription {
+    max-width: 48rem;
+    line-height: 1.33;
+    width: 70%;
+
+    @container banner (width < 500px) {
+      display: none;
+    }
+  }
+
+  .headingText.headingText.headingText {
+    @container banner (width < 500px) {
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+      text-shadow:
+        1px 1px 1rem var(--c-black-alpha-1),
+        2px 2px 1rem var(--c-black-alpha-1),
+        3px 3px 1rem var(--c-black-alpha-1);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-radius: 2rem;
+      backdrop-filter: blur(1rem);
+    }
+  }
+
+  .bannerSliderClosed.bannerSliderClosed.bannerSliderClosed {
+    & > :global(.swiper-pagination.swiper-pagination) {
+      display: none;
+    }
+  }
+
+  .bannerSlider.bannerSlider.bannerSlider {
+    width: 100%;
+    height: 100%;
+
+    .bannerSlideClosed.bannerSlideClosed.bannerSlideClosed {
+      background-position: left center;
+      min-height: unset;
+      height: 15.5rem;
+      background-size: 20%;
+      box-shadow: unset;
+      background: linear-gradient(89.9deg, #0c0b0f 0.08%, #19181f 101.82%);
+      border-radius: 5rem;
+      padding-right: 14rem;
+      padding-left: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      .closedBlockImage.closedBlockImage.closedBlockImage {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        max-width: 19rem;
+        width: 100%;
+        box-shadow: inset 0 0 5rem var(--background-color);
+
+        &.allModes {
+          background-image: url('/src/shared/images/banners/banner-part-all-modes.png');
+        }
+        &.bullsEye {
+          background-image: url('/src/shared/images/banners/banner-part-bulls-eye.png');
+        }
+        &.upDown {
+          background-image: url('/src/shared/images/banners/banner-part-up-down.png');
+        }
+        &.setups {
+          background-image: url('/src/shared/images/banners/banner-part-setups.png');
+        }
+        &.addSetups {
+          background-image: url('/src/shared/images/banners/banner-part-create-setups.png');
+        }
+        &.help {
+          background-image: url('/src/shared/images/banners/banner-part-faq.png');
+        }
+        &.twitter {
+          background-image: url('/src/shared/images/banners/banner-part-twitter.png');
+        }
+        &.discord {
+          background-image: url('/src/shared/images/banners/banner-part-discord.png');
+        }
+        &.web3 {
+          background-image: url('/src/shared/images/banners/banner-part-web3.png');
+        }
+        &.chainlink {
+          background-image: url('/src/shared/images/banners/banner-part-chainlink.webp');
+
+          @media screen and (width < $sm) {
+            background-position: center -20%;
+          }
+        }
+        &.mainnet {
+          background-image: url('/src/shared/images/banners/banner-part-mainnet.webp');
+        }
+      }
+    }
+
+    .bannerSlide {
+      background-size: contain;
+      background-color: var(--color-background);
+      background-repeat: no-repeat;
+      background-position: right center;
+      height: 100%;
+      min-height: 55rem; // NOTE: this is the height of the banners
+      box-shadow:
+        inset -5em 0 8rem var(--color-background),
+        /* internal shadow from right side of image */ inset 0 -5rem 8rem var(--color-background); /* internal shadow from bottom of image */
+
+      @media screen and (width < $sm) {
+        padding-top: 2rem;
+      }
+
+      &.allModes {
+        background-image: url('/src/shared/images/banners/banner-part-all-modes.png');
+      }
+      &.bullsEye {
+        background-image: url('/src/shared/images/banners/banner-part-bulls-eye.png');
+      }
+      &.upDown {
+        background-image: url('/src/shared/images/banners/banner-part-up-down.png');
+      }
+      &.setups {
+        background-image: url('/src/shared/images/banners/banner-part-setups.png');
+      }
+      &.addSetups {
+        background-image: url('/src/shared/images/banners/banner-part-create-setups.png');
+      }
+      &.help {
+        background-image: url('/src/shared/images/banners/banner-part-faq.png');
+      }
+      &.twitter {
+        background-image: url('/src/shared/images/banners/banner-part-twitter.png');
+      }
+      &.discord {
+        background-image: url('/src/shared/images/banners/banner-part-discord.png');
+      }
+      &.web3 {
+        background-image: url('/src/shared/images/banners/banner-part-web3.png');
+      }
+      &.chainlink {
+        background-image: url('/src/shared/images/banners/banner-part-chainlink.webp');
+
+        @media screen and (width < $sm) {
+          background-position: center -20%;
+        }
+      }
+      &.mainnet {
+        background-image: url('/src/shared/images/banners/banner-part-mainnet.webp');
+      }
+    }
+
+    & > :global(.swiper-pagination) {
+      border-radius: 4rem;
+      padding: 1rem;
+      bottom: 8.8rem;
+      left: 35rem;
+      backdrop-filter: blur(1rem) brightness(0.8);
+      display: flex;
+      align-items: center;
+      width: auto;
+
+      @container banner (width < 400px) {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        margin-bottom: 2rem;
+      }
+    }
+
+    :global(.swiper-pagination-bullet) {
+      aspect-ratio: 1;
+      width: 1rem;
+      height: 1rem;
+      margin: 1rem;
+      background-origin: content-box;
+      background-color: var(--c-white);
+      box-sizing: content-box;
+      border-radius: 50%;
+      position: relative;
+      opacity: 0.5;
+      transition:
+        opacity 0.2s ease-in-out,
+        transform 0.2s ease-in-out;
+
+      &:global(.swiper-pagination-bullet-active) {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+
+      &::after {
+        content: '';
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .bannerButton.bannerButton {
+    width: 28rem;
+    height: 7rem;
+    text-transform: uppercase;
+    backdrop-filter: blur(1rem) brightness(0.6);
+
+    @container banner (width < 400px) {
+      width: 20rem;
+      margin: 0 auto;
+      margin-top: 0;
+    }
+
+    & > a {
+      text-decoration: none;
+      color: currentcolor;
+    }
+  }
+
+  .bannerButtonClosed.bannerButtonClosed {
+    @media screen and (width < $md) {
+      display: none;
+    }
+  }
+
+  .bannerSlideLinkWrapper.bannerSlideLinkWrapper {
+    width: fit-content;
+
+    @container banner (width < 400px) {
+      align-self: center;
+    }
+  }
+
+  .bannerSlideLink.bannerSlideLink {
+    width: fit-content;
+  }
+}

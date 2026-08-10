@@ -1,0 +1,20 @@
+.todayLeadersItemWrapper {
+  height: 9rem;
+  border-bottom: 0.2px solid var(--c-white-alpha-2);
+  padding: 0 2rem;
+}
+
+.todayLeadersItemWrapper:has(+ .todayLeadersItemWrapperSelf) {
+  border-bottom: none;
+}
+
+.todayLeadersItemWrapperSelf {
+  border-radius: 50px;
+  background-color: var(--c-black);
+  border-bottom: none;
+}
+
+.todayLeadersItemWrapper:last-child {
+  height: 9rem;
+  border-bottom: none;
+}

@@ -1,0 +1,54 @@
+@use '/src/shared/styles/mixins' as mixins;
+
+@each $level, $colors in mixins.$levels {
+  .borderContainerLevel-#{$level} {
+    &::before {
+      @if length($colors) == 3 {
+        @include mixins.avatar-border-gradient(
+          nth($colors, 1),
+          nth($colors, 2),
+          nth($colors, 3)
+        );
+      } @else {
+        @include mixins.avatar-border-gradient(
+          nth($colors, 1),
+          nth($colors, 2)
+        );
+      }
+    }
+  }
+}
+
+.borderContainer {
+  position: relative;
+  background: transparent;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 0.4rem solid transparent;
+    mask:
+      linear-gradient(#000 0 0) padding-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    z-index: 2;
+  }
+}
+
+.largeBorder::before {
+  border-width: 1rem;
+}
+
+.levelContainer {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.levelContainerText {
+  z-index: 3;
+}

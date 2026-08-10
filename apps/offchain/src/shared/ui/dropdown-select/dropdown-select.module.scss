@@ -1,0 +1,56 @@
+.dropdownContent {
+  min-width: 25rem;
+  background-color: var(--color-background);
+
+  :global(.rt-DropdownMenuViewport) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.dropdownTrigger.dropdownTrigger.dropdownTrigger {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 12rem;
+  text-transform: unset;
+  gap: 0.5rem;
+  border: 1px solid var(--c-gray-40);
+  color: var(--c-gray-40);
+}
+
+.checkBoxItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+
+  &:hover {
+    background-color: var(--c-gray-80);
+  }
+}
+
+.checkBoxIndicator {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  border: 1.5px solid var(--c-gray-70)
+}
+
+.checkBoxIndicatorChecked {
+  background-color: var(--c-a-pink);
+  border-color: var(--c-a-pink);
+}
+
+.checkboxTitle {
+  color: var(--c-gray-40);
+}

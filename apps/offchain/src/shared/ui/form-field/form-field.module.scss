@@ -1,0 +1,28 @@
+.formValidationMessage {
+  color: var(--c-error);
+}
+
+.formField {
+  position: relative;
+  width: 100%;
+}
+
+.formLabel {
+  margin-bottom: 0.5rem;
+}
+
+.formFieldInput.formFieldInput.formFieldInput {
+  background-color: var(--black);
+}
+
+.formFieldInput.formFieldInput.formFieldInput::placeholder {
+  color: var(--gray-7);
+}
+
+.formFieldInputError.formFieldInputError.formFieldInputError {
+  outline: 1px solid var(--c-error);
+}
+
+.formFieldLabelWrap {
+  padding: 0.25rem 0.25rem;
+}
